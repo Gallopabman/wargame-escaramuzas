@@ -1,0 +1,73 @@
+﻿Guerrero ataca a Asesino
+  Sin reacción: Asesino recibe 6,83
+  Combate mutuo: Asesino recibe 2,81 | Guerrero recibe 0,01 | empieza Asesino
+  Uso Guerrero: golpe  54%  parada   1%  esquiva   1%  encaja  30%  descarte  14%  
+  Uso Asesino: golpe  28%  parada  11%  esquiva  22%  encaja  27%  descarte  12%  
+
+Asesino ataca a Guerrero
+  Sin reacción: Guerrero recibe 0,60
+  Combate mutuo: Guerrero recibe 0,01 | Asesino recibe 2,81 | empieza Asesino
+  Uso Asesino: golpe  28%  parada  11%  esquiva  22%  encaja  27%  descarte  12%  
+  Uso Guerrero: golpe  54%  parada   1%  esquiva   1%  encaja  30%  descarte  14%  
+
+Guerrero ataca a Bruto
+  Sin reacción: Bruto recibe 6,15
+  Combate mutuo: Bruto recibe 1,99 | Guerrero recibe 3,00 | empieza Guerrero
+  Uso Guerrero: golpe  25%  parada  25%  esquiva  15%  encaja  22%  descarte  13%  
+  Uso Bruto: golpe  49%  parada   0%  esquiva   4%  encaja  29%  descarte  17%  
+
+Asesino ataca a Bruto
+  Sin reacción: Bruto recibe 3,22
+  Combate mutuo: Bruto recibe 1,29 | Asesino recibe 5,38 | empieza Asesino
+  Uso Asesino: golpe  28%  parada  11%  esquiva  22%  encaja  27%  descarte  12%  
+  Uso Bruto: golpe  54%  parada   1%  esquiva   1%  encaja  30%  descarte  14%  
+
+Guerrero ataca a Guerrero
+  Sin reacción: Guerrero recibe 3,53
+  Combate mutuo: Guerrero recibe 1,60 | Guerrero recibe 1,56 | empieza Guerrero
+  Uso Guerrero: golpe  45%  parada   1%  esquiva  11%  encaja  31%  descarte  12%  
+  Uso Guerrero: golpe  42%  parada   2%  esquiva  14%  encaja  31%  descarte  12%  
+
+Asesino ataca a Guerrero (carga)
+  Sin reacción: Guerrero recibe 0,60
+  Combate mutuo: Guerrero recibe 0,01 | Asesino recibe 2,81 | empieza Asesino
+  Uso Asesino: golpe  28%  parada  11%  esquiva  22%  encaja  27%  descarte  12%  
+  Uso Guerrero: golpe  54%  parada   1%  esquiva   1%  encaja  30%  descarte  14%  
+
+Guerrero ataca a Asesino [esquiva con gasolina]
+  Sin reacción: Asesino recibe 6,83
+  Combate mutuo: Asesino recibe 3,46 | Guerrero recibe 0,04 | empieza Asesino
+  Uso Guerrero: golpe  57%  parada   0%  esquiva   0%  encaja  28%  descarte  15%  
+  Uso Asesino: golpe  25%  parada  17%  esquiva  13%  encaja  35%  descarte  10%  
+
+Asesino ataca a Guerrero [esquiva con gasolina]
+  Sin reacción: Guerrero recibe 0,60
+  Combate mutuo: Guerrero recibe 0,04 | Asesino recibe 3,47 | empieza Asesino
+  Uso Asesino: golpe  25%  parada  17%  esquiva  13%  encaja  35%  descarte  10%  
+  Uso Guerrero: golpe  56%  parada   0%  esquiva   0%  encaja  29%  descarte  15%  
+
+Guerrero ataca a Bruto [esquiva con gasolina]
+  Sin reacción: Bruto recibe 6,15
+  Combate mutuo: Bruto recibe 2,78 | Guerrero recibe 4,02 | empieza Guerrero
+  Uso Guerrero: golpe  30%  parada  29%  esquiva   4%  encaja  29%  descarte   9%  
+  Uso Bruto: golpe  44%  parada   0%  esquiva   2%  encaja  39%  descarte  15%  
+
+Asesino ataca a Bruto [esquiva con gasolina]
+  Sin reacción: Bruto recibe 3,22
+  Combate mutuo: Bruto recibe 1,31 | Asesino recibe 6,56 | empieza Asesino
+  Uso Asesino: golpe  29%  parada  19%  esquiva  10%  encaja  34%  descarte   8%  
+  Uso Bruto: golpe  52%  parada   0%  esquiva   0%  encaja  33%  descarte  15%  
+
+Guerrero ataca a Guerrero [esquiva con gasolina]
+  Sin reacción: Guerrero recibe 3,53
+  Combate mutuo: Guerrero recibe 2,53 | Guerrero recibe 2,49 | empieza Guerrero
+  Uso Guerrero: golpe  44%  parada   4%  esquiva   0%  encaja  42%  descarte  10%  
+  Uso Guerrero: golpe  43%  parada   3%  esquiva   3%  encaja  43%  descarte   8%  
+
+Asesino ataca a Guerrero (carga) [esquiva con gasolina]
+  Sin reacción: Guerrero recibe 0,60
+  Combate mutuo: Guerrero recibe 0,04 | Asesino recibe 3,47 | empieza Asesino
+  Uso Asesino: golpe  25%  parada  17%  esquiva  13%  encaja  35%  descarte  10%  
+  Uso Guerrero: golpe  56%  parada   0%  esquiva   0%  encaja  29%  descarte  15%  
+
+

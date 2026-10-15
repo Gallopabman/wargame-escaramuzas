@@ -1,0 +1,63 @@
+# Registro de decisiones
+
+Formato: fecha · decisión · motivo.
+
+## 2026-10-14
+
+- **Escaramuzas narrativas PvEvP.** Los jugadores compiten entre sí, pero una
+  Amenaza automática puede hacer que la campaña la pierdan todos.
+  *Motivo:* concepto original del autor.
+- **Mini-agnóstico pero no facción-agnóstico.** Las facciones se definen por
+  concepto y palabras clave, no por una gama de miniaturas concreta.
+  *Motivo:* libertad para usar miniaturas propias sin perder la identidad de
+  cada facción.
+- **Cada facción tendrá varias subfacciones.** *Motivo:* riqueza y
+  rejugabilidad.
+- **Fantasía medieval, miniaturas de 28–32 mm.**
+- **Solo se usan D6.** *Motivo:* accesibilidad; todo el mundo los tiene.
+- **Activación alternada, una miniatura por jugador.** *Motivo:* mantiene a
+  ambos jugadores implicados todo el turno (estilo Kill Team / Warcry).
+
+## 2026-10-15
+
+- **Bandas de 4–8 miniaturas.** Cifra orientativa; se ajustará al hacer el
+  constructor de bandas.
+- **Tiradas con 3D6 + estadística contra umbral** (6 / 8 / 10 / 12). Los 6
+  naturales dan un dado extra y activan los críticos.
+- **Estadísticas:** Fuerza, Agilidad, Magia y Mente (de 1 a 5, máximo 6 con
+  magia o habilidades), más Vitalidad, Acciones y Movimiento.
+- **Acciones por activación:** 2 lo normal; 1 para esbirros e invocaciones; 3
+  para algunas élites.
+- **Reacciones:** el objetivo de un ataque o disparo puede gastar una de sus
+  acciones para reaccionar.
+- **Armas:** Modificador, Daño, Parry, Hit, Rango, Especial y Velocidad.
+- **Armaduras:** Esquiva, Dureza (resta daño a cada impacto) y Durabilidad
+  (número de impactos que aguanta). Sustituye al esquema anterior de
+  Dureza/Reducción.
+- **Tiradas: cada dado es independiente** (no se suman). Umbral por defecto 6.
+- **Cada éxito es un impacto** con el Daño del arma.
+- **Reacciones:** Bloquear (los disparos solo se bloquean con escudo o
+  habilidad) y Esquivar (contra disparos, mover 2" alejándose; en cuerpo a
+  cuerpo no se mueve). Cada éxito del defensor anula un éxito del atacante.
+- **Combate mutuo:** ambos tiran y asignan dados a Golpear, Parar o Esquivar.
+  El orden lo decide la carga, después la Velocidad y por último el jugador
+  activo. La esquiva debe igualar el valor total del golpe.
+- **1 natural siempre falla; 6 natural siempre es éxito.**
+- **Siempre se tiran 3 dados** salvo que se indique lo contrario.
+- **Reaccionar en cuerpo a cuerpo inicia un combate mutuo.** Ambos tiran y
+  deciden en el momento (golpear, parar, esquivar). *Motivo:* mecánica
+  novedosa: se tira para combatir, no para "pegar". Viabilidad a confirmar
+  con simulaciones.
+- **Contra disparos, el propósito (bloquear o esquivar) se elige antes de
+  tirar.** Bloquear = Fuerza + Parry; Esquivar = Agilidad + Esquiva. Ambos
+  valores de equipo pueden ser negativos.
+- **Un 6 natural solo se puede parar con otro 6 natural.**
+- **En combate mutuo, los dados se asignan de uno en uno, alternando.**
+- **Cargar cuesta 2 acciones** y da la iniciativa del combate mutuo,
+  ignorando la Velocidad.
+- **Armadura: Dureza + Durabilidad** (se descarta la barra de vida extra).
+- **Cambios de nombre:** Dureza → Reducción; Modificador (del arma) →
+  Atributo; Hit → Precisión; Parry → Parada; Rango → Alcance; Especial (del
+  arma) → Crítico. *Motivo:* claridad y todo en castellano.
+- **Apartado común "Especial"** para reglas especiales de cualquier elemento
+  (miniaturas, armas, armaduras, equipo, habilidades…).
