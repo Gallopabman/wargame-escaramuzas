@@ -158,6 +158,34 @@ public class CombateMutuo {
         return c;
     }
 
+    // Combate a muerte: intercambios seguidos conservando vida y Durabilidad.
+    // Los intercambios pares los empieza pl[0] y los impares pl[1] (cada uno
+    // ataca en su activación y el otro reacciona). Cada intercambio se juega de
+    // forma óptima, pero sin planificar los siguientes.
+    // Devuelve: [gana pl0, gana pl1, nadie muere, media de intercambios].
+    public double[] Duelo(int pruebas, int maxIntercambios) {
+        double[] r = new double[4];
+        Resultado basura = new Resultado();
+        for (int t = 0; t < pruebas; t++) {
+            int[] hp = { pl[0].vida, pl[1].vida }, d = { pl[0].durabilidad, pl[1].durabilidad };
+            int k = 0;
+            while (k < maxIntercambios && hp[0] > 0 && hp[1] > 0) {
+                Estado s = new Estado();
+                int[] a = Tirada(3), b = Tirada(3);
+                for (int f = 1; f <= 6; f++) { s.c[0, f] = a[f]; s.c[1, f] = b[f]; }
+                s.turno = k % 2;
+                for (int p = 0; p < 2; p++) { s.d[p] = d[p]; s.hp[p] = hp[p]; }
+                Estado fin = Jugar(s, basura);
+                for (int p = 0; p < 2; p++) { d[p] = fin.d[p]; hp[p] = fin.hp[p]; }
+                k++;
+            }
+            if (hp[1] == 0) r[0]++; else if (hp[0] == 0) r[1]++; else r[2]++;
+            r[3] += k;
+        }
+        for (int i = 0; i < 4; i++) r[i] /= pruebas;
+        return r;
+    }
+
     // pl[0] = atacante (jugador activo), pl[1] = defensor que reacciona.
     // inicia: -1 = por Velocidad (empate: atacante); 0 = atacante; 1 = defensor.
     public Resultado Ejecutar(int pruebas, int inicia, int dadosAtacante) {

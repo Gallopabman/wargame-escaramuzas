@@ -55,3 +55,6 @@
       dado rival.
 - [ ] Rangos propuestos de Precisión, Esquiva, Daño, Reducción y
       Durabilidad (ver `02_equipo_habilidades.md`).
+- [ ] Espada de Daño 1 con escudo contra hacha con cuero R1 D1
+      (`simulaciones/resultados_espada_escudo.txt`): el hacha gana el 90–99%
+      de los combates a muerte. Daño 1 contra Reducción 1 no funciona.
