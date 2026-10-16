@@ -80,7 +80,7 @@ Cada miniatura tiene las siguientes estadísticas:
 El defensor gasta 1 acción, elige **antes de tirar** si bloquea o esquiva, y
 tira 3D6. **Cada éxito del defensor anula un éxito del atacante.**
 
-- **Bloquear:** cada dado + Fuerza + *Parada* del arma o escudo. Los disparos
+- **Bloquear:** cada dado + *Parada* del arma o escudo. Los disparos
   **solo se pueden bloquear** con un arma o habilidad que lo permita (un
   escudo sí; una espada no).
 - **Esquivar:** cada dado + Agilidad + *Esquiva* de la armadura. Al terminar
@@ -100,24 +100,30 @@ jugador decide en el momento qué hace con cada uno.
    opciones. El modificador se elige después de tirar, según la opción:
    - **Golpear** (dado + *Atributo* del arma): si es un éxito, es un
      impacto.
-   - **Parar** (dado + Fuerza + *Parada*): si es un éxito, **elimina un dado
-     del rival**, sin más. Un **6 natural** del rival solo se puede eliminar
-     con un **6 natural**.
-   - **Esquivar** (dado + Agilidad + *Esquiva*): se usa al instante como
-     respuesta a un golpe del rival. Tiene éxito si iguala o supera el
-     **valor total del golpe**. Ejemplo: espada con Fuerza 3 y un 4 en el
-     dado → golpe de 7 → la esquiva necesita 7.
+   - **Parar** (dado + *Parada* del arma o escudo ≥ 6): elige un dado del
+     rival que aún no haya usado; **ambos dados desaparecen**. Un **6
+     natural** del rival solo se puede parar con un **6 natural**.
+   - **Esquivar** (dado + Agilidad ± *Esquiva* de la armadura): elige un
+     dado del rival que aún no haya usado. Si tu resultado **iguala o supera
+     ese dado + el Atributo de golpe del rival**, **ambos dados
+     desaparecen**. Ejemplo: el rival tiene un 5 y golpea con Fuerza 3 →
+     necesitas 8. Con un 3 en tu dado y Agilidad 5 (sin penalizador de
+     armadura): 3 + 5 = 8 → esquivas.
+     - Las armaduras suelen dar Esquiva **negativa**: cuanto más pesada y
+       robusta, más cuesta moverse.
      - [A PROBAR] Puede que esquivar cueste un **dado extra como
        "gasolina"**.
-4. Ejemplo de reparto: con +2 al ataque y +4 a la esquiva, un 2 no sirve
-   para golpear (2+2=4) pero sí para esquivar (2+4=6).
-5. Cada golpe no anulado es un impacto (ver 6. Daño).
+4. **Un golpe declarado impacta directamente.** La defensa consiste en
+   eliminar los dados del rival (parando o esquivando) antes de que los use.
+5. Ejemplo de reparto: con +2 al golpe y +4 a la esquiva, un 2 no sirve
+   para golpear (2+2=4) pero sí para esquivar un dado bajo del rival.
 
 ### 5.4 Cargar
 - Cuesta **2 acciones**.
+- La miniatura se mueve hasta quedar a **1"** del objetivo e **inicia el
+  combate** (no hay que pagar el ataque aparte).
 - Quien carga empieza el combate mutuo, sin importar la Velocidad.
-- [PENDIENTE: distancia de carga; ¿incluye el ataque o hay que pagarlo
-  aparte?]
+- [PENDIENTE: distancia máxima de carga; ¿es igual al Movimiento?]
 
 ## 6. Daño
 

@@ -61,3 +61,18 @@ Formato: fecha · decisión · motivo.
   arma) → Crítico. *Motivo:* claridad y todo en castellano.
 - **Apartado común "Especial"** para reglas especiales de cualquier elemento
   (miniaturas, armas, armaduras, equipo, habilidades…).
+
+## 2026-10-16
+
+- **Corrección: Parar y Esquivar se usan en tu turno**, contra un dado del
+  rival que aún no se haya usado, y ambos dados desaparecen. No son
+  respuestas a un golpe ya declarado: **un golpe declarado impacta
+  directamente**.
+  - **Parar:** dado + Parada del arma o escudo ≥ 6 (sin sumar Fuerza). Un 6
+    natural solo se para con otro 6.
+  - **Esquivar:** dado + Agilidad ± Esquiva de la armadura ≥ dado del rival +
+    su Atributo de golpe.
+- **Las armaduras suelen dar Esquiva negativa**: cuanto más pesadas, más
+  penalizan. *Motivo:* representar la dificultad de moverse con armadura.
+- **Cargar:** 2 acciones; mueve hasta quedar a 1" del objetivo e inicia el
+  combate mutuo.

@@ -54,29 +54,40 @@ manual usable.
     solo se para con otro 6) o Esquivar (el dado debe igualar el valor total
     del golpe). Empieza quien cargó; si no, la mayor Velocidad; si hay empate,
     el jugador activo.
-- **Cargar:** cuesta 2 acciones y da la iniciativa del combate mutuo.
+- **Cargar:** cuesta 2 acciones, mueve hasta quedar a 1" e inicia el combate mutuo con la iniciativa.
 - **Daño:** cada éxito es un impacto con el Daño del arma. La armadura resta
   su Reducción y pierde 1 de Durabilidad por impacto.
 - **Armas:** Atributo, Daño, Parada, Precisión, Alcance, Velocidad, Crítico,
   Especial. **Armaduras:** Esquiva, Reducción, Durabilidad, Especial.
 
-## Resultados de la simulación v1 (combate mutuo)
+## Resultados de la simulación v2 (combate mutuo, 2026-10-16)
 
-Perfiles de prueba inventados (no son del autor). Ver
-`simulaciones/resultados_combate_mutuo_v1.txt`.
+La v1 usaba una esquiva mal entendida (como respuesta a un golpe) y queda
+obsoleta. La v2 aplica las reglas corregidas, con vida y muerte. Perfiles de
+prueba inventados (Soldado, Asesino, Bruto, Caballero). Ver
+`simulaciones/resultados_combate_mutuo_v2.txt`.
 
-1. La mecánica genera decisiones reales: cada opción se usa según el rival.
-2. Reaccionar reduce mucho el daño recibido → riesgo de juego pasivo.
-3. Empezar primero casi no da ventaja → Cargar y Velocidad valen poco.
-4. La "gasolina" para esquivar no parece necesaria. Recomendación: quitarla.
-5. Armas de Daño 2 contra Reducción 2 no hacen nada en un intercambio.
+1. **Empezar primero ahora sí importa mucho** (Bruto contra Bruto: quien
+   empieza mata el 77% de las veces y quien no, el 19%). La carga tal como
+   está ya vale la pena; añadirle +1 dado sería excesivo.
+2. **Saltos de vida y daño:** 1 punto de Reducción puede cambiar cuántos
+   golpes hacen falta para matar y disparar los resultados (Soldado sin
+   armadura muere el 51%; con R1 D1, el 10%).
+3. **El penalizador de Esquiva funciona:** al Asesino le va mejor con
+   armadura ligera sin penalizador que con armadura pesada.
+4. Parar lo usa sobre todo quien tiene Parada alta (Caballero); esquivar,
+   quien tiene Agilidad alta (Asesino). Buena diferenciación.
+5. La "gasolina" empeora mucho al Asesino. Recomendación: no usarla.
+6. Reaccionar sigue siendo muy rentable → riesgo de juego pasivo.
+7. El Asesino con dagas (Daño 2) apenas hace daño a miniaturas con
+   armadura: necesita Críticos o venenos.
 
 ## Próximos pasos
 
 1. Recibir **perfiles reales** de 2–3 miniaturas del autor.
-2. Decidir **qué da la carga** además de empezar primero.
-3. **Simulación de activaciones completas** (2 acciones, decidir cuándo
+2. **Simulación de activaciones completas** (2 acciones, decidir cuándo
    reaccionar) para comprobar si aparece el juego pasivo.
+3. Definir **Críticos** y reglas especiales (venenos).
 4. Resolver el resto de `pendientes.md`: disparo, Vitalidad 0, ronda, la
    Amenaza, gremios.
 

@@ -1,0 +1,126 @@
+﻿== 1. Variantes de armadura y vida del defensor (empieza el arma más rápida) ==
+Soldado      -> Soldado sin armadura                                 | sin reacc:  5,2 dmg  78% muere | mutuo: def  4,2 dmg  51% muere, atac  3,2 dmg  23% muere | def usa G 58% P  2% E 11% | atac usa G 57% P  2% E 17%
+Soldado      -> Soldado R1 D1 (ligera, Esq 0)                        | sin reacc:  4,7 dmg  43% muere | mutuo: def  3,1 dmg  10% muere, atac  3,6 dmg  32% muere | def usa G 53% P  2% E 11% | atac usa G 48% P  2% E 26%
+Soldado      -> Soldado R1 D3 (media, Esq -1)                        | sin reacc:  4,3 dmg  43% muere | mutuo: def  2,7 dmg  11% muere, atac  3,4 dmg  32% muere | def usa G 53% P  4% E  6% | atac usa G 45% P  3% E 27%
+Soldado      -> Soldado R2 D3 (pesada, Esq -2)                       | sin reacc:  2,6 dmg  14% muere | mutuo: def  1,4 dmg   3% muere, atac  3,4 dmg  32% muere | def usa G 53% P  2% E  1% | atac usa G 43% P  3% E 27%
+Soldado      -> Soldado vida 1, sin armadura                         | sin reacc:  1,0 dmg  96% muere | mutuo: def  1,0 dmg  96% muere, atac  0,2 dmg   3% muere | def usa G 50% P  0% E 13% | atac usa G 89% P  0% E  3%
+Soldado      -> Asesino sin armadura                                 | sin reacc:  4,4 dmg  78% muere | mutuo: def  2,7 dmg  18% muere, atac  3,4 dmg  18% muere | def usa G 56% P  0% E 25% | atac usa G 42% P  6% E  3%
+Soldado      -> Asesino R1 D1 (ligera, Esq 0)                        | sin reacc:  4,3 dmg  78% muere | mutuo: def  2,2 dmg  18% muere, atac  3,5 dmg  18% muere | def usa G 58% P  0% E 24% | atac usa G 44% P  6% E  3%
+Soldado      -> Asesino R1 D3 (media, Esq -1)                        | sin reacc:  3,9 dmg  43% muere | mutuo: def  2,8 dmg   5% muere, atac  4,0 dmg  25% muere | def usa G 70% P  0% E 10% | atac usa G 47% P 10% E  6%
+Soldado      -> Asesino R2 D3 (pesada, Esq -2)                       | sin reacc:  2,4 dmg  14% muere | mutuo: def  1,4 dmg   2% muere, atac  3,9 dmg  25% muere | def usa G 74% P  0% E  5% | atac usa G 44% P 14% E  8%
+Soldado      -> Asesino vida 1, sin armadura                         | sin reacc:  1,0 dmg  96% muere | mutuo: def  0,8 dmg  78% muere, atac  2,4 dmg   7% muere | def usa G 78% P  0% E 11% | atac usa G 61% P  0% E  0%
+Soldado      -> Bruto sin armadura                                   | sin reacc:  6,1 dmg  43% muere | mutuo: def  3,7 dmg   7% muere, atac  5,3 dmg  47% muere | def usa G 74% P  1% E  2% | atac usa G 43% P  7% E 21%
+Soldado      -> Bruto R1 D1 (ligera, Esq 0)                          | sin reacc:  5,5 dmg  43% muere | mutuo: def  2,9 dmg   7% muere, atac  5,3 dmg  47% muere | def usa G 74% P  1% E  2% | atac usa G 43% P  7% E 21%
+Soldado      -> Bruto R1 D3 (media, Esq -1)                          | sin reacc:  4,6 dmg  14% muere | mutuo: def  2,5 dmg   1% muere, atac  5,2 dmg  47% muere | def usa G 74% P  1% E  2% | atac usa G 43% P  8% E 22%
+Soldado      -> Bruto R2 D3 (pesada, Esq -2)                         | sin reacc:  2,6 dmg   3% muere | mutuo: def  1,3 dmg   0% muere, atac  5,2 dmg  47% muere | def usa G 74% P  1% E  1% | atac usa G 42% P  8% E 22%
+Soldado      -> Bruto vida 1, sin armadura                           | sin reacc:  1,0 dmg  96% muere | mutuo: def  1,0 dmg  96% muere, atac  0,2 dmg   4% muere | def usa G 78% P  0% E  0% | atac usa G 91% P  0% E  1%
+
+Asesino      -> Soldado sin armadura                                 | sin reacc:  5,2 dmg  69% muere | mutuo: def  3,3 dmg  18% muere, atac  2,8 dmg  18% muere | def usa G 42% P  6% E  3% | atac usa G 56% P  0% E 26%
+Asesino      -> Soldado R1 D1 (ligera, Esq 0)                        | sin reacc:  4,5 dmg  25% muere | mutuo: def  2,4 dmg   4% muere, atac  2,8 dmg  18% muere | def usa G 44% P  2% E  2% | atac usa G 53% P  0% E 30%
+Asesino      -> Soldado R1 D3 (media, Esq -1)                        | sin reacc:  3,2 dmg   5% muere | mutuo: def  1,7 dmg   1% muere, atac  2,7 dmg  18% muere | def usa G 45% P  1% E  0% | atac usa G 52% P  0% E 31%
+Asesino      -> Soldado R2 D3 (pesada, Esq -2)                       | sin reacc:  0,6 dmg   0% muere | mutuo: def  0,1 dmg   0% muere, atac  2,7 dmg  18% muere | def usa G 45% P  0% E  0% | atac usa G 52% P  0% E 31%
+Asesino      -> Soldado vida 1, sin armadura                         | sin reacc:  1,0 dmg  99% muere | mutuo: def  1,0 dmg  99% muere, atac  0,0 dmg   0% muere | def usa G 25% P  0% E  0% | atac usa G 97% P  0% E  0%
+Asesino      -> Asesino sin armadura                                 | sin reacc:  4,6 dmg  69% muere | mutuo: def  3,6 dmg  24% muere, atac  3,6 dmg  13% muere | def usa G 65% P  0% E 16% | atac usa G 67% P  0% E 14%
+Asesino      -> Asesino R1 D1 (ligera, Esq 0)                        | sin reacc:  4,3 dmg  69% muere | mutuo: def  2,8 dmg  24% muere, atac  3,5 dmg  13% muere | def usa G 64% P  0% E 17% | atac usa G 65% P  0% E 16%
+Asesino      -> Asesino R1 D3 (media, Esq -1)                        | sin reacc:  3,1 dmg  25% muere | mutuo: def  1,7 dmg   6% muere, atac  3,0 dmg  14% muere | def usa G 69% P  0% E  6% | atac usa G 48% P  0% E 35%
+Asesino      -> Asesino R2 D3 (pesada, Esq -2)                       | sin reacc:  0,6 dmg   0% muere | mutuo: def  0,2 dmg   0% muere, atac  3,1 dmg  14% muere | def usa G 74% P  0% E  0% | atac usa G 51% P  0% E 33%
+Asesino      -> Asesino vida 1, sin armadura                         | sin reacc:  1,0 dmg  99% muere | mutuo: def  1,0 dmg  99% muere, atac  0,0 dmg   0% muere | def usa G 70% P  0% E  0% | atac usa G 98% P  0% E  0%
+Asesino      -> Bruto sin armadura                                   | sin reacc:  5,7 dmg  25% muere | mutuo: def  2,1 dmg   0% muere, atac  4,7 dmg  94% muere | def usa G 86% P  0% E  0% | atac usa G 90% P  0% E  5%
+Asesino      -> Bruto R1 D1 (ligera, Esq 0)                          | sin reacc:  4,8 dmg   5% muere | mutuo: def  1,1 dmg   0% muere, atac  4,7 dmg  94% muere | def usa G 86% P  0% E  0% | atac usa G 90% P  0% E  4%
+Asesino      -> Bruto R1 D3 (media, Esq -1)                          | sin reacc:  3,2 dmg   0% muere | mutuo: def  1,1 dmg   0% muere, atac  4,7 dmg  94% muere | def usa G 86% P  0% E  0% | atac usa G 90% P  0% E  4%
+Asesino      -> Bruto R2 D3 (pesada, Esq -2)                         | sin reacc:  0,6 dmg   0% muere | mutuo: def  0,0 dmg   0% muere, atac  4,7 dmg  94% muere | def usa G 62% P  0% E  0% | atac usa G 64% P  0% E  3%
+Asesino      -> Bruto vida 1, sin armadura                           | sin reacc:  1,0 dmg  99% muere | mutuo: def  1,0 dmg  99% muere, atac  0,0 dmg   1% muere | def usa G 48% P  0% E  0% | atac usa G 99% P  0% E  0%
+
+Bruto        -> Soldado sin armadura                                 | sin reacc:  5,9 dmg  94% muere | mutuo: def  5,2 dmg  46% muere, atac  3,7 dmg   7% muere | def usa G 43% P  7% E 22% | atac usa G 74% P  2% E  1%
+Bruto        -> Soldado R1 D1 (ligera, Esq 0)                        | sin reacc:  5,9 dmg  94% muere | mutuo: def  4,8 dmg  46% muere, atac  3,7 dmg   7% muere | def usa G 43% P  7% E 22% | atac usa G 74% P  2% E  1%
+Bruto        -> Soldado R1 D3 (media, Esq -1)                        | sin reacc:  5,9 dmg  94% muere | mutuo: def  4,8 dmg  50% muere, atac  3,8 dmg   7% muere | def usa G 45% P 10% E 12% | atac usa G 70% P  2% E  2%
+Bruto        -> Soldado R2 D3 (pesada, Esq -2)                       | sin reacc:  5,8 dmg  94% muere | mutuo: def  4,5 dmg  50% muere, atac  3,9 dmg   7% muere | def usa G 46% P 14% E  7% | atac usa G 70% P  2% E  2%
+Bruto        -> Soldado vida 1, sin armadura                         | sin reacc:  1,0 dmg  99% muere | mutuo: def  0,9 dmg  95% muere, atac  3,0 dmg   1% muere | def usa G 80% P  1% E  5% | atac usa G 83% P  0% E  0%
+Bruto        -> Asesino sin armadura                                 | sin reacc:  5,0 dmg  99% muere | mutuo: def  4,7 dmg  94% muere, atac  2,1 dmg   0% muere | def usa G 90% P  0% E  4% | atac usa G 86% P  0% E  0%
+Bruto        -> Asesino R1 D1 (ligera, Esq 0)                        | sin reacc:  4,9 dmg  94% muere | mutuo: def  4,1 dmg  35% muere, atac  3,1 dmg   2% muere | def usa G 51% P  0% E 32% | atac usa G 68% P  1% E  2%
+Bruto        -> Asesino R1 D3 (media, Esq -1)                        | sin reacc:  4,9 dmg  94% muere | mutuo: def  4,3 dmg  43% muere, atac  3,3 dmg   2% muere | def usa G 56% P  0% E 27% | atac usa G 68% P  2% E  3%
+Bruto        -> Asesino R2 D3 (pesada, Esq -2)                       | sin reacc:  4,9 dmg  94% muere | mutuo: def  4,0 dmg  54% muere, atac  3,5 dmg   2% muere | def usa G 62% P  0% E 21% | atac usa G 70% P  2% E  3%
+Bruto        -> Asesino vida 1, sin armadura                         | sin reacc:  1,0 dmg  99% muere | mutuo: def  0,9 dmg  94% muere, atac  2,1 dmg   0% muere | def usa G 90% P  0% E  4% | atac usa G 86% P  0% E  0%
+Bruto        -> Bruto sin armadura                                   | sin reacc:  7,8 dmg  94% muere | mutuo: def  7,2 dmg  77% muere, atac  5,4 dmg  19% muere | def usa G 79% P  3% E  2% | atac usa G 82% P  1% E  1%
+Bruto        -> Bruto R1 D1 (ligera, Esq 0)                          | sin reacc:  7,7 dmg  94% muere | mutuo: def  7,0 dmg  77% muere, atac  5,4 dmg  19% muere | def usa G 79% P  3% E  2% | atac usa G 82% P  1% E  1%
+Bruto        -> Bruto R1 D3 (media, Esq -1)                          | sin reacc:  7,7 dmg  94% muere | mutuo: def  7,0 dmg  77% muere, atac  5,4 dmg  19% muere | def usa G 79% P  3% E  2% | atac usa G 82% P  1% E  1%
+Bruto        -> Bruto R2 D3 (pesada, Esq -2)                         | sin reacc:  7,2 dmg  69% muere | mutuo: def  5,3 dmg  12% muere, atac  6,7 dmg  63% muere | def usa G 72% P  3% E  3% | atac usa G 69% P  6% E  9%
+Bruto        -> Bruto vida 1, sin armadura                           | sin reacc:  1,0 dmg  99% muere | mutuo: def  1,0 dmg  99% muere, atac  0,0 dmg   0% muere | def usa G 64% P  0% E  0% | atac usa G 99% P  0% E  0%
+
+Caballero    -> Soldado sin armadura                                 | sin reacc:  5,8 dmg  94% muere | mutuo: def  5,1 dmg  73% muere, atac  2,9 dmg   3% muere | def usa G 54% P  5% E  7% | atac usa G 74% P  6% E  1%
+Caballero    -> Soldado R1 D1 (ligera, Esq 0)                        | sin reacc:  5,5 dmg  69% muere | mutuo: def  4,4 dmg  24% muere, atac  4,0 dmg   5% muere | def usa G 46% P  7% E 11% | atac usa G 69% P  9% E  3%
+Caballero    -> Soldado R1 D3 (media, Esq -1)                        | sin reacc:  5,2 dmg  69% muere | mutuo: def  3,4 dmg  24% muere, atac  3,3 dmg   5% muere | def usa G 42% P 10% E  6% | atac usa G 58% P 15% E  7%
+Caballero    -> Soldado R2 D3 (pesada, Esq -2)                       | sin reacc:  3,4 dmg  25% muere | mutuo: def  1,8 dmg   6% muere, atac  3,2 dmg   5% muere | def usa G 46% P  4% E  2% | atac usa G 51% P 22% E  9%
+Caballero    -> Soldado vida 1, sin armadura                         | sin reacc:  1,0 dmg  99% muere | mutuo: def  1,0 dmg  99% muere, atac  0,0 dmg   0% muere | def usa G 30% P  0% E  9% | atac usa G 97% P  0% E  0%
+Caballero    -> Asesino sin armadura                                 | sin reacc:  4,9 dmg  94% muere | mutuo: def  3,5 dmg  35% muere, atac  3,1 dmg   1% muere | def usa G 51% P  0% E 32% | atac usa G 67% P  3% E  0%
+Caballero    -> Asesino R1 D1 (ligera, Esq 0)                        | sin reacc:  4,8 dmg  94% muere | mutuo: def  3,0 dmg  35% muere, atac  3,2 dmg   1% muere | def usa G 52% P  0% E 31% | atac usa G 68% P  3% E  0%
+Caballero    -> Asesino R1 D3 (media, Esq -1)                        | sin reacc:  4,6 dmg  69% muere | mutuo: def  3,8 dmg  13% muere, atac  4,0 dmg   3% muere | def usa G 62% P  0% E 21% | atac usa G 72% P  5% E  2%
+Caballero    -> Asesino R2 D3 (pesada, Esq -2)                       | sin reacc:  3,1 dmg  25% muere | mutuo: def  1,9 dmg   5% muere, atac  3,7 dmg   3% muere | def usa G 71% P  0% E  7% | atac usa G 56% P 22% E  5%
+Caballero    -> Asesino vida 1, sin armadura                         | sin reacc:  1,0 dmg  99% muere | mutuo: def  0,9 dmg  94% muere, atac  2,1 dmg   0% muere | def usa G 90% P  0% E  4% | atac usa G 86% P  0% E  0%
+Caballero    -> Bruto sin armadura                                   | sin reacc:  7,2 dmg  69% muere | mutuo: def  4,6 dmg  12% muere, atac  5,5 dmg  36% muere | def usa G 66% P  3% E  3% | atac usa G 54% P 24% E  5%
+Caballero    -> Bruto R1 D1 (ligera, Esq 0)                          | sin reacc:  6,9 dmg  69% muere | mutuo: def  3,8 dmg  12% muere, atac  5,5 dmg  36% muere | def usa G 66% P  3% E  3% | atac usa G 54% P 24% E  5%
+Caballero    -> Bruto R1 D3 (media, Esq -1)                          | sin reacc:  5,7 dmg  25% muere | mutuo: def  3,1 dmg   3% muere, atac  5,5 dmg  36% muere | def usa G 66% P  2% E  3% | atac usa G 52% P 25% E  6%
+Caballero    -> Bruto R2 D3 (pesada, Esq -2)                         | sin reacc:  3,5 dmg   5% muere | mutuo: def  1,6 dmg   0% muere, atac  5,4 dmg  36% muere | def usa G 67% P  2% E  3% | atac usa G 52% P 25% E  6%
+Caballero    -> Bruto vida 1, sin armadura                           | sin reacc:  1,0 dmg  99% muere | mutuo: def  1,0 dmg  99% muere, atac  0,0 dmg   0% muere | def usa G 64% P  0% E  0% | atac usa G 99% P  0% E  0%
+
+== 2. Carga: quién empieza el combate mutuo ==
+   [atac empieza] = carga actual; [def empieza] = sin carga, rival más rápido; [carga +1 dado] = propuesta
+Soldado R1D3 -> Soldado R1D3                          [atac empieza] | sin reacc:  4,3 dmg  43% muere | mutuo: def  3,3 dmg  15% muere, atac  3,3 dmg  12% muere | def usa G 57% P  5% E  6% | atac usa G 54% P  4% E 10%
+Soldado R1D3 -> Soldado R1D3                          [def empieza]  | sin reacc:  4,3 dmg  43% muere | mutuo: def  3,3 dmg  12% muere, atac  3,4 dmg  16% muere | def usa G 55% P  4% E 10% | atac usa G 57% P  5% E  6%
+Soldado R1D3 -> Soldado R1D3                          [carga +1 dado] | sin reacc:  5,2 dmg  69% muere | mutuo: def  4,2 dmg  33% muere, atac  2,8 dmg   7% muere | def usa G 51% P  5% E  9% | atac usa G 52% P  6% E  9%
+Soldado R1D3 -> Asesino                               [atac empieza] | sin reacc:  4,4 dmg  78% muere | mutuo: def  3,8 dmg  45% muere, atac  1,8 dmg   0% muere | def usa G 70% P  0% E 14% | atac usa G 59% P  1% E  0%
+Soldado R1D3 -> Asesino                               [def empieza]  | sin reacc:  4,4 dmg  78% muere | mutuo: def  2,7 dmg  18% muere, atac  1,7 dmg   0% muere | def usa G 52% P  0% E 31% | atac usa G 45% P  1% E  0%
+Soldado R1D3 -> Asesino                               [carga +1 dado] | sin reacc:  4,8 dmg  91% muere | mutuo: def  4,4 dmg  70% muere, atac  1,4 dmg   0% muere | def usa G 71% P  0% E 11% | atac usa G 63% P  2% E  0%
+Soldado R1D3 -> Bruto R1D1                            [atac empieza] | sin reacc:  5,5 dmg  43% muere | mutuo: def  3,1 dmg   7% muere, atac  4,9 dmg  51% muere | def usa G 70% P  2% E  2% | atac usa G 46% P 10% E 12%
+Soldado R1D3 -> Bruto R1D1                            [def empieza]  | sin reacc:  5,5 dmg  43% muere | mutuo: def  2,3 dmg   6% muere, atac  5,4 dmg  73% muere | def usa G 75% P  2% E  3% | atac usa G 56% P  8% E  3%
+Soldado R1D3 -> Bruto R1D1                            [carga +1 dado] | sin reacc:  6,8 dmg  69% muere | mutuo: def  4,3 dmg  19% muere, atac  4,6 dmg  42% muere | def usa G 70% P  0% E  1% | atac usa G 48% P 11% E 11%
+Soldado R1D3 -> Caballero R2D3                        [atac empieza] | sin reacc:  2,6 dmg   3% muere | mutuo: def  1,2 dmg   0% muere, atac  3,4 dmg  20% muere | def usa G 71% P  4% E  0% | atac usa G 35% P 15% E 15%
+Soldado R1D3 -> Caballero R2D3                        [def empieza]  | sin reacc:  2,6 dmg   3% muere | mutuo: def  1,4 dmg   0% muere, atac  3,9 dmg  25% muere | def usa G 74% P  4% E  1% | atac usa G 44% P 14% E  8%
+Soldado R1D3 -> Caballero R2D3                        [carga +1 dado] | sin reacc:  3,8 dmg  13% muere | mutuo: def  2,0 dmg   1% muere, atac  3,0 dmg  13% muere | def usa G 67% P  6% E  2% | atac usa G 41% P 13% E 12%
+
+Asesino      -> Soldado R1D3                          [atac empieza] | sin reacc:  3,2 dmg   5% muere | mutuo: def  1,7 dmg   1% muere, atac  2,7 dmg  18% muere | def usa G 45% P  1% E  0% | atac usa G 52% P  0% E 31%
+Asesino      -> Soldado R1D3                          [def empieza]  | sin reacc:  3,2 dmg   5% muere | mutuo: def  1,8 dmg   1% muere, atac  3,8 dmg  45% muere | def usa G 59% P  1% E  0% | atac usa G 71% P  0% E 13%
+Asesino      -> Soldado R1D3                          [carga +1 dado] | sin reacc:  4,5 dmg  28% muere | mutuo: def  2,7 dmg   5% muere, atac  2,6 dmg  16% muere | def usa G 44% P  2% E  1% | atac usa G 60% P  0% E 24%
+Asesino      -> Asesino                               [atac empieza] | sin reacc:  4,6 dmg  69% muere | mutuo: def  3,6 dmg  24% muere, atac  3,6 dmg  13% muere | def usa G 65% P  0% E 16% | atac usa G 67% P  0% E 14%
+Asesino      -> Asesino                               [def empieza]  | sin reacc:  4,6 dmg  69% muere | mutuo: def  3,6 dmg  12% muere, atac  3,6 dmg  25% muere | def usa G 67% P  0% E 14% | atac usa G 65% P  0% E 16%
+Asesino      -> Asesino                               [carga +1 dado] | sin reacc:  4,9 dmg  91% muere | mutuo: def  4,3 dmg  50% muere, atac  3,0 dmg   6% muere | def usa G 62% P  0% E 17% | atac usa G 65% P  0% E 15%
+Asesino      -> Bruto R1D1                            [atac empieza] | sin reacc:  4,8 dmg   5% muere | mutuo: def  1,1 dmg   0% muere, atac  4,7 dmg  94% muere | def usa G 86% P  0% E  0% | atac usa G 90% P  0% E  4%
+Asesino      -> Bruto R1D1                            [def empieza]  | sin reacc:  4,8 dmg   5% muere | mutuo: def  0,0 dmg   0% muere, atac  5,0 dmg 100% muere | def usa G 98% P  0% E  0% | atac usa G 70% P  0% E  0%
+Asesino      -> Bruto R1D1                            [carga +1 dado] | sin reacc:  6,4 dmg  28% muere | mutuo: def  1,3 dmg   1% muere, atac  4,7 dmg  94% muere | def usa G 87% P  0% E  0% | atac usa G 91% P  0% E  5%
+Asesino      -> Caballero R2D3                        [atac empieza] | sin reacc:  0,6 dmg   0% muere | mutuo: def  0,0 dmg   0% muere, atac  3,5 dmg  35% muere | def usa G 69% P  0% E  0% | atac usa G 50% P  0% E 32%
+Asesino      -> Caballero R2D3                        [def empieza]  | sin reacc:  0,6 dmg   0% muere | mutuo: def  0,1 dmg   0% muere, atac  4,4 dmg  71% muere | def usa G 75% P  0% E  0% | atac usa G 61% P  0% E 12%
+Asesino      -> Caballero R2D3                        [carga +1 dado] | sin reacc:  2,0 dmg   1% muere | mutuo: def  0,3 dmg   0% muere, atac  3,4 dmg  30% muere | def usa G 68% P  0% E  0% | atac usa G 54% P  0% E 27%
+
+Bruto R1D1   -> Soldado R1D3                          [atac empieza] | sin reacc:  5,9 dmg  94% muere | mutuo: def  5,4 dmg  73% muere, atac  2,3 dmg   5% muere | def usa G 56% P  8% E  3% | atac usa G 75% P  2% E  3%
+Bruto R1D1   -> Soldado R1D3                          [def empieza]  | sin reacc:  5,9 dmg  94% muere | mutuo: def  4,8 dmg  50% muere, atac  3,0 dmg   7% muere | def usa G 45% P 10% E 12% | atac usa G 70% P  2% E  2%
+Bruto R1D1   -> Soldado R1D3                          [carga +1 dado] | sin reacc:  6,0 dmg  99% muere | mutuo: def  5,8 dmg  92% muere, atac  1,8 dmg   2% muere | def usa G 59% P  2% E  1% | atac usa G 76% P  3% E  3%
+Bruto R1D1   -> Asesino                               [atac empieza] | sin reacc:  5,0 dmg  99% muere | mutuo: def  5,0 dmg  99% muere, atac  0,0 dmg   0% muere | def usa G 73% P  0% E  0% | atac usa G 98% P  0% E  0%
+Bruto R1D1   -> Asesino                               [def empieza]  | sin reacc:  5,0 dmg  99% muere | mutuo: def  4,7 dmg  94% muere, atac  1,1 dmg   0% muere | def usa G 90% P  0% E  4% | atac usa G 86% P  0% E  0%
+Bruto R1D1   -> Asesino                               [carga +1 dado] | sin reacc:  5,0 dmg 100% muere | mutuo: def  5,0 dmg 100% muere, atac  0,0 dmg   0% muere | def usa G 41% P  0% E  0% | atac usa G 99% P  0% E  0%
+Bruto R1D1   -> Bruto R1D1                            [atac empieza] | sin reacc:  7,7 dmg  94% muere | mutuo: def  7,0 dmg  77% muere, atac  4,6 dmg  19% muere | def usa G 79% P  3% E  2% | atac usa G 82% P  1% E  1%
+Bruto R1D1   -> Bruto R1D1                            [def empieza]  | sin reacc:  7,7 dmg  94% muere | mutuo: def  4,6 dmg  18% muere, atac  7,0 dmg  77% muere | def usa G 82% P  1% E  1% | atac usa G 79% P  3% E  2%
+Bruto R1D1   -> Bruto R1D1                            [carga +1 dado] | sin reacc:  7,9 dmg  99% muere | mutuo: def  7,7 dmg  93% muere, atac  4,0 dmg   5% muere | def usa G 80% P  0% E  0% | atac usa G 86% P  1% E  2%
+Bruto R1D1   -> Caballero R2D3                        [atac empieza] | sin reacc:  6,5 dmg  69% muere | mutuo: def  5,5 dmg  18% muere, atac  4,8 dmg  25% muere | def usa G 63% P 15% E  4% | atac usa G 72% P  4% E  4%
+Bruto R1D1   -> Caballero R2D3                        [def empieza]  | sin reacc:  6,5 dmg  69% muere | mutuo: def  5,1 dmg   8% muere, atac  4,7 dmg  34% muere | def usa G 63% P 16% E  3% | atac usa G 68% P  7% E  6%
+Bruto R1D1   -> Caballero R2D3                        [carga +1 dado] | sin reacc:  6,9 dmg  91% muere | mutuo: def  6,2 dmg  40% muere, atac  3,8 dmg  11% muere | def usa G 57% P 20% E  2% | atac usa G 68% P  5% E  6%
+
+Caballero R2D3 -> Soldado R1D3                          [atac empieza] | sin reacc:  5,2 dmg  69% muere | mutuo: def  3,9 dmg  24% muere, atac  1,4 dmg   0% muere | def usa G 44% P 13% E  8% | atac usa G 74% P  4% E  1%
+Caballero R2D3 -> Soldado R1D3                          [def empieza]  | sin reacc:  5,2 dmg  69% muere | mutuo: def  3,3 dmg  19% muere, atac  1,2 dmg   0% muere | def usa G 35% P 15% E 16% | atac usa G 71% P  4% E  1%
+Caballero R2D3 -> Soldado R1D3                          [carga +1 dado] | sin reacc:  5,8 dmg  91% muere | mutuo: def  4,9 dmg  52% muere, atac  1,2 dmg   0% muere | def usa G 40% P 13% E  9% | atac usa G 69% P  8% E  1%
+Caballero R2D3 -> Asesino                               [atac empieza] | sin reacc:  4,9 dmg  94% muere | mutuo: def  4,4 dmg  71% muere, atac  0,1 dmg   0% muere | def usa G 61% P  0% E 12% | atac usa G 75% P  0% E  0%
+Caballero R2D3 -> Asesino                               [def empieza]  | sin reacc:  4,9 dmg  94% muere | mutuo: def  3,5 dmg  35% muere, atac  0,0 dmg   0% muere | def usa G 49% P  0% E 32% | atac usa G 69% P  0% E  0%
+Caballero R2D3 -> Asesino                               [carga +1 dado] | sin reacc:  5,0 dmg  99% muere | mutuo: def  4,8 dmg  92% muere, atac  0,0 dmg   0% muere | def usa G 66% P  0% E  4% | atac usa G 72% P  0% E  0%
+Caballero R2D3 -> Bruto R1D1                            [atac empieza] | sin reacc:  6,9 dmg  69% muere | mutuo: def  4,7 dmg  32% muere, atac  5,1 dmg   8% muere | def usa G 68% P  7% E  6% | atac usa G 62% P 17% E  3%
+Caballero R2D3 -> Bruto R1D1                            [def empieza]  | sin reacc:  6,9 dmg  69% muere | mutuo: def  4,8 dmg  24% muere, atac  5,5 dmg  19% muere | def usa G 72% P  4% E  4% | atac usa G 63% P 15% E  4%
+Caballero R2D3 -> Bruto R1D1                            [carga +1 dado] | sin reacc:  7,7 dmg  91% muere | mutuo: def  6,4 dmg  62% muere, atac  4,6 dmg   4% muere | def usa G 67% P  5% E  6% | atac usa G 64% P 15% E  3%
+Caballero R2D3 -> Caballero R2D3                        [atac empieza] | sin reacc:  3,4 dmg   5% muere | mutuo: def  2,7 dmg   0% muere, atac  2,6 dmg   0% muere | def usa G 76% P  5% E  2% | atac usa G 76% P  5% E  2%
+Caballero R2D3 -> Caballero R2D3                        [def empieza]  | sin reacc:  3,4 dmg   5% muere | mutuo: def  2,6 dmg   0% muere, atac  2,6 dmg   0% muere | def usa G 76% P  5% E  2% | atac usa G 76% P  5% E  2%
+Caballero R2D3 -> Caballero R2D3                        [carga +1 dado] | sin reacc:  5,1 dmg  28% muere | mutuo: def  3,4 dmg   3% muere, atac  2,2 dmg   0% muere | def usa G 60% P 17% E  5% | atac usa G 77% P  3% E  1%
+
+== 3. Esquiva con gasolina (dado extra) ==
+Soldado R1D3 -> Asesino                               [normal]       | sin reacc:  4,4 dmg  78% muere | mutuo: def  2,7 dmg  18% muere, atac  1,7 dmg   0% muere | def usa G 52% P  0% E 31% | atac usa G 45% P  1% E  0%
+Soldado R1D3 -> Asesino                               [gasolina]     | sin reacc:  4,4 dmg  78% muere | mutuo: def  3,0 dmg  31% muere, atac  1,7 dmg   0% muere | def usa G 61% P 12% E 16% | atac usa G 47% P  4% E  0%
+Bruto R1D1   -> Asesino                               [normal]       | sin reacc:  5,0 dmg  99% muere | mutuo: def  4,7 dmg  94% muere, atac  1,1 dmg   0% muere | def usa G 90% P  0% E  4% | atac usa G 86% P  0% E  0%
+Bruto R1D1   -> Asesino                               [gasolina]     | sin reacc:  5,0 dmg  99% muere | mutuo: def  4,7 dmg  94% muere, atac  1,1 dmg   0% muere | def usa G 92% P  1% E  3% | atac usa G 86% P  0% E  0%
+Caballero R2D3 -> Asesino                               [normal]       | sin reacc:  4,9 dmg  94% muere | mutuo: def  3,5 dmg  35% muere, atac  0,0 dmg   0% muere | def usa G 49% P  0% E 32% | atac usa G 69% P  0% E  0%
+Caballero R2D3 -> Asesino                               [gasolina]     | sin reacc:  4,9 dmg  94% muere | mutuo: def  3,9 dmg  51% muere, atac  0,0 dmg   0% muere | def usa G 54% P  3% E 25% | atac usa G 72% P  0% E  0%

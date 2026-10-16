@@ -1,50 +1,73 @@
-// Simulación del combate mutuo (reglas 5.3) con juego óptimo (minimax).
-// Cada jugador maximiza (daño hecho - daño recibido) del intercambio.
-// Supuestos (ver pendientes.md): Golpear = dado + Modificador + Hit;
-// cada 6 natural da 1 dado extra que no vuelve a explotar; asignar es
-// obligatorio (se puede descartar un dado, pero no guardarlo).
+// Simulación del combate mutuo (reglas 5.3) con juego óptimo (minimax). v2
+// Cada jugador maximiza: daño hecho - daño recibido + BONO_MUERTE si mata
+// (y lo resta si muere). Si una miniatura llega a 0 de vida, el combate acaba.
+// Supuestos (ver pendientes.md):
+//  - Golpear = dado + Atributo + Precisión.
+//  - Cada 6 natural da 1 dado extra que no vuelve a explotar.
+//  - Asignar es obligatorio (se puede descartar un dado, pero no guardarlo).
+//  - Parar y Esquivar se usan en tu turno contra un dado del rival aún no
+//    usado, y ambos dados se van. Parar: dado + Parada >= 6 (un 6 rival solo
+//    se para con un 6). Esquivar: dado + Agilidad + Esquiva de armadura >=
+//    dado rival + su golpe.
+//  - Un golpe declarado impacta directamente.
+//  - Un 6 natural siempre tiene éxito, también al esquivar.
+//  - Un impacto que la armadura reduce a 0 también gasta Durabilidad.
 using System;
 using System.Collections.Generic;
 
 public class Perfil {
     public string nombre;
-    public int golpe, parada, esquiva, dano, dureza, durabilidad, velocidad;
-    public Perfil(string n, int g, int p, int e, int da, int du, int dur, int vel) {
+    public int golpe, parada, esquiva, dano, reduccion, durabilidad, velocidad, vida;
+    public Perfil(string n, int g, int p, int e, int da, int red, int dur, int vel, int vida) {
         nombre = n; golpe = g; parada = p; esquiva = e; dano = da;
-        dureza = du; durabilidad = dur; velocidad = vel;
+        reduccion = red; durabilidad = dur; velocidad = vel; this.vida = Math.Min(vida, 15);
+    }
+    // Copia con otra armadura (Reducción, Durabilidad, Esquiva) y/o vida.
+    public Perfil Con(string n, int red, int dur, int esqArmadura, int vida) {
+        return new Perfil(n, golpe, parada, esquiva + esqArmadura, dano, red, dur, velocidad, vida);
     }
 }
 
+public class Resultado {
+    public double danoSinReaccion, muereSinReaccion;
+    public double[] dano = new double[2], muere = new double[2];
+    public double[,] uso = new double[2, 4]; // golpe, parada, esquiva, descarte
+}
+
 public class CombateMutuo {
+    const double BONO_MUERTE = 10;
     Perfil[] pl = new Perfil[2];
     bool gasolina;
     Dictionary<long, double> memo = new Dictionary<long, double>();
     Random rng = new Random(12345);
 
-    // Estado: dados por cara de cada jugador, turno, durabilidad, golpe pendiente.
     class Estado {
         public int[,] c = new int[2, 7];
         public int turno, pend;
-        public int[] d = new int[2];
+        public int[] d = new int[2], hp = new int[2];
         public Estado Copia() {
             Estado e = new Estado();
             Array.Copy(c, e.c, c.Length);
-            e.turno = turno; e.pend = pend; e.d[0] = d[0]; e.d[1] = d[1];
+            e.turno = turno; e.pend = pend;
+            e.d[0] = d[0]; e.d[1] = d[1]; e.hp[0] = hp[0]; e.hp[1] = hp[1];
             return e;
         }
         public int Total(int p) { int s = 0; for (int f = 1; f <= 6; f++) s += c[p, f]; return s; }
         public long Clave() {
             long k = 0;
             for (int p = 0; p < 2; p++) for (int f = 1; f <= 6; f++) k = k * 8 + c[p, f];
-            return ((k * 2 + turno) * 8 + d[0]) * 8 * 16 + d[1] * 16 + pend;
+            k = k * 2 + turno; k = k * 8 + d[0]; k = k * 8 + d[1];
+            k = k * 16 + pend; k = k * 16 + hp[0]; k = k * 16 + hp[1];
+            return k;
         }
     }
 
-    class Mov { public Estado sig; public double premio; public int actor; public string tipo; }
+    class Mov { public Estado sig; public double premio; public int actor; public int tipo; }
+    const int GOLPE = 0, PARADA = 1, ESQUIVA = 2, DESCARTE = 3, ENCAJA = 4, PASA = 5;
 
     public CombateMutuo(Perfil a, Perfil b, bool gas) { pl[0] = a; pl[1] = b; gasolina = gas; }
 
-    static bool Exito(int dado, int mod, int umbral) {
+    public static bool Exito(int dado, int mod, int umbral) {
         if (dado == 1) return false;
         if (dado == 6) return true;
         return dado + mod >= umbral;
@@ -52,48 +75,46 @@ public class CombateMutuo {
 
     List<Mov> Hijos(Estado s) {
         List<Mov> r = new List<Mov>();
+        if (s.hp[0] == 0 || s.hp[1] == 0) return r;
         int yo = s.turno, op = 1 - yo;
-        if (s.pend > 0) {
-            // Nodo de respuesta: 'yo' es el defensor de un golpe de valor s.pend.
-            for (int w = 1; w <= 6; w++) {
-                if (s.c[yo, w] == 0) continue;
-                if (!(w != 1 && (w == 6 || w + pl[yo].esquiva >= s.pend))) continue;
-                Estado e = s.Copia(); e.c[yo, w]--; e.pend = 0;
-                if (gasolina) {
-                    for (int f = 1; f <= 6; f++) {
-                        if (e.c[yo, f] == 0) continue;
-                        Estado e2 = e.Copia(); e2.c[yo, f]--;
-                        r.Add(new Mov { sig = e2, premio = 0, actor = yo, tipo = "esquiva" });
-                    }
-                } else r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = "esquiva" });
-            }
-            Estado t = s.Copia(); t.pend = 0;
-            int dm = pl[op].dano;
-            if (t.d[yo] > 0) { dm = Math.Max(0, dm - pl[yo].dureza); t.d[yo]--; }
-            r.Add(new Mov { sig = t, premio = (yo == 1 ? dm : -dm), actor = yo, tipo = "encaja" });
-            return r;
-        }
         if (s.Total(yo) == 0) {
             if (s.Total(op) == 0) return r;
             Estado e = s.Copia(); e.turno = op;
-            r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = "pasa" });
+            r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = PASA });
             return r;
         }
         for (int v = 1; v <= 6; v++) {
             if (s.c[yo, v] == 0) continue;
             if (Exito(v, pl[yo].golpe, 6)) {
-                Estado e = s.Copia(); e.c[yo, v]--; e.turno = op; e.pend = v + pl[yo].golpe;
-                r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = "golpe" });
+                Estado t = s.Copia(); t.c[yo, v]--; t.turno = op;
+                int dm = pl[yo].dano;
+                if (t.d[op] > 0) { dm = Math.Max(0, dm - pl[op].reduccion); t.d[op]--; }
+                int real = Math.Min(dm, t.hp[op]);
+                t.hp[op] -= real;
+                double u = real + (t.hp[op] == 0 ? BONO_MUERTE : 0);
+                r.Add(new Mov { sig = t, premio = (op == 1 ? u : -u), actor = yo, tipo = GOLPE });
+            }
+            for (int u = 1; u <= 6; u++) {
+                if (s.c[op, u] == 0) continue;
+                if (!(v != 1 && (v == 6 || v + pl[yo].esquiva >= u + pl[op].golpe))) continue;
+                Estado e = s.Copia(); e.c[yo, v]--; e.c[op, u]--; e.turno = op;
+                if (gasolina) {
+                    for (int f = 1; f <= 6; f++) {
+                        if (e.c[yo, f] == 0) continue;
+                        Estado e2 = e.Copia(); e2.c[yo, f]--;
+                        r.Add(new Mov { sig = e2, premio = 0, actor = yo, tipo = ESQUIVA });
+                    }
+                } else r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = ESQUIVA });
             }
             if (Exito(v, pl[yo].parada, 6)) {
                 for (int u = 1; u <= 6; u++) {
                     if (s.c[op, u] == 0 || (u == 6 && v != 6)) continue;
                     Estado e = s.Copia(); e.c[yo, v]--; e.c[op, u]--; e.turno = op;
-                    r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = "parada" });
+                    r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = PARADA });
                 }
             }
             Estado x = s.Copia(); x.c[yo, v]--; x.turno = op;
-            r.Add(new Mov { sig = x, premio = 0, actor = yo, tipo = "descarte" });
+            r.Add(new Mov { sig = x, premio = 0, actor = yo, tipo = DESCARTE });
         }
         return r;
     }
@@ -112,71 +133,65 @@ public class CombateMutuo {
         memo[k] = best; return best;
     }
 
-    // Sigue la línea óptima y cuenta qué opciones se usan.
-    void Jugar(Estado s, Dictionary<string, int>[] uso, double[] dano) {
+    // Sigue la línea óptima, cuenta qué opciones se usan y devuelve el estado final.
+    Estado Jugar(Estado s, Resultado r) {
         while (true) {
             List<Mov> h = Hijos(s);
-            if (h.Count == 0) return;
+            if (h.Count == 0) return s;
             bool max = h[0].actor == 0;
             Mov mejor = null; double best = max ? double.NegativeInfinity : double.PositiveInfinity;
             foreach (Mov m in h) {
                 double x = m.premio + V(m.sig);
                 if (max ? x > best + 1e-9 : x < best - 1e-9) { best = x; mejor = m; }
             }
-            if (mejor.tipo != "pasa") {
-                int n; uso[mejor.actor].TryGetValue(mejor.tipo, out n);
-                uso[mejor.actor][mejor.tipo] = n + 1;
-            }
-            if (mejor.premio > 0) dano[1] += mejor.premio;
-            if (mejor.premio < 0) dano[0] -= mejor.premio;
+            if (mejor.tipo <= DESCARTE) r.uso[mejor.actor, mejor.tipo]++;
             s = mejor.sig;
         }
     }
 
-    int[] Tirada() {
-        int[] c = new int[7]; int n = 3;
-        for (int i = 0; i < n; i++) { int v = rng.Next(1, 7); c[v]++; if (v == 6 && i < 3) n++; }
+    int[] Tirada(int n) {
+        int[] c = new int[7]; int total = n;
+        for (int i = 0; i < total; i++) {
+            int v = rng.Next(1, 7); c[v]++;
+            if (v == 6 && i < n) total++;
+        }
         return c;
     }
 
     // pl[0] = atacante (jugador activo), pl[1] = defensor que reacciona.
-    public string Ejecutar(int pruebas, bool carga) {
-        int inicia = carga ? 0 : (pl[1].velocidad > pl[0].velocidad ? 1 : 0);
-        Dictionary<string, int>[] uso = { new Dictionary<string, int>(), new Dictionary<string, int>() };
-        double[] dano = new double[2];
-        double sinReaccion = 0;
+    // inicia: -1 = por Velocidad (empate: atacante); 0 = atacante; 1 = defensor.
+    public Resultado Ejecutar(int pruebas, int inicia, int dadosAtacante) {
+        if (inicia < 0) inicia = pl[1].velocidad > pl[0].velocidad ? 1 : 0;
+        Resultado r = new Resultado();
         for (int t = 0; t < pruebas; t++) {
             Estado s = new Estado();
-            int[] a = Tirada(), b = Tirada();
+            int[] a = Tirada(dadosAtacante), b = Tirada(3);
             for (int f = 1; f <= 6; f++) { s.c[0, f] = a[f]; s.c[1, f] = b[f]; }
-            s.turno = inicia; s.d[0] = pl[0].durabilidad; s.d[1] = pl[1].durabilidad;
-            Jugar(s, uso, dano);
+            s.turno = inicia;
+            for (int p = 0; p < 2; p++) { s.d[p] = pl[p].durabilidad; s.hp[p] = pl[p].vida; }
+            Estado fin = Jugar(s, r);
+            for (int p = 0; p < 2; p++) {
+                r.dano[p] += pl[p].vida - fin.hp[p];
+                if (fin.hp[p] == 0) r.muere[p]++;
+            }
             // Referencia: el defensor no reacciona y el atacante tira para golpear.
-            int dur = pl[1].durabilidad;
+            int dur = pl[1].durabilidad, total = 0;
             for (int f = 1; f <= 6; f++)
                 for (int i = 0; i < a[f]; i++)
                     if (Exito(f, pl[0].golpe, 6)) {
                         int dm = pl[0].dano;
-                        if (dur > 0) { dm = Math.Max(0, dm - pl[1].dureza); dur--; }
-                        sinReaccion += dm;
+                        if (dur > 0) { dm = Math.Max(0, dm - pl[1].reduccion); dur--; }
+                        total += dm;
                     }
+            r.danoSinReaccion += Math.Min(total, pl[1].vida);
+            if (total >= pl[1].vida) r.muereSinReaccion++;
         }
-        Func<int, string> fmt = delegate (int p) {
-            int tot = 0; foreach (int v in uso[p].Values) tot += v;
-            string o = "";
-            foreach (string k in new string[] { "golpe", "parada", "esquiva", "encaja", "descarte" }) {
-                int n; uso[p].TryGetValue(k, out n);
-                o += string.Format("{0} {1,3:0}%  ", k, 100.0 * n / Math.Max(1, tot));
-            }
-            return o;
-        };
-        return string.Format(
-            "{0} ataca a {1}{2}{3}\n" +
-            "  Sin reacción: {1} recibe {4:0.00}\n" +
-            "  Combate mutuo: {1} recibe {5:0.00} | {0} recibe {6:0.00} | empieza {7}\n" +
-            "  Uso {0}: {8}\n  Uso {1}: {9}\n",
-            pl[0].nombre, pl[1].nombre, carga ? " (carga)" : "", gasolina ? " [esquiva con gasolina]" : "",
-            sinReaccion / pruebas, dano[1] / pruebas, dano[0] / pruebas, pl[inicia].nombre,
-            fmt(0), fmt(1));
+        r.danoSinReaccion /= pruebas; r.muereSinReaccion /= pruebas;
+        for (int p = 0; p < 2; p++) {
+            r.dano[p] /= pruebas; r.muere[p] /= pruebas;
+            double tot = 0; for (int k = 0; k < 4; k++) tot += r.uso[p, k];
+            for (int k = 0; k < 4; k++) r.uso[p, k] /= Math.Max(1, tot);
+        }
+        return r;
     }
 }

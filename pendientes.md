@@ -13,14 +13,12 @@
 
 ## Combate
 - [ ] ¿Se suma la *Precisión* del arma además del *Atributo*?
-- [ ] Cargar: distancia; ¿incluye el ataque?
+- [ ] Cargar: distancia máxima (¿igual al Movimiento?).
 - [ ] Combate mutuo: ¿se puede pasar el turno guardando dados para esquivar?
 - [ ] Parar frente a esquivar en combate mutuo: equilibrio y la "gasolina".
-      Simulación v1 (`simulaciones/resultados_combate_mutuo_v1.txt`): la
-      gasolina reduce la esquiva a la mitad y no parece necesaria.
-- [ ] Empezar el combate mutuo apenas da ventaja (v1) → Cargar (2 acciones)
-      y Velocidad valen muy poco. ¿Qué más deben dar?
-- [ ] Reaccionar en cuerpo a cuerpo reduce mucho el daño recibido (v1).
+      Simulación v2 (`simulaciones/resultados_combate_mutuo_v2.txt`): la
+      gasolina empeora mucho al Asesino; recomendación: quitarla.
+- [ ] Reaccionar en cuerpo a cuerpo reduce mucho el daño recibido (v1 y v2).
       Riesgo de juego pasivo: nadie ataca a quien aún tiene acciones.
       Probarlo con una simulación de activación completa.
 - [ ] Armas de Daño 2 contra Reducción 2 no hacen nada en un intercambio (v1).
@@ -41,3 +39,9 @@
 
 ## Constructor de bandas
 - [ ] Sistema de puntos.
+
+## Equilibrio (de la simulación v2)
+- [ ] Saltos de vida y daño: 1 punto de Reducción puede cambiar cuántos golpes
+      hacen falta para matar. Tenerlo en cuenta al fijar Vida y Daño.
+- [ ] ¿Quieres que matar de un golpe (Daño ≥ Vida) sea posible?
+- [ ] Armas ligeras (Daño 2) contra armadura: necesitan Críticos o venenos.
