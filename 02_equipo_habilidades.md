@@ -11,6 +11,22 @@ habilidades, gremios…
 - [PENDIENTE: lista de reglas especiales comunes, con nombre y texto
   estándar, para reutilizarlas en todo el juego]
 
+### Ideas de reglas especiales para dar profundidad al combate mutuo
+
+La profundidad del combate debe venir de las reglas especiales: permiten
+romper el ritmo de "un dado por turno" y dan identidad a cada arquetipo.
+
+- **Doble parada** (p. ej. escudos): en tu turno puedes asignar **2 dados a
+  parar a la vez** contra 2 dados del rival.
+- **Doble golpe** (p. ej. armas de daño): en tu turno puedes asignar **2
+  dados a golpear a la vez**.
+- **Esquiva y retirada** (p. ej. armas o habilidades ágiles): al esquivar,
+  puedes terminar el combate a **más de 1"** del rival. Para volver a
+  golpearte tendrá que cargar de nuevo, y tú quedas libre para hacer otras
+  cosas.
+- [PENDIENTE: ¿se pueden usar siempre, una vez por intercambio, o solo bajo
+  una condición (p. ej. con un 6 o con dados iguales)?]
+
 > No confundir con el **Crítico** del arma, que solo se activa al sacar un
 > 6 natural.
 

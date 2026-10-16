@@ -1,0 +1,88 @@
+﻿######## REGLAS ACTUALES (Daño del hacha: 3) ########
+
+== A. Letalidad: % de combates en que alguien muere en el intercambio 1.º / 2.º / 3.º / 4.º o más ==
+Dañino (hacha)        vs Dañino (hacha)        |  97% /   3% /   0% /   0% | media 1,0 intercambios | gana Dañino (hacha): 50%
+Dañino (hacha)        vs Tanque (escudo)       |  16% /  68% /  15% /   1% | media 2,0 intercambios | gana Dañino (hacha): 93%
+Dañino (hacha)        vs Ágil (dagas)          |  97% /   3% /   0% /   0% | media 1,0 intercambios | gana Dañino (hacha): 100%
+Dañino (hacha)        vs Equilibrado (espada)  |  66% /  34% /   0% /   0% | media 1,3 intercambios | gana Dañino (hacha): 88%
+Tanque (escudo)       vs Tanque (escudo)       |   0% /   0% /  22% /  77% | media 4,1 intercambios | gana Tanque (escudo): 50%
+Tanque (escudo)       vs Ágil (dagas)          |   4% /  49% /  40% /   7% | media 2,5 intercambios | gana Tanque (escudo): 96%
+Tanque (escudo)       vs Equilibrado (espada)  |   3% /  58% /  35% /   4% | media 2,4 intercambios | gana Tanque (escudo): 32%
+Ágil (dagas)          vs Ágil (dagas)          |  36% /  64% /   0% /   0% | media 1,6 intercambios | gana Ágil (dagas): 50%
+Ágil (dagas)          vs Equilibrado (espada)  |  31% /  61% /   7% /   0% | media 1,8 intercambios | gana Ágil (dagas): 12%
+Equilibrado (espada)  vs Equilibrado (espada)  |  24% /  66% /  10% /   0% | media 1,9 intercambios | gana Equilibrado (espada): 50%
+
+== B. Elección real (en todos sus combates) ==
+Arquetipo             | decisiones con elección por intercambio | ajustadas (<1 pto) | coste medio de elegir la otra opción
+Dañino (hacha)        |                                     1,3 |                37% |     5,54
+Tanque (escudo)       |                                     1,9 |                63% |     1,75
+Ágil (dagas)          |                                     1,5 |                54% |     3,40
+Equilibrado (espada)  |                                     1,5 |                47% |     3,49
+
+Qué hace cada uno con sus dados (golpear / parar en su turno / esquivar en su turno / parar reaccionando / esquivar reaccionando / no reacciona a un golpe)
+Dañino (hacha)        | G  97% | P   0% | E   3% | P-reac   0% | E-reac   0% | encaja   0%
+Tanque (escudo)       | G  87% | P  10% | E   3% | P-reac   0% | E-reac   0% | encaja   0%
+Ágil (dagas)          | G  79% | P   0% | E  21% | P-reac   0% | E-reac   0% | encaja   0%
+Equilibrado (espada)  | G  81% | P   3% | E  16% | P-reac   0% | E-reac   0% | encaja   0%
+
+== C. Peso de las decisiones: experto contra jugador que siempre golpea (mismo personaje) ==
+Dañino (hacha)        | el experto gana  53% (empezando 83%, sin empezar 23%)
+Tanque (escudo)       | el experto gana  53% (empezando 51%, sin empezar 55%)
+Ágil (dagas)          | el experto gana  62% (empezando 59%, sin empezar 65%)
+Equilibrado (espada)  | el experto gana  56% (empezando 49%, sin empezar 62%)
+
+== D. Peso del equipo: personaje Fue 3, Agi 3, Vida 4 contra los 4 arquetipos (% de victorias) ==
+espada larga (D2 P+2) + sin armadura         | Dañino       12% | Tanque       50% | Ágil         76% | Equilibrado  26% | MEDIA  41%
+espada larga (D2 P+2) + cuero R1 D1          | Dañino       12% | Tanque       68% | Ágil         88% | Equilibrado  50% | MEDIA  54%
+espada larga (D2 P+2) + malla R1 D3 Esq-1    | Dañino       12% | Tanque       89% | Ágil         97% | Equilibrado  67% | MEDIA  66%
+espada y escudo (D1 P+3) + sin armadura      | Dañino        1% | Tanque        6% | Ágil         57% | Equilibrado   7% | MEDIA  18%
+espada y escudo (D1 P+3) + cuero R1 D1       | Dañino        1% | Tanque       13% | Ágil         74% | Equilibrado  19% | MEDIA  27%
+espada y escudo (D1 P+3) + malla R1 D3 Esq-1 | Dañino        1% | Tanque       35% | Ágil         91% | Equilibrado  32% | MEDIA  40%
+hacha grande (D3 P-1) + sin armadura         | Dañino       39% | Tanque       66% | Ágil         97% | Equilibrado  49% | MEDIA  63%
+hacha grande (D3 P-1) + cuero R1 D1          | Dañino       39% | Tanque       80% | Ágil         99% | Equilibrado  74% | MEDIA  73%
+hacha grande (D3 P-1) + malla R1 D3 Esq-1    | Dañino       38% | Tanque       94% | Ágil        100% | Equilibrado  85% | MEDIA  79%
+
+######## DEFENSA REACTIVA (Daño del hacha: 3) ########
+
+== A. Letalidad: % de combates en que alguien muere en el intercambio 1.º / 2.º / 3.º / 4.º o más ==
+Dañino (hacha)        vs Dañino (hacha)        |  82% /  16% /   2% /   0% | media 1,2 intercambios | gana Dañino (hacha): 50%
+Dañino (hacha)        vs Tanque (escudo)       |  10% /  24% /  24% /  43% | media 3,4 intercambios | gana Dañino (hacha): 89%
+Dañino (hacha)        vs Ágil (dagas)          |  45% /  27% /  15% /  13% | media 2,1 intercambios | gana Dañino (hacha): 92%
+Dañino (hacha)        vs Equilibrado (espada)  |  43% /  36% /  15% /   6% | media 1,9 intercambios | gana Dañino (hacha): 80%
+Tanque (escudo)       vs Tanque (escudo)       |   0% /   0% /   1% /  86% | media 9,0 intercambios | gana Tanque (escudo): 43%
+Tanque (escudo)       vs Ágil (dagas)          |   3% /   6% /  10% /  80% | media 5,7 intercambios | gana Tanque (escudo): 58%
+Tanque (escudo)       vs Equilibrado (espada)  |   1% /  10% /  17% /  71% | media 4,7 intercambios | gana Tanque (escudo): 41%
+Ágil (dagas)          vs Ágil (dagas)          |  19% /  32% /  25% /  24% | media 2,7 intercambios | gana Ágil (dagas): 50%
+Ágil (dagas)          vs Equilibrado (espada)  |  11% /  20% /  24% /  45% | media 3,4 intercambios | gana Ágil (dagas): 47%
+Equilibrado (espada)  vs Equilibrado (espada)  |  16% /  32% /  27% /  25% | media 2,8 intercambios | gana Equilibrado (espada): 50%
+
+== B. Elección real (en todos sus combates) ==
+Arquetipo             | decisiones con elección por intercambio | ajustadas (<1 pto) | coste medio de elegir la otra opción
+Dañino (hacha)        |                                     1,8 |                66% |     2,49
+Tanque (escudo)       |                                     2,6 |                75% |     1,05
+Ágil (dagas)          |                                     2,7 |                64% |     2,47
+Equilibrado (espada)  |                                     2,3 |                75% |     1,58
+
+Qué hace cada uno con sus dados (golpear / parar en su turno / esquivar en su turno / parar reaccionando / esquivar reaccionando / no reacciona a un golpe)
+Dañino (hacha)        | G  69% | P   0% | E   0% | P-reac   6% | E-reac   7% | encaja  18%
+Tanque (escudo)       | G  53% | P   4% | E   2% | P-reac  35% | E-reac   0% | encaja   7%
+Ágil (dagas)          | G  56% | P   0% | E   8% | P-reac   6% | E-reac  25% | encaja   5%
+Equilibrado (espada)  | G  52% | P   1% | E   8% | P-reac  25% | E-reac   4% | encaja  11%
+
+== C. Peso de las decisiones: experto contra jugador que siempre golpea (mismo personaje) ==
+Dañino (hacha)        | el experto gana  69% (empezando 85%, sin empezar 53%)
+Tanque (escudo)       | el experto gana  58% (empezando 59%, sin empezar 58%)
+Ágil (dagas)          | el experto gana  69% (empezando 70%, sin empezar 68%)
+Equilibrado (espada)  | el experto gana  63% (empezando 63%, sin empezar 63%)
+
+== D. Peso del equipo: personaje Fue 3, Agi 3, Vida 4 contra los 4 arquetipos (% de victorias) ==
+espada larga (D2 P+2) + sin armadura         | Dañino       20% | Tanque       48% | Ágil         44% | Equilibrado  34% | MEDIA  37%
+espada larga (D2 P+2) + cuero R1 D1          | Dañino       20% | Tanque       59% | Ágil         53% | Equilibrado  50% | MEDIA  45%
+espada larga (D2 P+2) + malla R1 D3 Esq-1    | Dañino       19% | Tanque       75% | Ágil         67% | Equilibrado  62% | MEDIA  56%
+espada y escudo (D1 P+3) + sin armadura      | Dañino        6% | Tanque       17% | Ágil         29% | Equilibrado  18% | MEDIA  17%
+espada y escudo (D1 P+3) + cuero R1 D1       | Dañino        6% | Tanque       25% | Ágil         37% | Equilibrado  30% | MEDIA  24%
+espada y escudo (D1 P+3) + malla R1 D3 Esq-1 | Dañino        6% | Tanque       39% | Ágil         53% | Equilibrado  41% | MEDIA  35%
+hacha grande (D3 P-1) + sin armadura         | Dañino       40% | Tanque       59% | Ágil         62% | Equilibrado  48% | MEDIA  52%
+hacha grande (D3 P-1) + cuero R1 D1          | Dañino       40% | Tanque       69% | Ágil         70% | Equilibrado  65% | MEDIA  61%
+hacha grande (D3 P-1) + malla R1 D3 Esq-1    | Dañino       36% | Tanque       82% | Ágil         81% | Equilibrado  74% | MEDIA  68%
+

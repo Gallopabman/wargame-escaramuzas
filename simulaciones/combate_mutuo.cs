@@ -31,7 +31,14 @@ public class Perfil {
 public class Resultado {
     public double danoSinReaccion, muereSinReaccion;
     public double[] dano = new double[2], muere = new double[2];
-    public double[,] uso = new double[2, 4]; // golpe, parada, esquiva, descarte
+    // golpe, parada, esquiva, descarte, encaja, (pasa), parada reactiva, esquiva reactiva
+    public double[,] uso = new double[2, 8];
+    // Decisiones con elección real, cuántas fueron ajustadas (< 1 punto de
+    // diferencia) y suma de lo que cuesta elegir la otra categoría.
+    public double[] decisiones = new double[2], ajustadas = new double[2], coste = new double[2];
+    // Combate a muerte: gana pl0, gana pl1, nadie muere, media de intercambios,
+    // y en qué intercambio muere alguien: 1.º, 2.º, 3.º, 4.º o más.
+    public double[] duelo = new double[9];
 }
 
 public class CombateMutuo {
@@ -66,7 +73,10 @@ public class CombateMutuo {
     }
 
     class Mov { public Estado sig; public double premio; public int actor; public int tipo; }
-    const int GOLPE = 0, PARADA = 1, ESQUIVA = 2, DESCARTE = 3, ENCAJA = 4, PASA = 5;
+    const int GOLPE = 0, PARADA = 1, ESQUIVA = 2, DESCARTE = 3, ENCAJA = 4, PASA = 5,
+              PARADA_R = 6, ESQUIVA_R = 7;
+    // Jugadores que siempre golpean y nunca se defienden (para comparar).
+    public bool[] ingenuo = new bool[2];
 
     public CombateMutuo(Perfil a, Perfil b, bool gas) { pl[0] = a; pl[1] = b; gasolina = gas; }
 
@@ -90,7 +100,7 @@ public class CombateMutuo {
                 bool esquiva = w != 1 && (w == 6 || w + pl[yo].esquiva >= v + pl[op].golpe);
                 if (!para && !esquiva) continue;
                 Estado e = s.Copia(); e.c[yo, w]--; e.pend = 0;
-                r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = para ? PARADA : ESQUIVA });
+                r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = para ? PARADA_R : ESQUIVA_R });
             }
             Estado t = s.Copia(); t.pend = 0;
             int dm = pl[op].dano;
@@ -160,18 +170,55 @@ public class CombateMutuo {
         memo[k] = best; return best;
     }
 
-    // Sigue la línea óptima, cuenta qué opciones se usan y devuelve el estado final.
+    // Categoría de una opción: 0 = golpear, 1 = defender (parar o esquivar),
+    // 2 = no hacer nada (descartar o encajar el golpe), 3 = pasar.
+    static int Categoria(int tipo) {
+        if (tipo == GOLPE) return 0;
+        if (tipo == PARADA || tipo == ESQUIVA || tipo == PARADA_R || tipo == ESQUIVA_R) return 1;
+        if (tipo == PASA) return 3;
+        return 2;
+    }
+
+    // Jugador que siempre golpea si puede y nunca se defiende.
+    static Mov Ingenuo(List<Mov> h) {
+        Mov golpe = null, descarte = null;
+        foreach (Mov m in h) {
+            if (m.tipo == ENCAJA) return m;
+            if (m.tipo == GOLPE) golpe = m;
+            if (m.tipo == DESCARTE && descarte == null) descarte = m;
+        }
+        if (golpe != null) return golpe;
+        if (descarte != null) return descarte;
+        return h[0];
+    }
+
+    // Sigue la línea óptima (o la ingenua), cuenta qué opciones se usan y
+    // mide las decisiones: hay elección real cuando se puede defender y también
+    // golpear (o encajar, si es una reacción). Devuelve el estado final.
     Estado Jugar(Estado s, Resultado r) {
         while (true) {
             List<Mov> h = Hijos(s);
             if (h.Count == 0) return s;
-            bool max = h[0].actor == 0;
-            Mov mejor = null; double best = max ? double.NegativeInfinity : double.PositiveInfinity;
+            int actor = h[0].actor;
+            double sg = actor == 0 ? 1 : -1;
+            Mov mejor = null; double best = double.NegativeInfinity;
+            double[] porCat = { double.NegativeInfinity, double.NegativeInfinity, double.NegativeInfinity, double.NegativeInfinity };
             foreach (Mov m in h) {
-                double x = m.premio + V(m.sig);
-                if (max ? x > best + 1e-9 : x < best - 1e-9) { best = x; mejor = m; }
+                double x = sg * (m.premio + V(m.sig));
+                int c = Categoria(m.tipo);
+                if (x > porCat[c]) porCat[c] = x;
+                if (x > best + 1e-9) { best = x; mejor = m; }
             }
-            if (mejor.tipo <= DESCARTE) r.uso[mejor.actor, mejor.tipo]++;
+            bool reaccion = s.pend > 0;
+            double otra = reaccion ? porCat[2] : porCat[0];
+            if (!ingenuo[actor] && porCat[1] > double.NegativeInfinity && otra > double.NegativeInfinity) {
+                double dif = Math.Abs(porCat[1] - otra);
+                r.decisiones[actor]++;
+                if (dif < 1.0) r.ajustadas[actor]++;
+                r.coste[actor] += dif;
+            }
+            if (ingenuo[actor]) mejor = Ingenuo(h);
+            if (mejor.tipo != PASA) r.uso[actor, mejor.tipo]++;
             s = mejor.sig;
         }
     }
@@ -189,10 +236,13 @@ public class CombateMutuo {
     // Los intercambios pares los empieza pl[0] y los impares pl[1] (cada uno
     // ataca en su activación y el otro reacciona). Cada intercambio se juega de
     // forma óptima, pero sin planificar los siguientes.
-    // Devuelve: [gana pl0, gana pl1, nadie muere, media de intercambios].
+    // Devuelve Resultado.duelo (ver Resultado); el resto de estadísticas del
+    // combate (uso, decisiones) quedan en ultimoDuelo.
+    public Resultado ultimoDuelo;
     public double[] Duelo(int pruebas, int maxIntercambios) {
-        double[] r = new double[4];
         Resultado basura = new Resultado();
+        double[] r = basura.duelo;
+        ultimoDuelo = basura;
         for (int t = 0; t < pruebas; t++) {
             int[] hp = { pl[0].vida, pl[1].vida }, d = { pl[0].durabilidad, pl[1].durabilidad };
             int k = 0;
@@ -208,8 +258,9 @@ public class CombateMutuo {
             }
             if (hp[1] == 0) r[0]++; else if (hp[0] == 0) r[1]++; else r[2]++;
             r[3] += k;
+            if (hp[0] == 0 || hp[1] == 0) r[3 + Math.Min(k, 4)]++;
         }
-        for (int i = 0; i < 4; i++) r[i] /= pruebas;
+        for (int i = 0; i < 9; i++) r[i] /= pruebas;
         return r;
     }
 
@@ -244,8 +295,8 @@ public class CombateMutuo {
         r.danoSinReaccion /= pruebas; r.muereSinReaccion /= pruebas;
         for (int p = 0; p < 2; p++) {
             r.dano[p] /= pruebas; r.muere[p] /= pruebas;
-            double tot = 0; for (int k = 0; k < 4; k++) tot += r.uso[p, k];
-            for (int k = 0; k < 4; k++) r.uso[p, k] /= Math.Max(1, tot);
+            double tot = 0; for (int k = 0; k < 8; k++) if (k != PASA) tot += r.uso[p, k];
+            for (int k = 0; k < 8; k++) r.uso[p, k] /= Math.Max(1, tot);
         }
         return r;
     }

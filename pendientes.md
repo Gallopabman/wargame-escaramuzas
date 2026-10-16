@@ -22,6 +22,11 @@
 - [ ] Armadura: ¿un impacto reducido a 0 gasta Durabilidad? ¿Se repara?
 - [ ] Qué ocurre con Vitalidad 0.
 
+- [ ] **Salir de un combate:** "no te puedes ir de un combate así como así".
+      ¿Qué cuesta desengancharse? ¿El rival puede golpearte al irte?
+- [ ] Probar con simulaciones las reglas especiales Doble parada, Doble golpe
+      y Esquiva y retirada (ver `02_equipo_habilidades.md`).
+
 ## Ronda
 - [ ] Quién empieza, fin de ronda, fin de partida.
 - [ ] Activación alternada con bandas desiguales (4 contra 8 miniaturas).
