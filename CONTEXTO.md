@@ -77,7 +77,7 @@ prueba inventados (Soldado, Asesino, Bruto, Caballero). Ver
    armadura ligera sin penalizador que con armadura pesada.
 4. Parar lo usa sobre todo quien tiene Parada alta (Caballero); esquivar,
    quien tiene Agilidad alta (Asesino). Buena diferenciación.
-5. La "gasolina" empeora mucho al Asesino. Recomendación: no usarla.
+5. La "gasolina" para esquivar queda descartada.
 6. Reaccionar sigue siendo muy rentable → riesgo de juego pasivo.
 7. El Asesino con dagas (Daño 2) apenas hace daño a miniaturas con
    armadura: necesita Críticos o venenos.

@@ -76,3 +76,8 @@ Formato: fecha · decisión · motivo.
   penalizan. *Motivo:* representar la dificultad de moverse con armadura.
 - **Cargar:** 2 acciones; mueve hasta quedar a 1" del objetivo e inicia el
   combate mutuo.
+- **Se descarta la "gasolina" para esquivar.** *Motivo:* la simulación v2
+  muestra que empeora mucho a los personajes ágiles.
+- **La Parada depende del arma:** las armas más dañinas tienen Parada 0 o
+  negativa (p. ej. un hacha grande, Parada −1) porque no están pensadas para
+  defenderse.

@@ -1,0 +1,61 @@
+﻿Arma/armadura        | Rival           | ATACA: mata  muere | DEFIENDE: mata  muere | usa Parada  Esquiva
+Hacha sin armadura   | Soldado         |        73%    13% |          32%    54% |         0%       5%
+Hacha sin armadura   | Soldado R1D3    |        18%    34% |          15%    54% |         0%      14%
+Hacha sin armadura   | Asesino         |        71%     9% |          35%    12% |         0%       3%
+Hacha sin armadura   | Bruto R1D1      |        12%    55% |          10%    79% |         0%      14%
+Hacha sin armadura   | Caballero R2D3  |         0%    55% |           0%    79% |         0%      15%
+
+Hacha R1 D1          | Soldado         |        73%     4% |          47%     7% |         0%       5%
+Hacha R1 D1          | Soldado R1D3    |        24%    10% |          19%    17% |         0%      13%
+Hacha R1 D1          | Asesino         |        71%     2% |          35%     3% |         0%       2%
+Hacha R1 D1          | Bruto R1D1      |        12%    55% |          10%    79% |         0%      14%
+Hacha R1 D1          | Caballero R2D3  |         0%    22% |           0%    32% |         0%      22%
+
+Hacha R1 D2          | Soldado         |        73%     4% |          47%     7% |         0%       5%
+Hacha R1 D2          | Soldado R1D3    |        24%    10% |          19%    17% |         0%       8%
+Hacha R1 D2          | Asesino         |        71%     2% |          35%     3% |         0%       2%
+Hacha R1 D2          | Bruto R1D1      |        12%    55% |          10%    79% |         0%      14%
+Hacha R1 D2          | Caballero R2D3  |         0%    22% |           0%    32% |         0%      22%
+
+Hacha R2 D1          | Soldado         |        73%     4% |          47%     7% |         0%       5%
+Hacha R2 D1          | Soldado R1D3    |        24%    10% |          19%    17% |         0%      12%
+Hacha R2 D1          | Asesino         |        71%     2% |          35%     3% |         0%       2%
+Hacha R2 D1          | Bruto R1D1      |        12%    55% |          10%    79% |         0%      14%
+Hacha R2 D1          | Caballero R2D3  |         0%    22% |           0%    32% |         0%      22%
+
+Hacha R2 D2          | Soldado         |        73%     1% |          47%     1% |         0%       4%
+Hacha R2 D2          | Soldado R1D3    |        24%     2% |          20%     3% |         0%       7%
+Hacha R2 D2          | Asesino         |        71%     0% |          35%     0% |         0%       1%
+Hacha R2 D2          | Bruto R1D1      |        12%    55% |          10%    79% |         0%      14%
+Hacha R2 D2          | Caballero R2D3  |         0%     5% |           0%     9% |         0%      15%
+
+Espada sin armadura  | Soldado         |        17%    32% |          13%    51% |         2%      12%
+Espada sin armadura  | Soldado R1D3    |         1%    32% |           0%    51% |         3%      15%
+Espada sin armadura  | Asesino         |        15%    18% |           7%    24% |         8%       5%
+Espada sin armadura  | Bruto R1D1      |         0%    47% |           0%    73% |         7%      12%
+Espada sin armadura  | Caballero R2D3  |         0%    47% |           0%    73% |         7%      12%
+
+Espada R1 D1         | Soldado         |        24%     9% |          16%    15% |         2%      12%
+Espada R1 D1         | Soldado R1D3    |         1%     9% |           0%    15% |         4%      19%
+Espada R1 D1         | Asesino         |        15%     4% |           8%     5% |         3%       2%
+Espada R1 D1         | Bruto R1D1      |         0%    47% |           0%    73% |         7%      12%
+Espada R1 D1         | Caballero R2D3  |         0%    16% |           0%    24% |        10%      18%
+
+Espada R1 D2         | Soldado         |        24%     9% |          16%    15% |         2%       7%
+Espada R1 D2         | Soldado R1D3    |         1%     9% |           0%    15% |         4%      17%
+Espada R1 D2         | Asesino         |        15%     4% |           8%     5% |         3%       2%
+Espada R1 D2         | Bruto R1D1      |         0%    47% |           0%    73% |         7%      12%
+Espada R1 D2         | Caballero R2D3  |         0%    16% |           0%    24% |        10%      16%
+
+Espada R2 D1         | Soldado         |        24%     9% |          16%    15% |         2%      12%
+Espada R2 D1         | Soldado R1D3    |         1%     9% |           0%    15% |         4%      18%
+Espada R2 D1         | Asesino         |        15%     4% |           8%     5% |         2%       2%
+Espada R2 D1         | Bruto R1D1      |         0%    47% |           0%    73% |         7%      12%
+Espada R2 D1         | Caballero R2D3  |         0%    16% |           0%    24% |        10%      18%
+
+Espada R2 D2         | Soldado         |        24%     2% |          16%     3% |         1%       6%
+Espada R2 D2         | Soldado R1D3    |         1%     2% |           0%     4% |         2%      10%
+Espada R2 D2         | Asesino         |        15%     0% |           8%     1% |         1%       0%
+Espada R2 D2         | Bruto R1D1      |         0%    47% |           0%    73% |         7%      12%
+Espada R2 D2         | Caballero R2D3  |         0%     3% |           0%     6% |        11%      18%
+

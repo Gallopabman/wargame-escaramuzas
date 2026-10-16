@@ -111,8 +111,6 @@ jugador decide en el momento qué hace con cada uno.
      armadura): 3 + 5 = 8 → esquivas.
      - Las armaduras suelen dar Esquiva **negativa**: cuanto más pesada y
        robusta, más cuesta moverse.
-     - [A PROBAR] Puede que esquivar cueste un **dado extra como
-       "gasolina"**.
 4. **Un golpe declarado impacta directamente.** La defensa consiste en
    eliminar los dados del rival (parando o esquivando) antes de que los use.
 5. Ejemplo de reparto: con +2 al golpe y +4 a la esquiva, un 2 no sirve

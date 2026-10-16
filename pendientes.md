@@ -15,9 +15,6 @@
 - [ ] ¿Se suma la *Precisión* del arma además del *Atributo*?
 - [ ] Cargar: distancia máxima (¿igual al Movimiento?).
 - [ ] Combate mutuo: ¿se puede pasar el turno guardando dados para esquivar?
-- [ ] Parar frente a esquivar en combate mutuo: equilibrio y la "gasolina".
-      Simulación v2 (`simulaciones/resultados_combate_mutuo_v2.txt`): la
-      gasolina empeora mucho al Asesino; recomendación: quitarla.
 - [ ] Reaccionar en cuerpo a cuerpo reduce mucho el daño recibido (v1 y v2).
       Riesgo de juego pasivo: nadie ataca a quien aún tiene acciones.
       Probarlo con una simulación de activación completa.
@@ -45,3 +42,9 @@
       hacen falta para matar. Tenerlo en cuenta al fijar Vida y Daño.
 - [ ] ¿Quieres que matar de un golpe (Daño ≥ Vida) sea posible?
 - [ ] Armas ligeras (Daño 2) contra armadura: necesitan Críticos o venenos.
+- [ ] Simulación del hacha (`simulaciones/resultados_hacha.txt`): +1 de Daño
+      vale mucho más que +3 de Parada. Parar casi no se usa. ¿Cómo hacer que
+      parar valga la pena?
+- [ ] R1 D1, R1 D2 y R2 D1 dan resultados idénticos en un combate porque no
+      cambian los golpes necesarios para matar. ¿Subir la escala de Vida
+      para que cada punto cuente?
