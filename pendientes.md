@@ -19,7 +19,8 @@
       sobrantes?
 
 ## Combate cuerpo a cuerpo (detalles menores)
-- [ ] Salir de un combate: ¿cuesta una acción intentarlo? ¿Cuánto te mueves?
+- [ ] Salir de un combate: si fallas la Agilidad, ¿te quedas trabado o te mueves
+      tras el combate gratis? ¿Te puede atacar cada enemigo trabado?
 - [ ] ¿Se puede pasar el turno guardando dados?
 - [ ] ¿Matar de un solo golpe (Daño ≥ Vida) debe ser posible?
 - [ ] ¿Las armaduras inutilizadas se reparan tras la partida?

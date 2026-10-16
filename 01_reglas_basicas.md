@@ -133,11 +133,15 @@ en el momento qué hace con cada uno.
 - El **máximo son 2 ayudas**: un tercer aliado trabado ya no da más bonus.
 
 ### 5.6 Salir de un combate
-- Para irte de un combate tira **Agilidad difícil (8)**: cada dado +
+- Salir de un combate **no cuesta nada extra**: se hace con una acción de
+  **Moverse** normal, tirando antes **Agilidad difícil (8)**: cada dado +
   Agilidad; basta **un éxito**.
 - Si lo superas, te vas sin más.
-- Si fallas, el enemigo puede **declarar un combate gratis** contra ti.
-- [PENDIENTE: ¿cuesta una acción intentarlo? ¿Cuánto te mueves al irte?]
+- Si fallas, el enemigo trabado contigo puede, si quiere, **iniciar un
+  combate gratis** contra ti.
+- Si te has salido de un combate, **no puedes cargar ese turno**.
+- [PENDIENTE: si fallas, ¿te quedas trabado o te mueves igualmente tras el
+  combate gratis? Si hay varios enemigos trabados, ¿puede atacarte cada uno?]
 
 ## 6. Daño
 

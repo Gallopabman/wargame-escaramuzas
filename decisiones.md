@@ -131,3 +131,7 @@ Formato: fecha · decisión · motivo.
 - **Ayudar** en un combate es estar trabado con el defensor. Cada personaje
   trabado, además del que combate, es una ayuda. **Máximo 2 ayudas.**
 - **Vida 0:** el personaje queda fuera de combate y se retira de la mesa.
+- **Salir de un combate** no cuesta nada extra: se hace con una acción de
+  Moverse normal, tirando Agilidad difícil (8). Si se falla, el enemigo
+  trabado puede iniciar un combate gratis. Quien se sale de un combate no
+  puede cargar ese turno.
