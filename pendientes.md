@@ -58,3 +58,10 @@
 - [ ] Espada de Daño 1 con escudo contra hacha con cuero R1 D1
       (`simulaciones/resultados_espada_escudo.txt`): el hacha gana el 90–99%
       de los combates a muerte. Daño 1 contra Reducción 1 no funciona.
+- [ ] **Propuesta: defensa reactiva.** Al declarar el rival un golpe, puedes
+      gastar al momento un dado para pararlo o esquivarlo, sin perder tu
+      turno. Con ella aparecen los arquetipos (el tanque para un 47%, el ágil
+      esquiva un 42%) y los combates duran más
+      (`simulaciones/resultados_arquetipos_*.txt`).
+- [ ] Con Vida de 2 a 5, Daño 3 es demasiado letal: ¿Daño 1–2 normal y 3
+      como extremo?

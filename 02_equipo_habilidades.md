@@ -21,9 +21,10 @@ Límites para que todo el contenido del juego sea coherente.
 | Valor | Normal | Extremo | Notas |
 |---|---|---|---|
 | Atributos (Fuerza, Agilidad, Magia, Mente) | 1 a 5 | 6+ | Por encima de 5 solo con objetos mágicos, habilidades o similares. |
-| Parada (armas y escudos) | −1 a +2 | −2 (muy malas parando) / +3 (excepcionales) | Las armas más dañinas tienen Parada 0 o negativa. |
+| Parada (armas y escudos) | −1 a +2 | −2 (muy malas parando) / +3 (excepcionales y escudos) | Se usa la de **un** arma o escudo equipado; no se suman. Las armas más dañinas tienen Parada 0 o negativa. |
 | Precisión | [PROPUESTA: −1 a +1] | [PROPUESTA: ±2] | |
 | Esquiva (armaduras) | [PROPUESTA: 0 a −2] | [PROPUESTA: −3] | Cuanto más pesada la armadura, más penaliza. |
+| Vida | [A PROBAR] 2 a 5 | | 2 para los muy poco resistentes; 5 para los más resistentes. |
 | Daño | [PROPUESTA: 1 a 4] | [PROPUESTA: 5] | Depende de la escala de Vida (pendiente). |
 | Reducción | [PROPUESTA: 0 a 2] | [PROPUESTA: 3] | |
 | Durabilidad | [PROPUESTA: 1 a 3] | [PROPUESTA: 4+] | |

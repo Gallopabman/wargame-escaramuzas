@@ -85,3 +85,10 @@ Formato: fecha · decisión · motivo.
   y +3 para las excepcionales.
 - **Atributos de 1 a 5 de forma natural**; por encima de 5 solo con objetos
   mágicos, habilidades o similares.
+- **La Parada no se suma:** se usa la de **un** arma o escudo equipado (p.
+  ej. la del escudo).
+- **Los escudos tienen Parada +3.**
+- **[A PROBAR] Vida de 2 (muy poco resistentes) a 5 (los más resistentes).**
+- **Arquetipos claros en el combate:** el dañino golpea, el tanque para, el
+  ágil esquiva y el equilibrado hace las tres cosas según convenga. El
+  dañino puede ganar al tanque, pero tras muchos intercambios.

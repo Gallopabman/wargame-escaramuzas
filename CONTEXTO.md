@@ -88,6 +88,8 @@ prueba inventados (Soldado, Asesino, Bruto, Caballero). Ver
 2. **Simulación de activaciones completas** (2 acciones, decidir cuándo
    reaccionar) para comprobar si aparece el juego pasivo.
 3. Definir **Críticos** y reglas especiales (venenos).
+4. Decidir la **defensa reactiva** y la escala de Vida (2–5) y Daño
+   (ver `simulaciones/resultados_arquetipos_*.txt`).
 4. Resolver el resto de `pendientes.md`: disparo, Vitalidad 0, ronda, la
    Amenaza, gremios.
 

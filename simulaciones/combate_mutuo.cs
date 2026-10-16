@@ -38,6 +38,9 @@ public class CombateMutuo {
     const double BONO_MUERTE = 10;
     Perfil[] pl = new Perfil[2];
     bool gasolina;
+    // Variante a probar: al declarar un golpe, el defensor puede gastar al
+    // momento un dado para pararlo o esquivarlo, sin perder su turno.
+    public bool reactiva;
     Dictionary<long, double> memo = new Dictionary<long, double>();
     Random rng = new Random(12345);
 
@@ -77,6 +80,27 @@ public class CombateMutuo {
         List<Mov> r = new List<Mov>();
         if (s.hp[0] == 0 || s.hp[1] == 0) return r;
         int yo = s.turno, op = 1 - yo;
+        if (s.pend > 0) {
+            // Defensa reactiva: 'yo' recibe un golpe hecho con un dado de valor
+            // s.pend por 'op' y puede pararlo o esquivarlo con un dado.
+            int v = s.pend;
+            for (int w = 1; w <= 6; w++) {
+                if (s.c[yo, w] == 0) continue;
+                bool para = Exito(w, pl[yo].parada, 6) && (v != 6 || w == 6);
+                bool esquiva = w != 1 && (w == 6 || w + pl[yo].esquiva >= v + pl[op].golpe);
+                if (!para && !esquiva) continue;
+                Estado e = s.Copia(); e.c[yo, w]--; e.pend = 0;
+                r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = para ? PARADA : ESQUIVA });
+            }
+            Estado t = s.Copia(); t.pend = 0;
+            int dm = pl[op].dano;
+            if (t.d[yo] > 0) { dm = Math.Max(0, dm - pl[yo].reduccion); t.d[yo]--; }
+            int real = Math.Min(dm, t.hp[yo]);
+            t.hp[yo] -= real;
+            double u = real + (t.hp[yo] == 0 ? BONO_MUERTE : 0);
+            r.Add(new Mov { sig = t, premio = (yo == 1 ? u : -u), actor = yo, tipo = ENCAJA });
+            return r;
+        }
         if (s.Total(yo) == 0) {
             if (s.Total(op) == 0) return r;
             Estado e = s.Copia(); e.turno = op;
@@ -85,7 +109,10 @@ public class CombateMutuo {
         }
         for (int v = 1; v <= 6; v++) {
             if (s.c[yo, v] == 0) continue;
-            if (Exito(v, pl[yo].golpe, 6)) {
+            if (Exito(v, pl[yo].golpe, 6) && reactiva && s.Total(op) > 0) {
+                Estado e = s.Copia(); e.c[yo, v]--; e.turno = op; e.pend = v;
+                r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = GOLPE });
+            } else if (Exito(v, pl[yo].golpe, 6)) {
                 Estado t = s.Copia(); t.c[yo, v]--; t.turno = op;
                 int dm = pl[yo].dano;
                 if (t.d[op] > 0) { dm = Math.Max(0, dm - pl[op].reduccion); t.d[op]--; }

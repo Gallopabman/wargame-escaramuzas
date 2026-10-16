@@ -1,0 +1,15 @@
+﻿== Defensa reactiva: False | Daño del hacha: 3 ==
+== Combate a muerte (hasta 12 intercambios; media de que empiece cada uno) ==
+Fila contra columna: % de victorias de la fila.  [x.x] = intercambios de media
+                       | Dañino (hacha)       | Tanque (escudo)      | Ágil (dagas)         | Equilibrado (espada)
+Dañino (hacha)         |   50% [ 1,0]   0%= |   93% [ 2,0]   0%= |  100% [ 1,0]   0%= |   88% [ 1,3]   0%=
+Tanque (escudo)        |    7% [ 2,0]   0%= |   50% [ 4,1]   0%= |   95% [ 2,5]   0%= |   32% [ 2,4]   0%=
+Ágil (dagas)           |    0% [ 1,0]   0%= |    5% [ 2,5]   0%= |   50% [ 1,6]   0%= |   12% [ 1,8]   0%=
+Equilibrado (espada)   |   12% [ 1,3]   0%= |   68% [ 2,4]   0%= |   88% [ 1,8]   0%= |   50% [ 1,9]   0%=
+  (x%= es el % de combates en que nadie muere en 12 intercambios)
+
+== Qué hace cada arquetipo con sus dados útiles (media contra todos los rivales) ==
+Dañino (hacha)         | Golpear  97% | Parar   0% | Esquivar   3%
+Tanque (escudo)        | Golpear  83% | Parar  13% | Esquivar   4%
+Ágil (dagas)           | Golpear  78% | Parar   0% | Esquivar  22%
+Equilibrado (espada)   | Golpear  82% | Parar   4% | Esquivar  15%
