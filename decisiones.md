@@ -107,3 +107,12 @@ Formato: fecha · decisión · motivo.
   el enemigo puede declarar un combate gratis.
 - **Escala provisional:** Vida de 2 a 5 y Daño de 1 a 3. Se estudia también
   Vida de 4 a 10 y Daño de 2 a 5.
+- **Apoyo de aliados (sustituye al +1 dado por aliado):** el primer aliado que
+  ayuda da un **dado de suerte**: se tira un dado más y, después de la
+  tirada, se descarta uno (como la ventaja de D&D). Con **dos apoyos**, el
+  dado extra se suma de verdad (4 dados) y deja de ser de suerte.
+- **Dos tanques que tardan muchos intercambios en vencerse está bien.**
+  *Motivo:* da tiempo a que lleguen aliados, se lancen hechizos o se controle
+  una zona; salir de esa situación debe ser un problema para los jugadores.
+- **La malla domina sobre las demás armaduras:** se aceptará por ahora y se
+  equilibrará más adelante (más penalización o coste en puntos).

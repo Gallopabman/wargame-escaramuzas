@@ -1,0 +1,54 @@
+﻿######## EL ÁGIL CON DISTINTO EQUIPO (Fue 2, Agi 5) ########
+Nota: 'estoque' es un arma inventada que golpea con Agilidad, para separar el efecto del Atributo del de la daga.
+
+== Vida 3 ==
+dagas (Agi, D1, Doble golpe) + sin arm.      | Dañino       11% | Tanque       13% | Ágil         50% | Equilibrado  48% | MEDIA  31%
+dagas (Agi, D1, Doble golpe) + cuero R1 D1   | Dañino       25% | Tanque       25% | Ágil         66% | Equilibrado  48% | MEDIA  41%
+dagas (Agi, D2, Doble golpe) + sin arm.      | Dañino       31% | Tanque       36% | Ágil         68% | Equilibrado  68% | MEDIA  51%
+dagas (Agi, D2, Doble golpe) + cuero R1 D1   | Dañino       57% | Tanque       54% | Ágil         81% | Equilibrado  67% | MEDIA  65%
+estoque (Agi, D2 P+2) + sin arm.             | Dañino       24% | Tanque       35% | Ágil         66% | Equilibrado  66% | MEDIA  48%
+estoque (Agi, D2 P+2) + cuero R1 D1          | Dañino       46% | Tanque       53% | Ágil         80% | Equilibrado  65% | MEDIA  61%
+espada larga (Fue, D2 P+2) + sin arm.        | Dañino       14% | Tanque       23% | Ágil         23% | Equilibrado  41% | MEDIA  25%
+espada larga (Fue, D2 P+2) + cuero R1 D1     | Dañino       27% | Tanque       36% | Ágil         30% | Equilibrado  41% | MEDIA  34%
+hacha grande (Fue, D3 P-1, Rompe) + sin arm. | Dañino       28% | Tanque       52% | Ágil         42% | Equilibrado  56% | MEDIA  44%
+hacha grande (Fue, D3 P-1, Rompe) + cuero R1 D1 | Dañino       46% | Tanque       66% | Ágil         50% | Equilibrado  56% | MEDIA  55%
+espada y escudo (Fue, D1 P+3, Doble par.) + sin arm. | Dañino       17% | Tanque       14% | Ágil         47% | Equilibrado  42% | MEDIA  30%
+espada y escudo (Fue, D1 P+3, Doble par.) + cuero R1 D1 | Dañino       31% | Tanque       21% | Ágil         56% | Equilibrado  42% | MEDIA  38%
+estoque y escudo (Agi, D1 P+3, Doble par.) + sin arm. | Dañino       36% | Tanque       32% | Ágil         78% | Equilibrado  67% | MEDIA  53%
+estoque y escudo (Agi, D1 P+3, Doble par.) + cuero R1 D1 | Dañino       58% | Tanque       47% | Ágil         86% | Equilibrado  67% | MEDIA  65%
+
+== Vida 4 ==
+dagas (Agi, D1, Doble golpe) + sin arm.      | Dañino       25% | Tanque       20% | Ágil         65% | Equilibrado  48% | MEDIA  40%
+dagas (Agi, D1, Doble golpe) + cuero R1 D1   | Dañino       25% | Tanque       32% | Ágil         77% | Equilibrado  66% | MEDIA  50%
+dagas (Agi, D2, Doble golpe) + sin arm.      | Dañino       57% | Tanque       47% | Ágil         81% | Equilibrado  68% | MEDIA  63%
+dagas (Agi, D2, Doble golpe) + cuero R1 D1   | Dañino       57% | Tanque       63% | Ágil         89% | Equilibrado  82% | MEDIA  73%
+estoque (Agi, D2 P+2) + sin arm.             | Dañino       46% | Tanque       47% | Ágil         80% | Equilibrado  66% | MEDIA  60%
+estoque (Agi, D2 P+2) + cuero R1 D1          | Dañino       46% | Tanque       62% | Ágil         88% | Equilibrado  81% | MEDIA  69%
+espada larga (Fue, D2 P+2) + sin arm.        | Dañino       27% | Tanque       31% | Ágil         30% | Equilibrado  41% | MEDIA  32%
+espada larga (Fue, D2 P+2) + cuero R1 D1     | Dañino       27% | Tanque       44% | Ágil         37% | Equilibrado  56% | MEDIA  41%
+hacha grande (Fue, D3 P-1, Rompe) + sin arm. | Dañino       46% | Tanque       63% | Ágil         50% | Equilibrado  56% | MEDIA  54%
+hacha grande (Fue, D3 P-1, Rompe) + cuero R1 D1 | Dañino       46% | Tanque       75% | Ágil         58% | Equilibrado  70% | MEDIA  62%
+espada y escudo (Fue, D1 P+3, Doble par.) + sin arm. | Dañino       31% | Tanque       22% | Ágil         59% | Equilibrado  42% | MEDIA  39%
+espada y escudo (Fue, D1 P+3, Doble par.) + cuero R1 D1 | Dañino       31% | Tanque       28% | Ágil         67% | Equilibrado  57% | MEDIA  46%
+estoque y escudo (Agi, D1 P+3, Doble par.) + sin arm. | Dañino       58% | Tanque       46% | Ágil         89% | Equilibrado  67% | MEDIA  65%
+estoque y escudo (Agi, D1 P+3, Doble par.) + cuero R1 D1 | Dañino       58% | Tanque       59% | Ágil         93% | Equilibrado  82% | MEDIA  73%
+
+== Apoyo de aliados: 1 apoyo = dado de suerte; 2 apoyos = 4 dados ==
+Equilibrado (espada)  sin apoyo           vs Equilibrado (espada)  | gana Equilibrado (espada):  50%
+Equilibrado (espada)  sin apoyo           vs Dañino (hacha)        | gana Equilibrado (espada):  21%
+Tanque (escudo)       sin apoyo           vs Equilibrado (espada)  | gana Tanque (escudo):  66%
+Tanque (escudo)       sin apoyo           vs Dañino (hacha)        | gana Tanque (escudo):  26%
+Ágil (dagas)          sin apoyo           vs Equilibrado (espada)  | gana Ágil (dagas):  48%
+Ágil (dagas)          sin apoyo           vs Dañino (hacha)        | gana Ágil (dagas):  11%
+Equilibrado (espada)  1 apoyo (suerte)    vs Equilibrado (espada)  | gana Equilibrado (espada):  75%
+Equilibrado (espada)  1 apoyo (suerte)    vs Dañino (hacha)        | gana Equilibrado (espada):  42%
+Tanque (escudo)       1 apoyo (suerte)    vs Equilibrado (espada)  | gana Tanque (escudo):  90%
+Tanque (escudo)       1 apoyo (suerte)    vs Dañino (hacha)        | gana Tanque (escudo):  54%
+Ágil (dagas)          1 apoyo (suerte)    vs Equilibrado (espada)  | gana Ágil (dagas):  75%
+Ágil (dagas)          1 apoyo (suerte)    vs Dañino (hacha)        | gana Ágil (dagas):  28%
+Equilibrado (espada)  2 apoyos (4 dados)  vs Equilibrado (espada)  | gana Equilibrado (espada):  78%
+Equilibrado (espada)  2 apoyos (4 dados)  vs Dañino (hacha)        | gana Equilibrado (espada):  47%
+Tanque (escudo)       2 apoyos (4 dados)  vs Equilibrado (espada)  | gana Tanque (escudo):  91%
+Tanque (escudo)       2 apoyos (4 dados)  vs Dañino (hacha)        | gana Tanque (escudo):  59%
+Ágil (dagas)          2 apoyos (4 dados)  vs Equilibrado (espada)  | gana Ágil (dagas):  84%
+Ágil (dagas)          2 apoyos (4 dados)  vs Dañino (hacha)        | gana Ágil (dagas):  42%

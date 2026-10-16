@@ -76,3 +76,8 @@
       (`simulaciones/resultados_arquetipos_*.txt`).
 - [ ] Con Vida de 2 a 5, Daño 3 es demasiado letal: ¿Daño 1–2 normal y 3
       como extremo?
+- [ ] Prueba del Ágil (`simulaciones/resultados_agil.txt`): el problema no es
+      el arquetipo, sino las dagas con Daño 1 (y la Vida 3). Con armas de
+      Agilidad y Daño 2, el Ágil gana el 48–73% de media.
+- [ ] El dado de suerte (1 apoyo) es casi tan fuerte como un dado entero:
+      75% frente a 78%. ¿Debe ser más débil?

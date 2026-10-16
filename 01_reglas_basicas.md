@@ -122,8 +122,10 @@ en el momento qué hace con cada uno.
 - [PENDIENTE: distancia máxima de carga; ¿es igual al Movimiento?]
 
 ### 5.5 Varios contra uno
-- Cada aliado que esté **ayudando** en el combate da **+1 dado** al
-  combatiente que tiene la superioridad numérica.
+- El **primer aliado** que ayuda da un **dado de suerte** al combatiente con
+  superioridad numérica: tira un dado más y, tras la tirada, descarta uno.
+- Con **dos aliados** ayudando, el dado extra se suma (4 dados en total).
+- [PENDIENTE: ¿y con tres o más aliados?]
 - [PENDIENTE: qué cuenta como "ayudar" (¿estar a 1" del enemigo?)]
 
 ### 5.6 Salir de un combate
