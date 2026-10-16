@@ -119,15 +119,18 @@ en el momento qué hace con cada uno.
 - Cuesta **2 acciones**.
 - La miniatura se mueve hasta quedar a **1"** del objetivo e **inicia el
   combate** (no hay que pagar el ataque aparte).
-- [PENDIENTE: distancia máxima de carga; ¿es igual al Movimiento?]
+- **Distancia de carga:** el Movimiento del personaje **+ 1D3 + 1** pulgadas.
+  El 1D3 se tira con un D6: 1–2 = 1, 3–4 = 2, 5–6 = 3.
 
 ### 5.5 Varios contra uno
 - Con **un aliado** ayudando, el combatiente con superioridad numérica puede
   **repetir un dado** después de tirar.
 - Con **dos aliados**, puede **repetir un dado y además tira un dado extra**
   (4 dados en total).
-- [PENDIENTE: ¿y con tres o más aliados?]
-- [PENDIENTE: qué cuenta como "ayudar" (¿estar a 1" del enemigo?)]
+- **Ayudar** es estar **trabado con el defensor**. Cada personaje trabado con
+  el defensor, además del que combate, cuenta como una ayuda. El que está
+  combatiendo no cuenta como ayuda.
+- El **máximo son 2 ayudas**: un tercer aliado trabado ya no da más bonus.
 
 ### 5.6 Salir de un combate
 - Para irte de un combate tira **Agilidad difícil (8)**: cada dado +
@@ -144,7 +147,7 @@ en el momento qué hace con cada uno.
   el impacto ha quedado en 0. Con Durabilidad 0, la armadura queda
   inutilizada.
 - El daño restante se descuenta de la **Vitalidad**.
-- [PENDIENTE: qué pasa al llegar a Vitalidad 0]
+- **Vida 0:** el personaje queda **fuera de combate** y se retira de la mesa.
 
 ## 7. Moral
 [PENDIENTE]

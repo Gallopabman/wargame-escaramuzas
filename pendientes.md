@@ -19,14 +19,12 @@
       sobrantes?
 
 ## Combate cuerpo a cuerpo (detalles menores)
-- [ ] Cargar: distancia máxima (¿igual al Movimiento?).
-- [ ] Varios contra uno: ¿qué cuenta como "ayudar"? ¿Qué pasa con tres o más
-      aliados?
 - [ ] Salir de un combate: ¿cuesta una acción intentarlo? ¿Cuánto te mueves?
 - [ ] ¿Se puede pasar el turno guardando dados?
 - [ ] ¿Matar de un solo golpe (Daño ≥ Vida) debe ser posible?
-- [ ] Qué ocurre al llegar a Vida 0 (fuera de combate, heridas de campaña…).
 - [ ] ¿Las armaduras inutilizadas se reparan tras la partida?
+- [ ] Campaña: ¿qué consecuencias tiene quedar fuera de combate (heridas
+      graves, muerte…)?
 
 ## Ronda
 - [ ] Quién empieza, fin de ronda, fin de partida.

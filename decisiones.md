@@ -126,3 +126,8 @@ Formato: fecha · decisión · motivo.
 - **Que las dagas sean flojas es aceptable:** cada arma tendrá un coste (p.
   ej. hacha grande ~70 monedas, daga ~5). El autor tiene ideas para hacerlas
   útiles más adelante.
+- **Distancia de carga:** Movimiento + 1D3 + 1 pulgadas (el 1D3 se tira con
+  un D6).
+- **Ayudar** en un combate es estar trabado con el defensor. Cada personaje
+  trabado, además del que combate, es una ayuda. **Máximo 2 ayudas.**
+- **Vida 0:** el personaje queda fuera de combate y se retira de la mesa.
