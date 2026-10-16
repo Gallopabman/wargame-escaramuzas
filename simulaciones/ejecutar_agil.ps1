@@ -49,13 +49,13 @@ foreach ($vida in 3, 4) {
     $out += ""
 }
 
-$out += "== Apoyo de aliados: 1 apoyo = dado de suerte; 2 apoyos = 4 dados =="
-$casos = @(@("sin apoyo", 3, $false), @("1 apoyo (suerte)", 3, $true), @("2 apoyos (4 dados)", 4, $false))
+$out += "== Apoyo de aliados: 1 apoyo = repetir un dado; 2 apoyos = repetir + 4 dados =="
+$casos = @(@("sin apoyo", 3, $false), @("1 apoyo (repetir)", 3, $true), @("2 apoyos (rep.+4 d.)", 4, $true))
 foreach ($caso in $casos) {
     foreach ($a in $arquetipos[3], $arquetipos[1], $arquetipos[2]) {
         foreach ($b in $arquetipos[3], $arquetipos[0]) {
-            $c1 = Nuevo $a $b; $c1.dados = [int[]]@($caso[1], 3); $c1.suerte = [bool[]]@($caso[2], $false); $d1 = $c1.Duelo($n, $maxIntercambios)
-            $c2 = Nuevo $b $a; $c2.dados = [int[]]@(3, $caso[1]); $c2.suerte = [bool[]]@($false, $caso[2]); $d2 = $c2.Duelo($n, $maxIntercambios)
+            $c1 = Nuevo $a $b; $c1.dados = [int[]]@($caso[1], 3); $c1.repetir = [bool[]]@($caso[2], $false); $d1 = $c1.Duelo($n, $maxIntercambios)
+            $c2 = Nuevo $b $a; $c2.dados = [int[]]@(3, $caso[1]); $c2.repetir = [bool[]]@($false, $caso[2]); $d2 = $c2.Duelo($n, $maxIntercambios)
             $out += "{0,-21} {1,-19} vs {2,-21} | gana {0}: {3,4:0%}" -f $a.nombre, $caso[0], $b.nombre, (($d1[0] + $d2[1]) / 2)
         }
     }

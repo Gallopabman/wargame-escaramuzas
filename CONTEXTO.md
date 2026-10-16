@@ -50,7 +50,8 @@ dado, **azar controlado** y donde el **equipo elegido sea determinante**.
   con escudo o habilidad) o Esquivar (Agilidad + Esquiva; luego mueve 2").
   Cada éxito del defensor anula uno del atacante. *(Siguiente tema a revisar.)*
 - **Cuerpo a cuerpo: siempre combaten los dos** (sin coste de acción). Ambos
-  tiran 3D6 (+1 dado por cada aliado que ayuda) y, alternando dado a dado,
+  tiran 3D6 (con un aliado ayudando: repetir un dado; con dos: repetir y
+  +1 dado) y, alternando dado a dado,
   **empezando quien inicia el combate**, deciden:
   - **Golpear** (dado + Atributo ≥ 6): impacta.
   - **Parar** (dado + Parada ≥ 6): elimina un dado del rival; un 6 solo se
@@ -82,16 +83,17 @@ la más reciente es `resultados_combate_v3_escala{A,B}.txt`.
    el ágil esquiva, el dañino golpea) y da más decisiones reales.
 3. Con las reglas v3 (reglas especiales incluidas), **un experto gana el
    63–83%** contra quien siempre golpea (antes, 53–62%).
-4. **Superar en número es muy fuerte:** +1 dado sube la victoria del 50% al
-   78% en un duelo igualado.
+4. **Superar en número es muy fuerte:** con un aliado (repetir un dado) se
+   gana ~73% de un duelo igualado; con dos (repetir + 1 dado), ~91%.
 5. La escala grande (Vida 4–10, Daño 2–5) da casi lo mismo que la pequeña:
    solo cambia algo cuando cambia la cuenta de golpes para matar.
 
 ## Próximos pasos
 
-1. Cerrar el combate cuerpo a cuerpo con los datos de la v3 (ver
-   `pendientes.md`).
-2. Pasar al **disparo**.
+1. **Combate cuerpo a cuerpo cerrado** (quedan detalles menores en
+   `pendientes.md`). Las armas de Agilidad encajan con personajes ágiles y
+   las de Fuerza no; las dagas son flojas a propósito (serán baratas).
+2. **Siguiente: el disparo.**
 3. Definir **Críticos** y más reglas especiales.
 
 ## Cómo trabajamos

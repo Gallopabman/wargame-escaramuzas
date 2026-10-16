@@ -2,7 +2,6 @@
 
 ## Concepto
 - [ ] Título del juego.
-- [ ] Duración objetivo de una partida.
 - [ ] ¿Solo 2 jugadores o también 3–4?
 - [ ] ¿Gremios en lugar de facciones? Si es así, ¿un gremio admite cualquier
       raza (un esqueleto asesino en Las Hojas Afiladas) o cada gremio
@@ -10,34 +9,29 @@
 
 ## Tiradas
 - [ ] ¿El dado extra del 6 natural puede volver a explotar?
+- [ ] En una tirada de dificultad (p. ej. salir de un combate), ¿basta con un
+      éxito? (Provisionalmente, sí.)
 
-## Combate
+## Disparo (siguiente tema)
+- [ ] Revisar las reglas de disparo y su reacción (Bloquear / Esquivar).
 - [ ] ¿Se suma la *Precisión* del arma además del *Atributo*?
-- [ ] Cargar: distancia máxima (¿igual al Movimiento?).
-- [ ] Combate mutuo: ¿se puede pasar el turno guardando dados para esquivar?
-- [ ] Reaccionar en cuerpo a cuerpo reduce mucho el daño recibido (v1 y v2).
-      Riesgo de juego pasivo: nadie ataca a quien aún tiene acciones.
-      Probarlo con una simulación de activación completa.
-- [ ] Armas de Daño 2 contra Reducción 2 no hacen nada en un intercambio (v1).
-- [ ] Armadura: ¿un impacto reducido a 0 gasta Durabilidad? ¿Se repara?
-- [ ] Qué ocurre con Vitalidad 0.
+- [ ] ¿Una miniatura ya activada puede reaccionar a un disparo con acciones
+      sobrantes?
 
-- [ ] **Propuesta: siempre combaten los dos.** Reaccionar en cuerpo a cuerpo
-      no cuesta acciones; empieza siempre quien inicia el combate y se
-      elimina la Velocidad. A vigilar: varios contra uno (¿ventaja por
-      superar en número?), identidad de las armas ligeras sin Velocidad.
-      Nota: la iniciativa depende del posicionamiento (es habilidad del
-      jugador, no solo azar).
-- [ ] **Salir de un combate:** "no te puedes ir de un combate así como así".
-      ¿Qué cuesta desengancharse? ¿El rival puede golpearte al irte?
-- [ ] Probar con simulaciones las reglas especiales Doble parada, Doble golpe
-      y Esquiva y retirada (ver `02_equipo_habilidades.md`).
+## Combate cuerpo a cuerpo (detalles menores)
+- [ ] Cargar: distancia máxima (¿igual al Movimiento?).
+- [ ] Varios contra uno: ¿qué cuenta como "ayudar"? ¿Qué pasa con tres o más
+      aliados?
+- [ ] Salir de un combate: ¿cuesta una acción intentarlo? ¿Cuánto te mueves?
+- [ ] ¿Se puede pasar el turno guardando dados?
+- [ ] ¿Matar de un solo golpe (Daño ≥ Vida) debe ser posible?
+- [ ] Qué ocurre al llegar a Vida 0 (fuera de combate, heridas de campaña…).
+- [ ] ¿Las armaduras inutilizadas se reparan tras la partida?
 
 ## Ronda
 - [ ] Quién empieza, fin de ronda, fin de partida.
 - [ ] Activación alternada con bandas desiguales (4 contra 8 miniaturas).
-- [ ] ¿Una miniatura ya activada puede reaccionar con acciones sobrantes?
-- [ ] ¿Para qué sirven Fuerza, Agilidad, Magia y Mente fuera de las armas?
+- [ ] ¿Para qué sirven Magia y Mente? (Fuerza y Agilidad ya tienen usos.)
 
 ## Amenaza (IA)
 - [ ] ¿Aparece físicamente en las batallas, solo en la campaña o en ambas?
@@ -45,39 +39,14 @@
 - [ ] ¿Cómo se incentiva cooperar sin eliminar la rivalidad?
 - [ ] ¿Cuándo actúa durante una partida?
 
-## Constructor de bandas
-- [ ] Sistema de puntos.
-
-## Equilibrio (de la simulación v2)
-- [ ] Saltos de vida y daño: 1 punto de Reducción puede cambiar cuántos golpes
-      hacen falta para matar. Tenerlo en cuenta al fijar Vida y Daño.
-- [ ] ¿Quieres que matar de un golpe (Daño ≥ Vida) sea posible?
-- [ ] Armas ligeras (Daño 2) contra armadura: necesitan Críticos o venenos.
-- [ ] Simulación del hacha (`simulaciones/resultados_hacha.txt`): +1 de Daño
-      vale mucho más que +3 de Parada. Parar casi no se usa. ¿Cómo hacer que
-      parar valga la pena?
-- [ ] R1 D1, R1 D2 y R2 D1 dan resultados idénticos en un combate porque no
-      cambian los golpes necesarios para matar. ¿Subir la escala de Vida
-      para que cada punto cuente?
-- [ ] Duelo directo hacha contra espada (`simulaciones/resultados_hacha_vs_espada_fue3.txt`
-      y `_fue4.txt`): con R1 D1 la espada gana al hacha. Pero parar se usa
-      poco (2–10%) porque esquivar compite por los mismos dados y, con
-      Agilidad igual a la Fuerza rival, basta con sacar igual o más que el
-      dado rival.
-- [ ] Rangos propuestos de Precisión, Esquiva, Daño, Reducción y
-      Durabilidad (ver `02_equipo_habilidades.md`).
-- [ ] Espada de Daño 1 con escudo contra hacha con cuero R1 D1
-      (`simulaciones/resultados_espada_escudo.txt`): el hacha gana el 90–99%
-      de los combates a muerte. Daño 1 contra Reducción 1 no funciona.
-- [ ] **Propuesta: defensa reactiva.** Al declarar el rival un golpe, puedes
-      gastar al momento un dado para pararlo o esquivarlo, sin perder tu
-      turno. Con ella aparecen los arquetipos (el tanque para un 47%, el ágil
-      esquiva un 42%) y los combates duran más
-      (`simulaciones/resultados_arquetipos_*.txt`).
-- [ ] Con Vida de 2 a 5, Daño 3 es demasiado letal: ¿Daño 1–2 normal y 3
-      como extremo?
-- [ ] Prueba del Ágil (`simulaciones/resultados_agil.txt`): el problema no es
-      el arquetipo, sino las dagas con Daño 1 (y la Vida 3). Con armas de
-      Agilidad y Daño 2, el Ágil gana el 48–73% de media.
-- [ ] El dado de suerte (1 apoyo) es casi tan fuerte como un dado entero:
-      75% frente a 78%. ¿Debe ser más débil?
+## Constructor de bandas y equilibrio
+- [ ] Sistema de puntos. **Cada arma y armadura tendrá un coste** en monedas
+      (p. ej. hacha grande ~70, daga ~5): el coste equilibra el equipo.
+- [ ] La malla domina sobre las demás armaduras: equilibrarla (más
+      penalización de Esquiva o coste).
+- [ ] El autor tiene ideas para que las dagas sean útiles (más adelante).
+- [ ] Rangos propuestos de Precisión, Esquiva, Reducción y Durabilidad (ver
+      `02_equipo_habilidades.md`).
+- [ ] Recordatorio de las simulaciones: lo que decide es **cuántos golpes
+      hacen falta para matar**. Cambios de 1 punto solo importan si cambian
+      esa cuenta.

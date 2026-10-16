@@ -116,3 +116,13 @@ Formato: fecha · decisión · motivo.
   una zona; salir de esa situación debe ser un problema para los jugadores.
 - **La malla domina sobre las demás armaduras:** se aceptará por ahora y se
   equilibrará más adelante (más penalización o coste en puntos).
+- **Corrección del apoyo de aliados:** con **un aliado** se puede **repetir
+  un dado**; con **dos aliados**, repetir un dado **y** tirar un dado extra.
+  *Motivo:* el dado de suerte era casi tan fuerte como un dado entero; así
+  tener dos apoyos es muy fuerte y uno solo, una ayuda moderada.
+- **Las armas de Agilidad funcionan con personajes ágiles y las de Fuerza
+  no.** Se considera un acierto del sistema: el arma debe encajar con el
+  personaje.
+- **Que las dagas sean flojas es aceptable:** cada arma tendrá un coste (p.
+  ej. hacha grande ~70 monedas, daga ~5). El autor tiene ideas para hacerlas
+  útiles más adelante.

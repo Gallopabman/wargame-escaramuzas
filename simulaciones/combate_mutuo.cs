@@ -92,8 +92,9 @@ public class CombateMutuo {
     public bool[] ingenuo = new bool[2];
     // Dados que tira cada uno (3 + 1 por cada aliado que ayuda, regla 5.5).
     public int[] dados = { 3, 3 };
-    // Dado de suerte (primer aliado que ayuda): tira uno más y descarta el más bajo.
-    public bool[] suerte = new bool[2];
+    // Apoyo de aliados (regla 5.5): 1 aliado = repetir un dado; 2 aliados = repetir + 1 dado.
+    // Para 2 aliados: dados = 4 y repetir = true.
+    public bool[] repetir = new bool[2];
 
     public CombateMutuo(Perfil a, Perfil b, bool gas) { pl[0] = a; pl[1] = b; gasolina = gas; }
 
@@ -282,14 +283,16 @@ public class CombateMutuo {
 
     int[] Tirada(int n) { return Tirada(n, false); }
 
-    // Con suerte se tira un dado más y se descarta el más bajo (un dado más
-    // alto nunca es peor para golpear, parar ni esquivar). Los 6 de los dados
-    // que se quedan dan un dado extra que no vuelve a explotar.
-    int[] Tirada(int n, bool conSuerte) {
+    // Con 'repetir' (apoyo de un aliado) se vuelve a tirar el dado más bajo si
+    // es un 3 o menos (aproximación: un dado más alto nunca es peor para
+    // golpear, parar ni esquivar). Los 6 dan un dado extra que no vuelve a
+    // explotar.
+    int[] Tirada(int n, bool repetir) {
         int[] c = new int[7];
-        int tirados = conSuerte ? n + 1 : n;
-        for (int i = 0; i < tirados; i++) c[rng.Next(1, 7)]++;
-        if (conSuerte) { for (int f = 1; f <= 6; f++) if (c[f] > 0) { c[f]--; break; } }
+        for (int i = 0; i < n; i++) c[rng.Next(1, 7)]++;
+        if (repetir) {
+            for (int f = 1; f <= 3; f++) if (c[f] > 0) { c[f]--; c[rng.Next(1, 7)]++; break; }
+        }
         int extras = Math.Min(c[6], 7 - n); // máximo 7 dados (límite del simulador)
         for (int i = 0; i < extras; i++) c[rng.Next(1, 7)]++;
         return c;
@@ -311,7 +314,7 @@ public class CombateMutuo {
             int k = 0;
             while (k < maxIntercambios && hp[0] > 0 && hp[1] > 0) {
                 Estado s = new Estado();
-                int[] a = Tirada(dados[0], suerte[0]), b = Tirada(dados[1], suerte[1]);
+                int[] a = Tirada(dados[0], repetir[0]), b = Tirada(dados[1], repetir[1]);
                 for (int f = 1; f <= 6; f++) { s.c[0, f] = a[f]; s.c[1, f] = b[f]; }
                 s.turno = k % 2;
                 for (int p = 0; p < 2; p++) { s.d[p] = d[p]; s.hp[p] = hp[p]; }

@@ -85,3 +85,8 @@ Límites para que todo el contenido del juego sea coherente.
 
 ## Sistema de puntos
 Necesario para el constructor de bandas (4–8 miniaturas).
+
+- **Cada arma y armadura tiene un coste** en monedas, que equilibra el equipo:
+  un arma muy buena es cara y una floja, barata (p. ej. hacha grande ~70,
+  daga ~5).
+- [PENDIENTE: costes de perfiles, equipo y habilidades]
