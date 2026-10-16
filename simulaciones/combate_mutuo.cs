@@ -1,4 +1,4 @@
-// Simulación del combate mutuo (reglas 5.3) con juego óptimo (minimax). v2
+// Simulación del combate mutuo (reglas 5.3-5.5) con juego óptimo (minimax). v3
 // Cada jugador maximiza: daño hecho - daño recibido + BONO_MUERTE si mata
 // (y lo resta si muere). Si una miniatura llega a 0 de vida, el combate acaba.
 // Supuestos (ver pendientes.md):
@@ -9,7 +9,9 @@
 //    usado, y ambos dados se van. Parar: dado + Parada >= 6 (un 6 rival solo
 //    se para con un 6). Esquivar: dado + Agilidad + Esquiva de armadura >=
 //    dado rival + su golpe.
-//  - Un golpe declarado impacta directamente.
+//  - Un golpe declarado impacta directamente, salvo con "reactiva": el
+//    defensor puede gastar al momento un dado para pararlo o esquivarlo.
+//  - Reglas especiales: Doble parada, Doble golpe, Rompearmaduras (Perfil.Especial).
 //  - Un 6 natural siempre tiene éxito, también al esquivar.
 //  - Un impacto que la armadura reduce a 0 también gasta Durabilidad.
 using System;
@@ -18,13 +20,23 @@ using System.Collections.Generic;
 public class Perfil {
     public string nombre;
     public int golpe, parada, esquiva, dano, reduccion, durabilidad, velocidad, vida;
+    // Reglas especiales: Doble parada (escudos), Doble golpe (dagas),
+    // Rompearmaduras (hachas).
+    public bool dobleParada, dobleGolpe, rompeArmadura;
     public Perfil(string n, int g, int p, int e, int da, int red, int dur, int vel, int vida) {
         nombre = n; golpe = g; parada = p; esquiva = e; dano = da;
         reduccion = red; durabilidad = dur; velocidad = vel; this.vida = Math.Min(vida, 15);
     }
     // Copia con otra armadura (Reducción, Durabilidad, Esquiva) y/o vida.
     public Perfil Con(string n, int red, int dur, int esqArmadura, int vida) {
-        return new Perfil(n, golpe, parada, esquiva + esqArmadura, dano, red, dur, velocidad, vida);
+        Perfil p = new Perfil(n, golpe, parada, esquiva + esqArmadura, dano, red, dur, velocidad, vida);
+        p.dobleParada = dobleParada; p.dobleGolpe = dobleGolpe; p.rompeArmadura = rompeArmadura;
+        return p;
+    }
+    // Activa reglas especiales: "P" doble parada, "G" doble golpe, "R" rompearmaduras.
+    public Perfil Especial(string e) {
+        dobleParada = e.Contains("P"); dobleGolpe = e.Contains("G"); rompeArmadura = e.Contains("R");
+        return this;
     }
 }
 
@@ -53,12 +65,13 @@ public class CombateMutuo {
 
     class Estado {
         public int[,] c = new int[2, 7];
-        public int turno, pend;
+        // pend / pend2: dados de golpes declarados a los que el defensor puede reaccionar.
+        public int turno, pend, pend2;
         public int[] d = new int[2], hp = new int[2];
         public Estado Copia() {
             Estado e = new Estado();
             Array.Copy(c, e.c, c.Length);
-            e.turno = turno; e.pend = pend;
+            e.turno = turno; e.pend = pend; e.pend2 = pend2;
             e.d[0] = d[0]; e.d[1] = d[1]; e.hp[0] = hp[0]; e.hp[1] = hp[1];
             return e;
         }
@@ -67,7 +80,7 @@ public class CombateMutuo {
             long k = 0;
             for (int p = 0; p < 2; p++) for (int f = 1; f <= 6; f++) k = k * 8 + c[p, f];
             k = k * 2 + turno; k = k * 8 + d[0]; k = k * 8 + d[1];
-            k = k * 16 + pend; k = k * 16 + hp[0]; k = k * 16 + hp[1];
+            k = k * 16 + pend; k = k * 8 + pend2; k = k * 16 + hp[0]; k = k * 16 + hp[1];
             return k;
         }
     }
@@ -77,6 +90,8 @@ public class CombateMutuo {
               PARADA_R = 6, ESQUIVA_R = 7;
     // Jugadores que siempre golpean y nunca se defienden (para comparar).
     public bool[] ingenuo = new bool[2];
+    // Dados que tira cada uno (3 + 1 por cada aliado que ayuda, regla 5.5).
+    public int[] dados = { 3, 3 };
 
     public CombateMutuo(Perfil a, Perfil b, bool gas) { pl[0] = a; pl[1] = b; gasolina = gas; }
 
@@ -85,6 +100,24 @@ public class CombateMutuo {
         if (dado == 6) return true;
         return dado + mod >= umbral;
     }
+
+    // Aplica un impacto de 'atk' a 'def' en el estado t. Devuelve el premio
+    // desde el punto de vista del jugador 0.
+    double Impacto(Estado t, int atk, int def) {
+        if (t.hp[def] == 0) return 0;
+        int dm = pl[atk].dano;
+        if (t.d[def] > 0) {
+            dm = Math.Max(0, dm - pl[def].reduccion);
+            t.d[def] = pl[atk].rompeArmadura ? 0 : t.d[def] - 1;
+        }
+        int real = Math.Min(dm, t.hp[def]);
+        t.hp[def] -= real;
+        double u = real + (t.hp[def] == 0 ? BONO_MUERTE : 0);
+        return def == 1 ? u : -u;
+    }
+
+    // Tras resolver la reacción a un golpe, pasa al siguiente golpe pendiente.
+    static void SiguientePendiente(Estado e) { e.pend = e.pend2; e.pend2 = 0; }
 
     List<Mov> Hijos(Estado s) {
         List<Mov> r = new List<Mov>();
@@ -99,16 +132,20 @@ public class CombateMutuo {
                 bool para = Exito(w, pl[yo].parada, 6) && (v != 6 || w == 6);
                 bool esquiva = w != 1 && (w == 6 || w + pl[yo].esquiva >= v + pl[op].golpe);
                 if (!para && !esquiva) continue;
-                Estado e = s.Copia(); e.c[yo, w]--; e.pend = 0;
+                Estado e = s.Copia(); e.c[yo, w]--; SiguientePendiente(e);
                 r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = para ? PARADA_R : ESQUIVA_R });
+                // Doble parada: además del golpe, elimina otro dado sin usar del rival.
+                if (para && pl[yo].dobleParada) {
+                    for (int u = 1; u <= 6; u++) {
+                        if (e.c[op, u] == 0 || (u == 6 && w != 6)) continue;
+                        Estado e2 = e.Copia(); e2.c[op, u]--;
+                        r.Add(new Mov { sig = e2, premio = 0, actor = yo, tipo = PARADA_R });
+                    }
+                }
             }
-            Estado t = s.Copia(); t.pend = 0;
-            int dm = pl[op].dano;
-            if (t.d[yo] > 0) { dm = Math.Max(0, dm - pl[yo].reduccion); t.d[yo]--; }
-            int real = Math.Min(dm, t.hp[yo]);
-            t.hp[yo] -= real;
-            double u = real + (t.hp[yo] == 0 ? BONO_MUERTE : 0);
-            r.Add(new Mov { sig = t, premio = (yo == 1 ? u : -u), actor = yo, tipo = ENCAJA });
+            Estado t = s.Copia(); SiguientePendiente(t);
+            double pr = Impacto(t, op, yo);
+            r.Add(new Mov { sig = t, premio = pr, actor = yo, tipo = ENCAJA });
             return r;
         }
         if (s.Total(yo) == 0) {
@@ -124,12 +161,22 @@ public class CombateMutuo {
                 r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = GOLPE });
             } else if (Exito(v, pl[yo].golpe, 6)) {
                 Estado t = s.Copia(); t.c[yo, v]--; t.turno = op;
-                int dm = pl[yo].dano;
-                if (t.d[op] > 0) { dm = Math.Max(0, dm - pl[op].reduccion); t.d[op]--; }
-                int real = Math.Min(dm, t.hp[op]);
-                t.hp[op] -= real;
-                double u = real + (t.hp[op] == 0 ? BONO_MUERTE : 0);
-                r.Add(new Mov { sig = t, premio = (op == 1 ? u : -u), actor = yo, tipo = GOLPE });
+                double pr = Impacto(t, yo, op);
+                r.Add(new Mov { sig = t, premio = pr, actor = yo, tipo = GOLPE });
+            }
+            // Doble golpe: dos dados a golpear a la vez (v2 >= v para no repetir).
+            if (pl[yo].dobleGolpe && Exito(v, pl[yo].golpe, 6)) {
+                for (int v2 = v; v2 <= 6; v2++) {
+                    if (s.c[yo, v2] - (v2 == v ? 1 : 0) <= 0 || !Exito(v2, pl[yo].golpe, 6)) continue;
+                    Estado e = s.Copia(); e.c[yo, v]--; e.c[yo, v2]--; e.turno = op;
+                    if (reactiva && s.Total(op) > 0) {
+                        e.pend = v2; e.pend2 = v;
+                        r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = GOLPE });
+                    } else {
+                        double pr = Impacto(e, yo, op) + Impacto(e, yo, op);
+                        r.Add(new Mov { sig = e, premio = pr, actor = yo, tipo = GOLPE });
+                    }
+                }
             }
             for (int u = 1; u <= 6; u++) {
                 if (s.c[op, u] == 0) continue;
@@ -148,6 +195,14 @@ public class CombateMutuo {
                     if (s.c[op, u] == 0 || (u == 6 && v != 6)) continue;
                     Estado e = s.Copia(); e.c[yo, v]--; e.c[op, u]--; e.turno = op;
                     r.Add(new Mov { sig = e, premio = 0, actor = yo, tipo = PARADA });
+                    // Doble parada: un dado elimina dos dados del rival (u2 >= u).
+                    if (pl[yo].dobleParada) {
+                        for (int u2 = u; u2 <= 6; u2++) {
+                            if (e.c[op, u2] == 0 || (u2 == 6 && v != 6)) continue;
+                            Estado e2 = e.Copia(); e2.c[op, u2]--;
+                            r.Add(new Mov { sig = e2, premio = 0, actor = yo, tipo = PARADA });
+                        }
+                    }
                 }
             }
             Estado x = s.Copia(); x.c[yo, v]--; x.turno = op;
@@ -227,7 +282,7 @@ public class CombateMutuo {
         int[] c = new int[7]; int total = n;
         for (int i = 0; i < total; i++) {
             int v = rng.Next(1, 7); c[v]++;
-            if (v == 6 && i < n) total++;
+            if (v == 6 && i < n && total < 7) total++; // máximo 7 dados (límite del simulador)
         }
         return c;
     }
@@ -248,7 +303,7 @@ public class CombateMutuo {
             int k = 0;
             while (k < maxIntercambios && hp[0] > 0 && hp[1] > 0) {
                 Estado s = new Estado();
-                int[] a = Tirada(3), b = Tirada(3);
+                int[] a = Tirada(dados[0]), b = Tirada(dados[1]);
                 for (int f = 1; f <= 6; f++) { s.c[0, f] = a[f]; s.c[1, f] = b[f]; }
                 s.turno = k % 2;
                 for (int p = 0; p < 2; p++) { s.d[p] = d[p]; s.hp[p] = hp[p]; }
@@ -271,7 +326,7 @@ public class CombateMutuo {
         Resultado r = new Resultado();
         for (int t = 0; t < pruebas; t++) {
             Estado s = new Estado();
-            int[] a = Tirada(dadosAtacante), b = Tirada(3);
+            int[] a = Tirada(dadosAtacante), b = Tirada(dados[1]);
             for (int f = 1; f <= 6; f++) { s.c[0, f] = a[f]; s.c[1, f] = b[f]; }
             s.turno = inicia;
             for (int p = 0; p < 2; p++) { s.d[p] = pl[p].durabilidad; s.hp[p] = pl[p].vida; }

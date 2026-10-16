@@ -57,20 +57,18 @@ Cada miniatura tiene las siguientes estadísticas:
 
 ## 4. Reacciones
 
-- Cuando una miniatura es objetivo de un **disparo** o de un **ataque cuerpo
-  a cuerpo**, puede **reaccionar gastando 1 de sus propias acciones** de la
-  ronda, siempre que le queden acciones disponibles.
-- Las acciones gastadas en reaccionar ya no se pueden usar en su propia
-  activación.
-- **Contra un disparo:** reacciona con **Bloquear** o **Esquivar** (5.2).
-- **Contra un ataque cuerpo a cuerpo:** la reacción inicia un **combate
-  mutuo** (5.3).
+- **Contra un disparo:** el objetivo puede **reaccionar gastando 1 de sus
+  propias acciones** de la ronda, si le quedan, para **Bloquear** o
+  **Esquivar** (5.2). Las acciones gastadas en reaccionar ya no se pueden usar
+  en su propia activación.
+- **Contra un ataque cuerpo a cuerpo:** **siempre combaten los dos**
+  (combate mutuo, 5.3). No cuesta acciones al defensor, y también combate una
+  miniatura que ya haya gastado todas sus acciones.
 
 ## 5. Combate
 
-### 5.1 Ataque sin reacción (disparo o cuerpo a cuerpo)
-1. Elige un objetivo dentro del *Alcance* del arma (cuerpo a cuerpo: a 1" o
-   menos) y el arma que usas.
+### 5.1 Ataque sin reacción (disparo)
+1. Elige un objetivo dentro del *Alcance* del arma y el arma que usas.
 2. Tira **3D6**. Suma a cada dado la estadística del *Atributo* del arma.
    [PENDIENTE: ¿se suma también la *Precisión* del arma?]
 3. Cada dado que alcanza el umbral (6) es un **éxito**.
@@ -88,14 +86,13 @@ tira 3D6. **Cada éxito del defensor anula un éxito del atacante.**
   distancia o más lejos del atacante.
 
 ### 5.3 Combate mutuo (cuerpo a cuerpo)
-Cuando el objetivo de un ataque cuerpo a cuerpo reacciona, **ambos
-combaten**: los dados no se tiran para "pegar", sino para combatir, y cada
-jugador decide en el momento qué hace con cada uno.
+Siempre que una miniatura ataca a otra cuerpo a cuerpo, **ambas combaten**:
+los dados no se tiran para "pegar", sino para combatir, y cada jugador decide
+en el momento qué hace con cada uno.
 
-1. **Ambos jugadores tiran 3D6 a la vez.**
-2. **Orden:** si alguien **cargó**, empieza él (se ignora la Velocidad). Si
-   no, empieza quien tenga más **Velocidad** en su arma; con empate, el
-   **jugador activo**.
+1. **Ambos jugadores tiran 3D6 a la vez** (más los dados por superioridad
+   numérica, 5.5).
+2. **Empieza siempre quien inicia el combate** (quien ataca o carga).
 3. **Por turnos, alternando, cada jugador asigna un dado** a una de estas
    opciones. El modificador se elige después de tirar, según la opción:
    - **Golpear** (dado + *Atributo* del arma): si es un éxito, es un
@@ -111,8 +108,10 @@ jugador decide en el momento qué hace con cada uno.
      armadura): 3 + 5 = 8 → esquivas.
      - Las armaduras suelen dar Esquiva **negativa**: cuanto más pesada y
        robusta, más cuesta moverse.
-4. **Un golpe declarado impacta directamente.** La defensa consiste en
-   eliminar los dados del rival (parando o esquivando) antes de que los use.
+4. **Defensa reactiva** [A PROBAR]: cuando el rival declara un golpe, puedes
+   gastar **al momento** uno de tus dados para **pararlo o esquivarlo** (con
+   las mismas condiciones), sin perder tu turno de asignar. Si no reaccionas,
+   el golpe impacta. También puedes parar o esquivar en tu turno.
 5. Ejemplo de reparto: con +2 al golpe y +4 a la esquiva, un 2 no sirve
    para golpear (2+2=4) pero sí para esquivar un dado bajo del rival.
 
@@ -120,18 +119,28 @@ jugador decide en el momento qué hace con cada uno.
 - Cuesta **2 acciones**.
 - La miniatura se mueve hasta quedar a **1"** del objetivo e **inicia el
   combate** (no hay que pagar el ataque aparte).
-- Quien carga empieza el combate mutuo, sin importar la Velocidad.
 - [PENDIENTE: distancia máxima de carga; ¿es igual al Movimiento?]
+
+### 5.5 Varios contra uno
+- Cada aliado que esté **ayudando** en el combate da **+1 dado** al
+  combatiente que tiene la superioridad numérica.
+- [PENDIENTE: qué cuenta como "ayudar" (¿estar a 1" del enemigo?)]
+
+### 5.6 Salir de un combate
+- Para irte de un combate tira **Agilidad difícil (8)**: cada dado +
+  Agilidad; basta **un éxito**.
+- Si lo superas, te vas sin más.
+- Si fallas, el enemigo puede **declarar un combate gratis** contra ti.
+- [PENDIENTE: ¿cuesta una acción intentarlo? ¿Cuánto te mueves al irte?]
 
 ## 6. Daño
 
 - **Cada impacto** hace el *Daño* del arma.
 - Si el objetivo lleva armadura con Durabilidad, se resta su **Reducción** al
-  daño de ese impacto y la armadura pierde **1 de Durabilidad**. Con
-  Durabilidad 0, la armadura queda inutilizada.
+  daño de ese impacto y la armadura pierde **1 de Durabilidad**, también si
+  el impacto ha quedado en 0. Con Durabilidad 0, la armadura queda
+  inutilizada.
 - El daño restante se descuenta de la **Vitalidad**.
-- [PENDIENTE: ¿un impacto que la armadura reduce a 0 también gasta
-  Durabilidad? Propuesta: sí.]
 - [PENDIENTE: qué pasa al llegar a Vitalidad 0]
 
 ## 7. Moral

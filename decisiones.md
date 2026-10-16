@@ -92,3 +92,18 @@ Formato: fecha · decisión · motivo.
 - **Arquetipos claros en el combate:** el dañino golpea, el tanque para, el
   ágil esquiva y el equilibrado hace las tres cosas según convenga. El
   dañino puede ganar al tanque, pero tras muchos intercambios.
+- **En cuerpo a cuerpo siempre combaten los dos.** No cuesta acciones al
+  defensor. Empieza siempre quien inicia el combate. **Se elimina la
+  Velocidad.** *Motivo:* evitar el juego pasivo; la iniciativa depende del
+  posicionamiento.
+- **Varios contra uno:** cada combatiente que ayuda da +1 dado al que tiene
+  superioridad numérica.
+- **Defensa reactiva (por ahora):** se puede parar o esquivar al momento en
+  que el rival declara un golpe.
+- **Reglas especiales:** Doble parada (escudos: un dado para dos), Doble golpe
+  (dagas: dos dados a golpear a la vez) y Rompearmaduras (hachas: un impacto
+  inutiliza la armadura).
+- **Salir de un combate:** Agilidad difícil (8). Si se supera, te vas; si no,
+  el enemigo puede declarar un combate gratis.
+- **Escala provisional:** Vida de 2 a 5 y Daño de 1 a 3. Se estudia también
+  Vida de 4 a 10 y Daño de 2 a 5.
