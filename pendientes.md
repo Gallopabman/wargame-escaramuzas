@@ -22,6 +22,12 @@
 - [ ] Armadura: ¿un impacto reducido a 0 gasta Durabilidad? ¿Se repara?
 - [ ] Qué ocurre con Vitalidad 0.
 
+- [ ] **Propuesta: siempre combaten los dos.** Reaccionar en cuerpo a cuerpo
+      no cuesta acciones; empieza siempre quien inicia el combate y se
+      elimina la Velocidad. A vigilar: varios contra uno (¿ventaja por
+      superar en número?), identidad de las armas ligeras sin Velocidad.
+      Nota: la iniciativa depende del posicionamiento (es habilidad del
+      jugador, no solo azar).
 - [ ] **Salir de un combate:** "no te puedes ir de un combate así como así".
       ¿Qué cuesta desengancharse? ¿El rival puede golpearte al irte?
 - [ ] Probar con simulaciones las reglas especiales Doble parada, Doble golpe
