@@ -81,3 +81,7 @@ Formato: fecha · decisión · motivo.
 - **La Parada depende del arma:** las armas más dañinas tienen Parada 0 o
   negativa (p. ej. un hacha grande, Parada −1) porque no están pensadas para
   defenderse.
+- **Rango de Parada:** de −1 a +2 lo normal; −2 para armas muy malas parando
+  y +3 para las excepcionales.
+- **Atributos de 1 a 5 de forma natural**; por encima de 5 solo con objetos
+  mágicos, habilidades o similares.

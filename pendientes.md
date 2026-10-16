@@ -48,3 +48,10 @@
 - [ ] R1 D1, R1 D2 y R2 D1 dan resultados idénticos en un combate porque no
       cambian los golpes necesarios para matar. ¿Subir la escala de Vida
       para que cada punto cuente?
+- [ ] Duelo directo hacha contra espada (`simulaciones/resultados_hacha_vs_espada_fue3.txt`
+      y `_fue4.txt`): con R1 D1 la espada gana al hacha. Pero parar se usa
+      poco (2–10%) porque esquivar compite por los mismos dados y, con
+      Agilidad igual a la Fuerza rival, basta con sacar igual o más que el
+      dado rival.
+- [ ] Rangos propuestos de Precisión, Esquiva, Daño, Reducción y
+      Durabilidad (ver `02_equipo_habilidades.md`).
