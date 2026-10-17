@@ -67,23 +67,49 @@ Cada miniatura tiene las siguientes estadísticas:
 
 ## 5. Combate
 
-### 5.1 Ataque sin reacción (disparo)
-1. Elige un objetivo dentro del *Alcance* del arma y el arma que usas.
-2. Tira **3D6**. Suma a cada dado la estadística del *Atributo* del arma.
-   [PENDIENTE: ¿se suma también la *Precisión* del arma?]
+### 5.1 Disparar
+1. Elige un objetivo **visible** (5.1.1) dentro del *Alcance* del arma.
+2. Tira **3D6**. Suma a cada dado el *Atributo* **y la *Precisión*** del arma.
 3. Cada dado que alcanza el umbral (6) es un **éxito**.
-4. **Cada éxito es un impacto** que hace el *Daño* del arma (ver 6. Daño).
+4. Si el objetivo no se defiende (5.2), **cada éxito es un impacto** que
+   hace el *Daño* del arma (ver 6. Daño).
 
-### 5.2 Reacción contra un disparo
-El defensor gasta 1 acción, elige **antes de tirar** si bloquea o esquiva, y
-tira 3D6. **Cada éxito del defensor anula un éxito del atacante.**
+#### 5.1.1 Línea de visión
+- Para que una miniatura sea un **objetivo válido**, traza una línea desde la
+  **cabeza** del tirador hasta **cualquier parte** del objetivo, sin contar
+  armas, estandartes, capas y elementos similares.
 
-- **Bloquear:** cada dado + *Parada* del arma o escudo. Los disparos
-  **solo se pueden bloquear** con un arma o habilidad que lo permita (un
-  escudo sí; una espada no).
-- **Esquivar:** cada dado + Agilidad + *Esquiva* de la armadura. Al terminar
-  la acción, el defensor puede moverse **2"**, pero debe acabar a la misma
-  distancia o más lejos del atacante.
+#### 5.1.2 Cobertura
+- Traza una línea recta desde el **centro de la peana** del tirador hasta el
+  **centro de la peana** del objetivo. Si la línea no es **recta e
+  ininterrumpida**, el objetivo tiene **cobertura**.
+- [PENDIENTE: ¿qué efecto tiene la cobertura?]
+
+#### 5.1.3 Disparar a un combate
+- **No se puede elegir como objetivo a una miniatura trabada en combate**,
+  pero sí se puede **disparar al combate**.
+- Si en el combate participa un **aliado** del tirador:
+  - El tirador **pierde 1 de Lealtad**.
+  - El objetivo **no puede defenderse** del disparo.
+  - Tras resolver el ataque, tira **1D6**: con **1–3** impactas a tu aliado;
+    con **4–6**, al enemigo.
+- [PENDIENTE: ¿qué es la Lealtad? ¿Se tira el 1D6 por cada impacto o una
+  vez por disparo? ¿Qué pasa si en el combate no participa ningún aliado?]
+
+### 5.2 Defenderse de un disparo
+- Para defenderse de un disparo, el objetivo debe **gastar 1 de sus
+  acciones** de la ronda (si le quedan). Si no lo hace, cada éxito del
+  tirador es un impacto.
+- Se defiende **igual que en el combate mutuo**: tira 3D6 y usa cada dado
+  contra un dado de disparo con éxito:
+  - **Bloquear** (dado + *Parada* ≥ 6): ese dado de disparo **queda
+    anulado**. Los disparos **solo se pueden bloquear** con un arma o
+    habilidad que lo permita (un escudo sí; una espada no).
+  - **Esquivar** (dado + Agilidad ± *Esquiva* de la armadura): anula el dado
+    de disparo si **iguala o supera ese dado + el Atributo y la Precisión**
+    del tirador.
+- [PENDIENTE: ¿un 6 de disparo solo se bloquea con otro 6, como en
+  cuerpo a cuerpo? ¿Se mantiene el movimiento de 2" al esquivar?]
 
 ### 5.3 Combate mutuo (cuerpo a cuerpo)
 Siempre que una miniatura ataca a otra cuerpo a cuerpo, **ambas combaten**:
@@ -95,14 +121,14 @@ en el momento qué hace con cada uno.
 2. **Empieza siempre quien inicia el combate** (quien ataca o carga).
 3. **Por turnos, alternando, cada jugador asigna un dado** a una de estas
    opciones. El modificador se elige después de tirar, según la opción:
-   - **Golpear** (dado + *Atributo* del arma): si es un éxito, es un
+   - **Golpear** (dado + *Atributo* + *Precisión* del arma): si es un éxito, es un
      impacto.
    - **Parar** (dado + *Parada* del arma o escudo ≥ 6): elige un dado del
      rival que aún no haya usado; **ambos dados desaparecen**. Un **6
      natural** del rival solo se puede parar con un **6 natural**.
    - **Esquivar** (dado + Agilidad ± *Esquiva* de la armadura): elige un
      dado del rival que aún no haya usado. Si tu resultado **iguala o supera
-     ese dado + el Atributo de golpe del rival**, **ambos dados
+     ese dado + el Atributo y la Precisión del rival**, **ambos dados
      desaparecen**. Ejemplo: el rival tiene un 5 y golpea con Fuerza 3 →
      necesitas 8. Con un 3 en tu dado y Agilidad 5 (sin penalizador de
      armadura): 3 + 5 = 8 → esquivas.

@@ -12,9 +12,13 @@
 - [ ] En una tirada de dificultad (p. ej. salir de un combate), ¿basta con un
       éxito? (Provisionalmente, sí.)
 
-## Disparo (siguiente tema)
-- [ ] Revisar las reglas de disparo y su reacción (Bloquear / Esquivar).
-- [ ] ¿Se suma la *Precisión* del arma además del *Atributo*?
+## Disparo
+- [ ] Efecto de la cobertura.
+- [ ] Lealtad: ¿qué es? (Se pierde 1 al disparar a un combate con un aliado.)
+- [ ] Disparar a un combate: ¿1D6 por impacto o por disparo? ¿Y si no hay
+      aliados en ese combate?
+- [ ] Defensa contra disparos: ¿un 6 solo se bloquea con un 6? ¿Se mantiene
+      el movimiento de 2" al esquivar?
 - [ ] ¿Una miniatura ya activada puede reaccionar a un disparo con acciones
       sobrantes?
 

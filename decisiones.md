@@ -148,3 +148,15 @@ Formato: fecha · decisión · motivo.
   frágil sin armadura puede caer de un golpe.
 - **La reparación de armaduras se decide en el modo campaña**: no afecta al
   núcleo de la partida.
+- **Disparo:** defenderse cuesta 1 acción; si no te defiendes, cada éxito es
+  un impacto. La defensa funciona como en el combate mutuo: bloquear con un
+  éxito anula un dado de disparo; esquivar debe igualar o superar el dado del
+  tirador + su Atributo y Precisión.
+- **La Precisión del arma se suma al Atributo** (al disparar y al golpear).
+- **Línea de visión:** desde la cabeza del tirador a cualquier parte del
+  objetivo, sin contar armas, estandartes, capas, etc.
+- **Cobertura:** si la línea entre los centros de las peanas no es recta e
+  ininterrumpida, el objetivo tiene cobertura.
+- **No se puede disparar a una miniatura trabada, pero sí a un combate.** Si
+  participa un aliado: el tirador pierde 1 de Lealtad, el objetivo no puede
+  defenderse y se tira 1D6 (1–3 impacta al aliado, 4–6 al enemigo).
