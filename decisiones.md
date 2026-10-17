@@ -168,3 +168,13 @@ Formato: fecha · decisión · motivo.
   el modo campaña.
 - **Defensa contra disparos:** un 6 solo se bloquea con un 6; al esquivar se
   mantiene el movimiento de 2".
+- **Crítico:** un crítico del rival solo se para o se bloquea con otro
+  crítico (sustituye a "un 6 solo con un 6"). Por ahora, crítico = 6
+  natural; habrá otras formas de conseguirlo.
+- **Cobertura al final:** se tira después de que el objetivo intente
+  defenderse.
+- **Sin penalización por distancia:** dentro del Alcance se puede disparar;
+  fuera, no.
+- **Se puede mover y disparar, y disparar dos veces** en una activación.
+- **Una miniatura ya activada puede defenderse de un disparo** si guardó una
+  acción.

@@ -42,6 +42,8 @@ Cada miniatura tiene las siguientes estadísticas:
 - **1 natural: siempre es un fallo.**
 - **6 natural: siempre es un éxito.** Además, permite **tirar un dado extra**
   y **activa el Crítico** del arma.
+- **Crítico:** por ahora, un dado es crítico cuando sale un 6 natural. Más
+  adelante habrá otras formas de conseguir críticos sin sacar un 6.
   [PENDIENTE: ¿el dado extra puede volver a explotar?]
 - Los modificadores pueden ser **negativos** (p. ej. una armadura pesada
   con Esquiva −1).
@@ -73,6 +75,10 @@ Cada miniatura tiene las siguientes estadísticas:
 3. Cada dado que alcanza el umbral (6) es un **éxito**.
 4. Si el objetivo no se defiende (5.2), **cada éxito es un impacto** que
    hace el *Daño* del arma (ver 6. Daño).
+5. **Distancia:** no hay penalizaciones. Si el objetivo está dentro del
+   *Alcance*, se puede disparar; si no, no.
+6. **Acciones:** disparar cuesta 1 acción. Se puede **moverse y disparar** en
+   la misma activación, y también **disparar dos veces**.
 
 #### 5.1.1 Línea de visión
 - Para que una miniatura sea un **objetivo válido**, traza una línea desde la
@@ -85,6 +91,8 @@ Cada miniatura tiene las siguientes estadísticas:
   ininterrumpida**, el objetivo tiene **cobertura**.
 - **Efecto:** por cada éxito del tirador, el objetivo tira **1D6**; con
   **5+**, ese éxito queda anulado. No cuesta acciones.
+- La tirada de cobertura se hace **al final**, después de que el objetivo
+  haya intentado defenderse (5.2).
 
 #### 5.1.3 Disparar a un combate
 - **No se puede elegir como objetivo a una miniatura trabada en combate**,
@@ -102,13 +110,14 @@ Cada miniatura tiene las siguientes estadísticas:
 
 ### 5.2 Defenderse de un disparo
 - Para defenderse de un disparo, el objetivo debe **gastar 1 de sus
-  acciones** de la ronda (si le quedan). Si no lo hace, cada éxito del
+  acciones** de la ronda (si le quedan). Una miniatura que ya se ha activado
+  puede defenderse si **guardó una acción** para ello. Si no lo hace, cada éxito del
   tirador es un impacto.
 - Se defiende **igual que en el combate mutuo**: tira 3D6 y usa cada dado
   contra un dado de disparo con éxito:
   - **Bloquear** (dado + *Parada* ≥ 6): ese dado de disparo **queda
-    anulado**. Un **6 natural** de disparo solo se bloquea con un **6
-    natural**. Los disparos **solo se pueden bloquear** con un arma o
+    anulado**. Un dado de disparo **crítico** solo se bloquea con otro
+    **crítico**. Los disparos **solo se pueden bloquear** con un arma o
     habilidad que lo permita (un escudo sí; una espada no).
   - **Esquivar** (dado + Agilidad ± *Esquiva* de la armadura): anula el dado
     de disparo si **iguala o supera ese dado + el Atributo y la Precisión**
@@ -128,8 +137,8 @@ en el momento qué hace con cada uno.
    - **Golpear** (dado + *Atributo* + *Precisión* del arma): si es un éxito, es un
      impacto.
    - **Parar** (dado + *Parada* del arma o escudo ≥ 6): elige un dado del
-     rival que aún no haya usado; **ambos dados desaparecen**. Un **6
-     natural** del rival solo se puede parar con un **6 natural**.
+     rival que aún no haya usado; **ambos dados desaparecen**. Un dado
+     **crítico** del rival solo se puede parar con otro **crítico**.
    - **Esquivar** (dado + Agilidad ± *Esquiva* de la armadura): elige un
      dado del rival que aún no haya usado. Si tu resultado **iguala o supera
      ese dado + el Atributo y la Precisión del rival**, **ambos dados

@@ -46,16 +46,20 @@ dado, **azar controlado** y donde el **equipo elegido sea determinante**.
   defecto; 8 / 10 / 12 para difícil, compleja, imposible). 1 natural siempre
   falla; 6 natural siempre acierta, da un dado extra y activa el Crítico.
 - **Activación alternada**, una miniatura cada jugador.
-- **Disparo:** el objetivo puede gastar 1 acción para Bloquear (Parada; solo
-  con escudo o habilidad) o Esquivar (Agilidad + Esquiva; luego mueve 2").
-  Cada éxito del defensor anula uno del atacante. *(Siguiente tema a revisar.)*
+- **Disparo:** 3D6 + Atributo + Precisión. Sin penalización por distancia; se
+  puede mover y disparar, o disparar dos veces. El objetivo puede gastar 1
+  acción (también si ya se activó y la guardó) para Bloquear (Parada; solo
+  con escudo) o Esquivar (Agilidad ± Esquiva contra el dado del tirador +
+  su Atributo y Precisión; luego mueve 2"). Después, la **cobertura**: 1D6
+  por éxito, con 5+ se anula. Disparar a un combate: 1D6 decide si das al
+  aliado (1–3) o al enemigo (4–6), y pierdes 1 de Lealtad.
 - **Cuerpo a cuerpo: siempre combaten los dos** (sin coste de acción). Ambos
   tiran 3D6 (con un aliado ayudando: repetir un dado; con dos: repetir y
   +1 dado) y, alternando dado a dado,
   **empezando quien inicia el combate**, deciden:
-  - **Golpear** (dado + Atributo ≥ 6): impacta.
-  - **Parar** (dado + Parada ≥ 6): elimina un dado del rival; un 6 solo se
-    para con un 6.
+  - **Golpear** (dado + Atributo + Precisión ≥ 6): impacta.
+  - **Parar** (dado + Parada ≥ 6): elimina un dado del rival; un crítico solo se
+    para con otro crítico (por ahora, crítico = 6 natural).
   - **Esquivar** (dado + Agilidad ± Esquiva ≥ dado rival + su Atributo):
     elimina ese dado.
   - **Defensa reactiva** (provisional): cuando el rival declara un golpe,
@@ -93,7 +97,8 @@ la más reciente es `resultados_combate_v3_escala{A,B}.txt`.
 1. **Combate cuerpo a cuerpo cerrado** (quedan detalles menores en
    `pendientes.md`). Las armas de Agilidad encajan con personajes ágiles y
    las de Fuerza no; las dagas son flojas a propósito (serán baratas).
-2. **Siguiente: el disparo.**
+2. **Disparo cerrado.** Siguiente: Críticos, ronda (quién empieza, fin de
+   partida) o la Amenaza.
 3. Definir **Críticos** y más reglas especiales.
 
 ## Cómo trabajamos

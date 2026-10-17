@@ -12,12 +12,9 @@
 - [ ] En una tirada de dificultad (p. ej. salir de un combate), ¿basta con un
       éxito? (Provisionalmente, sí.)
 
-## Disparo
-- [ ] Orden: ¿primero la tirada de cobertura y luego la defensa, o al revés?
-- [ ] ¿Hay penalización por distancia (alcance corto y largo)?
-- [ ] ¿Se puede mover y disparar en la misma activación? ¿Y disparar dos veces?
-- [ ] ¿Una miniatura ya activada puede reaccionar a un disparo con acciones
-      sobrantes?
+## Críticos
+- [ ] Otras formas de conseguir críticos además del 6 natural.
+- [ ] Definir el efecto Crítico de cada arma.
 
 ## Campaña (temas surgidos en el combate)
 - [ ] Campaña: Lealtad (se pierde 1 al disparar a un combate con un aliado).
