@@ -19,8 +19,6 @@
       sobrantes?
 
 ## Combate cuerpo a cuerpo (detalles menores)
-- [ ] Escala de Vida: mínimo 4 con Daño máximo 3. ¿Cuál es el máximo? (Las
-      simulaciones usaron Vida 3–5.)
 - [ ] Campaña: ¿se reparan las armaduras inutilizadas? (Se definirá en el
       modo campaña.)
 - [ ] Campaña: ¿qué consecuencias tiene quedar fuera de combate (heridas

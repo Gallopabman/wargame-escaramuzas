@@ -143,7 +143,8 @@ Formato: fecha · decisión · motivo.
   tiene **−1 por cada enemigo trabado además del primero**.
 - **No se puede pasar ni guardar dados** en el combate mutuo: si un dado no
   sirve, se gasta parando o esquivando "a la nada".
-- **Matar de un golpe debe ser posible pero muy raro:** Daño máximo 3 y Vida
-  mínima 4. Solo se mata de un golpe con Críticos o habilidades.
+- **Matar de un golpe es posible según el equipo:** Daño máximo 3 y Vida de
+  2 a 5 (corrección: la Vida mínima 4 fue un error del autor). Un personaje
+  frágil sin armadura puede caer de un golpe.
 - **La reparación de armaduras se decide en el modo campaña**: no afecta al
   núcleo de la partida.
