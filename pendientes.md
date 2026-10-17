@@ -29,7 +29,9 @@
 - [ ] Cómo encajan las reacciones con las activaciones.
 - [ ] Fase de mantenimiento: lista de efectos (veneno, control…) y cuándo
       terminan.
-- [ ] Activación alternada con bandas desiguales (4 contra 8 miniaturas).
+- [ ] Activación alternada con bandas desiguales (4 contra 8 miniaturas): se
+      resolverá con la mecánica de reacciones que el autor explicará más
+      adelante.
 - [ ] ¿Para qué sirven Magia y Mente? (Fuerza y Agilidad ya tienen usos.)
 
 ## Amenaza (IA)

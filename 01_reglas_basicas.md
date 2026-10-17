@@ -70,7 +70,8 @@ Cada ronda tiene cuatro fases, en este orden:
 - Una miniatura activada realiza hasta tantas acciones como su estadística
   *Acciones*.
 - [PENDIENTE: qué ocurre si un bando tiene más miniaturas sin activar que el
-  otro; cómo encajan las reacciones con las activaciones]
+  otro (se resolverá con la mecánica de reacciones, pendiente de explicar);
+  cómo encajan las reacciones con las activaciones]
 
 ### 3.4 Fase de mantenimiento
 - Se resuelven los efectos que duran en el tiempo: se aplica el daño de
