@@ -19,7 +19,7 @@
 - [ ] ¿Una miniatura ya activada puede reaccionar a un disparo con acciones
       sobrantes?
 
-## Combate cuerpo a cuerpo (detalles menores)
+## Campaña (temas surgidos en el combate)
 - [ ] Campaña: Lealtad (se pierde 1 al disparar a un combate con un aliado).
 - [ ] Campaña: ¿se reparan las armaduras inutilizadas? (Se definirá en el
       modo campaña.)
