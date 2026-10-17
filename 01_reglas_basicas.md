@@ -112,7 +112,10 @@ en el momento qué hace con cada uno.
    gastar **al momento** uno de tus dados para **pararlo o esquivarlo** (con
    las mismas condiciones), sin perder tu turno de asignar. Si no reaccionas,
    el golpe impacta. También puedes parar o esquivar en tu turno.
-5. Ejemplo de reparto: con +2 al golpe y +4 a la esquiva, un 2 no sirve
+5. **No se puede pasar ni guardar dados:** en tu turno tienes que asignar un
+   dado. Si no te sirve para nada, puedes gastarlo parando o esquivando "a la
+   nada".
+6. Ejemplo de reparto: con +2 al golpe y +4 a la esquiva, un 2 no sirve
    para golpear (2+2=4) pero sí para esquivar un dado bajo del rival.
 
 ### 5.4 Cargar
@@ -135,13 +138,12 @@ en el momento qué hace con cada uno.
 ### 5.6 Salir de un combate
 - Salir de un combate **no cuesta nada extra**: se hace con una acción de
   **Moverse** normal, tirando antes **Agilidad difícil (8)**: cada dado +
-  Agilidad; basta **un éxito**.
+  Agilidad; basta **un éxito**. Tienes **−1 por cada enemigo trabado contigo
+  además del primero**.
 - Si lo superas, te vas sin más.
-- Si fallas, el enemigo trabado contigo puede, si quiere, **iniciar un
-  combate gratis** contra ti.
+- Si fallas, **te quedas trabado** y **uno** de los enemigos trabados contigo
+  puede, si quiere, **iniciar un combate gratis** contra ti.
 - Si te has salido de un combate, **no puedes cargar ese turno**.
-- [PENDIENTE: si fallas, ¿te quedas trabado o te mueves igualmente tras el
-  combate gratis? Si hay varios enemigos trabados, ¿puede atacarte cada uno?]
 
 ## 6. Daño
 

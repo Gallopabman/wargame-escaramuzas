@@ -19,11 +19,10 @@
       sobrantes?
 
 ## Combate cuerpo a cuerpo (detalles menores)
-- [ ] Salir de un combate: si fallas la Agilidad, ¿te quedas trabado o te mueves
-      tras el combate gratis? ¿Te puede atacar cada enemigo trabado?
-- [ ] ¿Se puede pasar el turno guardando dados?
-- [ ] ¿Matar de un solo golpe (Daño ≥ Vida) debe ser posible?
-- [ ] ¿Las armaduras inutilizadas se reparan tras la partida?
+- [ ] Escala de Vida: mínimo 4 con Daño máximo 3. ¿Cuál es el máximo? (Las
+      simulaciones usaron Vida 3–5.)
+- [ ] Campaña: ¿se reparan las armaduras inutilizadas? (Se definirá en el
+      modo campaña.)
 - [ ] Campaña: ¿qué consecuencias tiene quedar fuera de combate (heridas
       graves, muerte…)?
 

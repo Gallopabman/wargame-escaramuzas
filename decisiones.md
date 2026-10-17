@@ -135,3 +135,15 @@ Formato: fecha · decisión · motivo.
   Moverse normal, tirando Agilidad difícil (8). Si se falla, el enemigo
   trabado puede iniciar un combate gratis. Quien se sale de un combate no
   puede cargar ese turno.
+
+## 2026-10-17
+
+- **Salir de un combate:** si se falla la tirada, te quedas trabado y solo
+  **uno** de los enemigos trabados puede iniciar el combate gratis. La tirada
+  tiene **−1 por cada enemigo trabado además del primero**.
+- **No se puede pasar ni guardar dados** en el combate mutuo: si un dado no
+  sirve, se gasta parando o esquivando "a la nada".
+- **Matar de un golpe debe ser posible pero muy raro:** Daño máximo 3 y Vida
+  mínima 4. Solo se mata de un golpe con Críticos o habilidades.
+- **La reparación de armaduras se decide en el modo campaña**: no afecta al
+  núcleo de la partida.
