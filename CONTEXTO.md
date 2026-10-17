@@ -45,7 +45,9 @@ dado, **azar controlado** y donde el **equipo elegido sea determinante**.
 - **Tiradas:** 3D6, **cada dado por separado** + modificador ≥ umbral (6 por
   defecto; 8 / 10 / 12 para difícil, compleja, imposible). 1 natural siempre
   falla; 6 natural siempre acierta, da un dado extra y activa el Crítico.
-- **Activación alternada**, una miniatura cada jugador.
+- **Ronda:** Iniciativa (1D6) → Órdenes (habilidades de banda) →
+  Activaciones alternadas, una miniatura cada jugador → Mantenimiento
+  (veneno, efectos de control…).
 - **Disparo:** 3D6 + Atributo + Precisión. Sin penalización por distancia; se
   puede mover y disparar, o disparar dos veces. El objetivo puede gastar 1
   acción (también si ya se activó y la guardó) para Bloquear (Parada; solo
@@ -97,9 +99,9 @@ la más reciente es `resultados_combate_v3_escala{A,B}.txt`.
 1. **Combate cuerpo a cuerpo cerrado** (quedan detalles menores en
    `pendientes.md`). Las armas de Agilidad encajan con personajes ágiles y
    las de Fuerza no; las dagas son flojas a propósito (serán baratas).
-2. **Disparo cerrado.** Siguiente: Críticos, ronda (quién empieza, fin de
-   partida) o la Amenaza.
-3. Definir **Críticos** y más reglas especiales.
+2. **Disparo y estructura de la ronda cerrados.** Siguiente: Magia, cómo
+   encajan reacciones y activaciones, o la Amenaza.
+3. Los **Críticos** no son parte del núcleo: más adelante.
 
 ## Cómo trabajamos
 

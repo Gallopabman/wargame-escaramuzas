@@ -50,12 +50,37 @@ Cada miniatura tiene las siguientes estadísticas:
 
 ## 3. Ronda y activación
 
-- **Activación alternada:** cada jugador elige una miniatura y la activa;
-  después el otro jugador hace lo mismo, y así sucesivamente.
+Cada ronda tiene cuatro fases, en este orden:
+
+### 3.1 Iniciativa
+- Cada jugador tira **1D6**; el más alto gana la iniciativa.
+- **Empate:** gana el jugador que **no tuvo la iniciativa en la ronda
+  anterior**. En la primera ronda, se vuelve a tirar.
+
+### 3.2 Fase de órdenes
+- Los jugadores pueden usar **órdenes**: habilidades que afectan a **toda la
+  banda** (p. ej. +1 para combatir cuerpo a cuerpo).
+- [PENDIENTE: esta fase se desarrollará por completo más adelante; quién
+  da órdenes primero, cuántas, de dónde salen]
+
+### 3.3 Fase de activaciones
+- El jugador con la iniciativa elige una de sus miniaturas y la **activa**.
+  Cuando termina, el otro jugador activa una de las suyas, y así
+  sucesivamente hasta que **todas las miniaturas se hayan activado**.
 - Una miniatura activada realiza hasta tantas acciones como su estadística
   *Acciones*.
-- [PENDIENTE: quién empieza la ronda; qué ocurre si un bando tiene más
-  miniaturas sin activar que el otro; fin de ronda y fin de partida]
+- [PENDIENTE: qué ocurre si un bando tiene más miniaturas sin activar que el
+  otro; cómo encajan las reacciones con las activaciones]
+
+### 3.4 Fase de mantenimiento
+- Se resuelven los efectos que duran en el tiempo: se aplica el daño de
+  **veneno**, se retiran los efectos de **control** (aturdido, inmovilizado…)
+  que terminen, etc.
+- [PENDIENTE: lista de efectos y cuándo terminan]
+
+### 3.5 Fin de la partida
+- [PENDIENTE: la partida dura 5–6 rondas; ¿cuántas exactamente y cómo se
+  gana?]
 
 ## 4. Reacciones
 

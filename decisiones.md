@@ -178,3 +178,11 @@ Formato: fecha · decisión · motivo.
 - **Se puede mover y disparar, y disparar dos veces** en una activación.
 - **Una miniatura ya activada puede defenderse de un disparo** si guardó una
   acción.
+- **Los críticos no forman parte del núcleo** del juego: se desarrollarán más
+  adelante.
+- **Estructura de la ronda:** 1) Iniciativa (1D6, el más alto gana; con
+  empate gana quien no tuvo la iniciativa la ronda anterior; en la primera
+  ronda se repite); 2) Fase de órdenes (habilidades para toda la banda; se
+  desarrollará más adelante); 3) Fase de activaciones (alternadas, empieza
+  quien tiene la iniciativa); 4) Fase de mantenimiento (veneno, fin de
+  efectos de control, etc.).

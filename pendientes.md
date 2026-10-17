@@ -12,7 +12,7 @@
 - [ ] En una tirada de dificultad (p. ej. salir de un combate), ¿basta con un
       éxito? (Provisionalmente, sí.)
 
-## Críticos
+## Críticos (fuera del núcleo; más adelante)
 - [ ] Otras formas de conseguir críticos además del 6 natural.
 - [ ] Definir el efecto Crítico de cada arma.
 
@@ -24,7 +24,11 @@
       graves, muerte…)?
 
 ## Ronda
-- [ ] Quién empieza, fin de ronda, fin de partida.
+- [ ] Fin de la partida: ¿cuántas rondas exactamente (5–6) y cómo se gana?
+- [ ] Fase de órdenes: desarrollarla (quién empieza, cuántas, de dónde salen).
+- [ ] Cómo encajan las reacciones con las activaciones.
+- [ ] Fase de mantenimiento: lista de efectos (veneno, control…) y cuándo
+      terminan.
 - [ ] Activación alternada con bandas desiguales (4 contra 8 miniaturas).
 - [ ] ¿Para qué sirven Magia y Mente? (Fuerza y Agilidad ya tienen usos.)
 
