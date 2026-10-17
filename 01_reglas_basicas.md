@@ -80,8 +80,8 @@ Cada ronda tiene cuatro fases, en este orden:
 - [PENDIENTE: lista de efectos y cuándo terminan]
 
 ### 3.5 Fin de la partida
-- [PENDIENTE: la partida dura 5–6 rondas; ¿cuántas exactamente y cómo se
-  gana?]
+- La **duración** de la partida y **cómo se gana** los determina el
+  **escenario** (ver `04_escenarios_especiales.md`).
 
 ## 4. Reacciones
 

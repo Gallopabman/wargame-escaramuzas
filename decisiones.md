@@ -186,3 +186,6 @@ Formato: fecha · decisión · motivo.
   desarrollará más adelante); 3) Fase de activaciones (alternadas, empieza
   quien tiene la iniciativa); 4) Fase de mantenimiento (veneno, fin de
   efectos de control, etc.).
+- **El escenario determina la duración de la partida y cómo se gana.**
+- **La mecánica de reacciones será una pieza central del juego:** se
+  definirá con cuidado más adelante.

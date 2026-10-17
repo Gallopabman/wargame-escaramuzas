@@ -24,9 +24,9 @@
       graves, muerte…)?
 
 ## Ronda
-- [ ] Fin de la partida: ¿cuántas rondas exactamente (5–6) y cómo se gana?
+- [ ] **Mecánica de reacciones (núcleo del juego):** el autor la explicará;
+      hay que definirla con cuidado. Resolverá también las bandas desiguales.
 - [ ] Fase de órdenes: desarrollarla (quién empieza, cuántas, de dónde salen).
-- [ ] Cómo encajan las reacciones con las activaciones.
 - [ ] Fase de mantenimiento: lista de efectos (veneno, control…) y cuándo
       terminan.
 - [ ] Activación alternada con bandas desiguales (4 contra 8 miniaturas): se
