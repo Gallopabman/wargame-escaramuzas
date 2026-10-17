@@ -24,14 +24,14 @@
       graves, muerte…)?
 
 ## Ronda
-- [ ] **Mecánica de reacciones (núcleo del juego):** el autor la explicará;
-      hay que definirla con cuidado. Resolverá también las bandas desiguales.
+- [ ] **Mecánica de reacciones** (ver `01_reglas_basicas.md`, sección 4):
+      ¿reaccionar gasta todos los puntos de acción? En la reacción por falta
+      de miniaturas, ¿cuántas acciones se hacen y cuántas veces se puede
+      reaccionar? ¿Qué otras acciones permiten reaccionar? ¿Los puntos no
+      gastados se pierden al acabar la ronda?
 - [ ] Fase de órdenes: desarrollarla (quién empieza, cuántas, de dónde salen).
 - [ ] Fase de mantenimiento: lista de efectos (veneno, control…) y cuándo
       terminan.
-- [ ] Activación alternada con bandas desiguales (4 contra 8 miniaturas): se
-      resolverá con la mecánica de reacciones que el autor explicará más
-      adelante.
 - [ ] ¿Para qué sirven Magia y Mente? (Fuerza y Agilidad ya tienen usos.)
 
 ## Amenaza (IA)

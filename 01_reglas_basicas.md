@@ -64,14 +64,16 @@ Cada ronda tiene cuatro fases, en este orden:
   da órdenes primero, cuántas, de dónde salen]
 
 ### 3.3 Fase de activaciones
+- Al empezar la ronda, cada miniatura tiene tantos **puntos de acción** como
+  su estadística *Acciones*.
 - El jugador con la iniciativa elige una de sus miniaturas y la **activa**.
   Cuando termina, el otro jugador activa una de las suyas, y así
   sucesivamente hasta que **todas las miniaturas se hayan activado**.
-- Una miniatura activada realiza hasta tantas acciones como su estadística
-  *Acciones*.
-- [PENDIENTE: qué ocurre si un bando tiene más miniaturas sin activar que el
-  otro (se resolverá con la mecánica de reacciones, pendiente de explicar);
-  cómo encajan las reacciones con las activaciones]
+- Al activar una miniatura puedes gastar **cualquier número de sus puntos de
+  acción: desde 0 hasta todos**. Los que no gastes quedan disponibles para
+  **reaccionar** (sección 4).
+- [PENDIENTE: ¿los puntos de acción no gastados se pierden al acabar la
+  ronda?]
 
 ### 3.4 Fase de mantenimiento
 - Se resuelven los efectos que duran en el tiempo: se aplica el daño de
@@ -85,13 +87,34 @@ Cada ronda tiene cuatro fases, en este orden:
 
 ## 4. Reacciones
 
-- **Contra un disparo:** el objetivo puede **reaccionar gastando 1 de sus
-  propias acciones** de la ronda, si le quedan, para **Bloquear** o
-  **Esquivar** (5.2). Las acciones gastadas en reaccionar ya no se pueden usar
-  en su propia activación.
-- **Contra un ataque cuerpo a cuerpo:** **siempre combaten los dos**
-  (combate mutuo, 5.3). No cuesta acciones al defensor, y también combate una
-  miniatura que ya haya gastado todas sus acciones.
+Una miniatura que aún tiene puntos de acción puede **reaccionar** cuando no
+es su turno. Hay tres casos:
+
+### 4.1 Defenderse de un disparo
+- Si una miniatura con puntos de acción es objetivo de un disparo, puede
+  **gastarlos todos** para reaccionar y **Bloquear** o **Esquivar** (5.2).
+- [PENDIENTE: confirmar que reaccionar gasta **todos** los puntos que le
+  queden (antes costaba 1).]
+
+### 4.2 Cuerpo a cuerpo
+- Contra un ataque cuerpo a cuerpo **siempre combaten los dos** (combate
+  mutuo, 5.3). No cuesta puntos de acción, y también combate una miniatura
+  que ya no tenga ninguno.
+
+### 4.3 Reacción por falta de miniaturas
+- Si ya has activado todas tus miniaturas y tu rival todavía tiene
+  miniaturas por activar, **cada vez que el rival termine de activar una**,
+  puedes **reaccionar con una de tus miniaturas** que tenga puntos de
+  acción.
+- Esa miniatura puede hacer **cualquier acción**: moverse, recoger algo del
+  suelo, disparar, combatir, etc.
+- [PENDIENTE: ¿gasta todos sus puntos de acción? ¿Puede hacer tantas
+  acciones como puntos le queden? ¿Una misma miniatura puede reaccionar
+  varias veces en la ronda?]
+
+### 4.4 Preguntas abiertas
+- [PENDIENTE: además de disparos, ¿qué otras acciones permiten reaccionar
+  (hechizos, cargas…)?]
 
 ## 5. Combate
 
@@ -135,9 +158,9 @@ Cada ronda tiene cuatro fases, en este orden:
 - La **Lealtad** se definirá en el modo campaña.
 
 ### 5.2 Defenderse de un disparo
-- Para defenderse de un disparo, el objetivo debe **gastar 1 de sus
-  acciones** de la ronda (si le quedan). Una miniatura que ya se ha activado
-  puede defenderse si **guardó una acción** para ello. Si no lo hace, cada éxito del
+- Para defenderse de un disparo, el objetivo debe **gastar todos los puntos
+  de acción que le queden** (si le queda alguno; ver 4.1). Una miniatura que ya se ha activado
+  puede defenderse si **guardó puntos de acción**. Si no lo hace, cada éxito del
   tirador es un impacto.
 - Se defiende **igual que en el combate mutuo**: tira 3D6 y usa cada dado
   contra un dado de disparo con éxito:

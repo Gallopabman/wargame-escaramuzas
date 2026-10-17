@@ -189,3 +189,12 @@ Formato: fecha · decisión · motivo.
 - **El escenario determina la duración de la partida y cómo se gana.**
 - **La mecánica de reacciones será una pieza central del juego:** se
   definirá con cuidado más adelante.
+- **Puntos de acción:** al empezar la ronda cada miniatura tiene tantos como
+  su estadística Acciones. Al activarla se gastan los que se quiera (de 0 a
+  todos); los que quedan sirven para reaccionar.
+- **Reaccionar a un disparo** gasta los puntos de acción que queden
+  (pendiente de confirmar si son todos).
+- **Reacción por falta de miniaturas:** si ya activaste todas tus
+  miniaturas y el rival no, cada vez que él termina una activación puedes
+  reaccionar con una miniatura que tenga puntos de acción y hacer cualquier
+  acción. Esto resuelve las bandas desiguales.
