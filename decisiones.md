@@ -160,3 +160,11 @@ Formato: fecha · decisión · motivo.
 - **No se puede disparar a una miniatura trabada, pero sí a un combate.** Si
   participa un aliado: el tirador pierde 1 de Lealtad, el objetivo no puede
   defenderse y se tira 1D6 (1–3 impacta al aliado, 4–6 al enemigo).
+- **Cobertura:** por cada éxito del tirador, el objetivo tira 1D6; con 5+
+  anula ese éxito.
+- **Disparar a un combate:** el 1D6 se tira una sola vez para todos los
+  impactos. Si no hay aliados, se resuelve igual sin perder Lealtad y los
+  jugadores deciden a quién corresponde 1–3 y 4–6. La Lealtad se definirá en
+  el modo campaña.
+- **Defensa contra disparos:** un 6 solo se bloquea con un 6; al esquivar se
+  mantiene el movimiento de 2".

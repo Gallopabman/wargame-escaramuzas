@@ -83,7 +83,8 @@ Cada miniatura tiene las siguientes estadísticas:
 - Traza una línea recta desde el **centro de la peana** del tirador hasta el
   **centro de la peana** del objetivo. Si la línea no es **recta e
   ininterrumpida**, el objetivo tiene **cobertura**.
-- [PENDIENTE: ¿qué efecto tiene la cobertura?]
+- **Efecto:** por cada éxito del tirador, el objetivo tira **1D6**; con
+  **5+**, ese éxito queda anulado. No cuesta acciones.
 
 #### 5.1.3 Disparar a un combate
 - **No se puede elegir como objetivo a una miniatura trabada en combate**,
@@ -91,10 +92,13 @@ Cada miniatura tiene las siguientes estadísticas:
 - Si en el combate participa un **aliado** del tirador:
   - El tirador **pierde 1 de Lealtad**.
   - El objetivo **no puede defenderse** del disparo.
-  - Tras resolver el ataque, tira **1D6**: con **1–3** impactas a tu aliado;
+  - Tras resolver el ataque, tira **1D6 una sola vez para todos los
+    impactos**: con **1–3** impactan a tu aliado;
     con **4–6**, al enemigo.
-- [PENDIENTE: ¿qué es la Lealtad? ¿Se tira el 1D6 por cada impacto o una
-  vez por disparo? ¿Qué pasa si en el combate no participa ningún aliado?]
+- Si en el combate **no participa ningún aliado**, se resuelve igual pero
+  **sin perder Lealtad**; los jugadores deciden qué miniatura corresponde a
+  1–3 y cuál a 4–6.
+- La **Lealtad** se definirá en el modo campaña.
 
 ### 5.2 Defenderse de un disparo
 - Para defenderse de un disparo, el objetivo debe **gastar 1 de sus
@@ -103,13 +107,13 @@ Cada miniatura tiene las siguientes estadísticas:
 - Se defiende **igual que en el combate mutuo**: tira 3D6 y usa cada dado
   contra un dado de disparo con éxito:
   - **Bloquear** (dado + *Parada* ≥ 6): ese dado de disparo **queda
-    anulado**. Los disparos **solo se pueden bloquear** con un arma o
+    anulado**. Un **6 natural** de disparo solo se bloquea con un **6
+    natural**. Los disparos **solo se pueden bloquear** con un arma o
     habilidad que lo permita (un escudo sí; una espada no).
   - **Esquivar** (dado + Agilidad ± *Esquiva* de la armadura): anula el dado
     de disparo si **iguala o supera ese dado + el Atributo y la Precisión**
-    del tirador.
-- [PENDIENTE: ¿un 6 de disparo solo se bloquea con otro 6, como en
-  cuerpo a cuerpo? ¿Se mantiene el movimiento de 2" al esquivar?]
+    del tirador. Al terminar, el defensor puede moverse **2"**, acabando a la
+    misma distancia o más lejos del tirador.
 
 ### 5.3 Combate mutuo (cuerpo a cuerpo)
 Siempre que una miniatura ataca a otra cuerpo a cuerpo, **ambas combaten**:

@@ -13,16 +13,14 @@
       éxito? (Provisionalmente, sí.)
 
 ## Disparo
-- [ ] Efecto de la cobertura.
-- [ ] Lealtad: ¿qué es? (Se pierde 1 al disparar a un combate con un aliado.)
-- [ ] Disparar a un combate: ¿1D6 por impacto o por disparo? ¿Y si no hay
-      aliados en ese combate?
-- [ ] Defensa contra disparos: ¿un 6 solo se bloquea con un 6? ¿Se mantiene
-      el movimiento de 2" al esquivar?
+- [ ] Orden: ¿primero la tirada de cobertura y luego la defensa, o al revés?
+- [ ] ¿Hay penalización por distancia (alcance corto y largo)?
+- [ ] ¿Se puede mover y disparar en la misma activación? ¿Y disparar dos veces?
 - [ ] ¿Una miniatura ya activada puede reaccionar a un disparo con acciones
       sobrantes?
 
 ## Combate cuerpo a cuerpo (detalles menores)
+- [ ] Campaña: Lealtad (se pierde 1 al disparar a un combate con un aliado).
 - [ ] Campaña: ¿se reparan las armaduras inutilizadas? (Se definirá en el
       modo campaña.)
 - [ ] Campaña: ¿qué consecuencias tiene quedar fuera de combate (heridas
