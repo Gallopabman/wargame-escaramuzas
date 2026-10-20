@@ -43,9 +43,11 @@ dejan actuar a la Amenaza, **la campaña la pierden todos**.
   - *Campaña:* avanza un contador o "reloj" entre partidas y altera el estado
     de la campaña.
   - *Batalla:* puede aparecer sobre la mesa con unidades que se mueven
-    según reglas automáticas. [PENDIENTE: confirmar]
-- **Campaña:** progresión de bandas (experiencia, heridas, equipo) y estado
-  global de la Amenaza.
+    según reglas automáticas. [PENDIENTE: la Amenaza se diseñará al final,
+    con el juego completo]
+- **Campaña:** progresión de bandas (Experiencia, Influencia, base, títulos,
+  cicatrices) y estado
+  global de la Amenaza. Ver `05_campana.md`.
 
 ## Formato
 
@@ -53,8 +55,8 @@ dejan actuar a la Amenaza, **la campaña la pierden todos**.
 |---|---|
 | Ambientación | Fantasía medieval |
 | Tamaño de miniatura | 28–32 mm (escala GW) |
-| Jugadores | 2 [PENDIENTE: ¿admite 3–4?] |
-| Miniaturas por banda | 4–8 (se ajustará con el constructor de bandas) |
-| Duración de la partida | [PENDIENTE] |
+| Jugadores | Campaña: cualquier número, sin máster. Batallas: [PENDIENTE] |
+| Miniaturas por banda | La banda inicial tiene 5 personajes (datacards); 4–8 como referencia [PENDIENTE] |
+| Duración de la partida | La fija el escenario |
 | Dados | Solo D6 |
 | Activación | Alternada: una miniatura cada jugador |

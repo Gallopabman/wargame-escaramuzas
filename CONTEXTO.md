@@ -1,13 +1,14 @@
 # Contexto para retomar el trabajo
 
 > Léelo al empezar cada sesión. Resume en qué punto está el diseño, cómo
-> trabajamos y qué toca hacer después. Última actualización: 2026-10-16.
+> trabajamos y qué toca hacer después. Última actualización: 2026-10-20.
 
 ## Qué es este proyecto
 
 Diseño de un **wargame de escaramuzas de fantasía medieval** (miniaturas de
-28–32 mm, bandas de 4–8 miniaturas, partidas de 5–6 turnos) con foco narrativo
-y estructura **PvEvP**: dos jugadores compiten en una campaña mientras una
+28–32 mm, bandas que empiezan con 5 personajes, partidas cuya duración fija
+el escenario) con foco narrativo
+y estructura **PvEvP**: los jugadores compiten en una campaña mientras una
 **Amenaza** automática (la "IA") avanza; si la dejan actuar, la campaña la
 pierden todos.
 
@@ -30,12 +31,13 @@ dado, **azar controlado** y donde el **equipo elegido sea determinante**.
 | `00_concepto.md` | Documento brújula: pilares de diseño y formato. |
 | `01_reglas_basicas.md` | Perfil, tiradas, activación, reacciones, combate y daño. |
 | `02_equipo_habilidades.md` | Rangos de valores, reglas especiales, armas, armaduras. |
-| `03_facciones/` | Un archivo por gremio o facción (vacío por ahora). |
-| `04_escenarios_especiales.md` | Terreno, escenarios, eventos (vacío). |
-| `05_campana.md` | Campaña, Amenaza, progresión (vacío). |
+| `03_facciones/` | Gremios: plantilla e ideas sin decidir. |
+| `04_escenarios_especiales.md` | Terreno, escenarios, eventos (casi vacío). |
+| `05_campana.md` | Campaña: marco, fases, monedas, progresión, banda inicial. |
 | `decisiones.md` | Registro fechado de cada decisión y su motivo. |
 | `pendientes.md` | Preguntas abiertas y huecos. **Empieza por aquí.** |
 | `simulaciones/` | Simulador de combate y resultados. |
+| `sesiones/` | Resúmenes de sesiones hechas fuera de VS Code (PDF). |
 
 ## Núcleo de reglas en una pantalla
 
@@ -46,11 +48,16 @@ dado, **azar controlado** y donde el **equipo elegido sea determinante**.
   defecto; 8 / 10 / 12 para difícil, compleja, imposible). 1 natural siempre
   falla; 6 natural siempre acierta, da un dado extra y activa el Crítico.
 - **Ronda:** Iniciativa (1D6) → Órdenes (habilidades de banda) →
-  Activaciones alternadas, una miniatura cada jugador → Mantenimiento
+  Activaciones alternadas, una miniatura cada jugador (el ganador de la
+  iniciativa empieza siempre) → Mantenimiento
   (veneno, efectos de control…).
+- **Puntos de acción y reacciones** (sección 4, en revisión): al activar una
+  miniatura gastas de 0 a todos sus puntos; los guardados sirven para
+  reaccionar. Si ya activaste todas tus miniaturas y el rival no, puedes
+  reaccionar con una tras cada activación suya.
 - **Disparo:** 3D6 + Atributo + Precisión. Sin penalización por distancia; se
-  puede mover y disparar, o disparar dos veces. El objetivo puede gastar 1
-  acción (también si ya se activó y la guardó) para Bloquear (Parada; solo
+  puede mover y disparar, o disparar dos veces. El objetivo puede gastar sus
+  puntos de acción (si los guardó) para Bloquear (Parada; solo
   con escudo) o Esquivar (Agilidad ± Esquiva contra el dado del tirador +
   su Atributo y Precisión; luego mueve 2"). Después, la **cobertura**: 1D6
   por éxito, con 5+ se anula. Disparar a un combate: 1D6 decide si das al
@@ -94,14 +101,34 @@ la más reciente es `resultados_combate_v3_escala{A,B}.txt`.
 5. La escala grande (Vida 4–10, Daño 2–5) da casi lo mismo que la pequeña:
    solo cambia algo cuando cambia la cuenta de golpes para matar.
 
+## Campaña en una pantalla
+
+Ver `05_campana.md` (sesión del 2026-10-19).
+
+- Cualquier número de jugadores, **sin máster**: los jugadores fiscalizan y
+  los eventos están fijados en la línea de tiempo.
+- Duraciones de 4, 8 o 12 sesiones (diseño sobre 8); **3 tiers** que se
+  abren en las sesiones 1, 3 y 6.
+- Ronda de campaña: **Encargos → Batalla → Resolución → Preparación**.
+- Dos monedas: **Experiencia** (pozo común; sube niveles, con tope de brecha)
+  e **Influencia** (equipo, reclutas, contratados, órdenes, base, locaciones).
+- **Banda inicial:** 5 personajes desde datacards, algo de Influencia y una
+  base. No se arma por puntos.
+- **Proezas** que dan títulos; **cicatrices** como progresión negativa.
+- **La Amenaza se diseña al final.**
+
 ## Próximos pasos
 
-1. **Combate cuerpo a cuerpo cerrado** (quedan detalles menores en
-   `pendientes.md`). Las armas de Agilidad encajan con personajes ágiles y
-   las de Fuerza no; las dagas son flojas a propósito (serán baratas).
-2. **Disparo y estructura de la ronda cerrados.** Siguiente: Magia, cómo
-   encajan reacciones y activaciones, o la Amenaza.
-3. Los **Críticos** no son parte del núcleo: más adelante.
+1. **Resolver los conflictos** entre la sesión de la app (2026-10-19) y el
+   repositorio (primer apartado de `pendientes.md`): si la miniatura gasta
+   todos sus puntos al activarse, y si se abandona el constructor por
+   puntos.
+2. **Mecánica de reacciones:** cerrar las preguntas de la sección 4 de
+   `01_reglas_basicas.md`.
+3. Magia (ligada a hechizos), fase de órdenes y fase de mantenimiento.
+4. Desarrollar la campaña (muchos [PENDIENTE] en `05_campana.md`).
+5. Los **Críticos** no son parte del núcleo: más adelante. La **Amenaza**,
+   al final.
 
 ## Cómo trabajamos
 
@@ -119,3 +146,7 @@ la más reciente es `resultados_combate_v3_escala{A,B}.txt`.
   Usa minimax (juego óptimo de ambos jugadores) sobre tiradas aleatorias.
   Los .ps1 deben guardarse en UTF-8 **con BOM** para que PowerShell 5 lea bien
   las tildes.
+- **Sesiones fuera de VS Code** (p. ej. en la app de Claude): el autor deja
+  un resumen en PDF; se guarda en `sesiones/` y se reparte en los archivos.
+  Ojo: esas sesiones pueden trabajar con información antigua del proyecto;
+  hay que contrastarlas con `decisiones.md` y señalar los conflictos.

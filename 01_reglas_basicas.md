@@ -54,6 +54,7 @@ Cada ronda tiene cuatro fases, en este orden:
 
 ### 3.1 Iniciativa
 - Cada jugador tira **1D6**; el más alto gana la iniciativa.
+- **El ganador empieza siempre:** no puede ceder ni elegir.
 - **Empate:** gana el jugador que **no tuvo la iniciativa en la ronda
   anterior**. En la primera ronda, se vuelve a tirar.
 

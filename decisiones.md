@@ -198,3 +198,42 @@ Formato: fecha · decisión · motivo.
   miniaturas y el rival no, cada vez que él termina una activación puedes
   reaccionar con una miniatura que tenga puntos de acción y hacer cualquier
   acción. Esto resuelve las bandas desiguales.
+
+## 2026-10-19 (sesión en la app de Claude; ver `sesiones/`)
+
+- **Iniciativa:** el ganador empieza siempre; no puede ceder ni elegir.
+  *Motivo:* simple y sin decisiones vacías.
+- **Progresión en dos ejes**, vertical y horizontal. *Motivo:* frenar el
+  efecto bola de nieve.
+- **Dos monedas:** Experiencia (niveles de miniaturas) e Influencia (todo lo
+  demás). *Motivo:* cada moneda alimenta un eje; la Influencia no se divide
+  para no sumar contabilidad.
+- **Experiencia en pozo común de la banda**, gastada en cada miniatura.
+  *Motivo:* simplifica y premia a las miniaturas de apoyo.
+- **Tope de brecha de nivel entre miniaturas.** *Motivo:* evitar un héroe que
+  concentre todo.
+- **Los reclutas entran al nivel de la miniatura más baja.** *Motivo:* que
+  las bandas que pierden miniaturas no queden atrás.
+- **Proezas por miniatura que otorgan títulos**, tiradas en una tabla.
+  *Motivo:* premiar individualmente sin componentes extra.
+- **Ronda de campaña:** Encargos → Batalla → Resolución → Preparación.
+  *Motivo:* separar lo fiscalizado de las decisiones privadas.
+- **Encargos rápidos** (la miniatura juega la batalla, más riesgo) **o
+  lentos** (no juega, menos riesgo); los dungeons solo lentos. *Motivo:*
+  coste de oportunidad real; freno a la bola de nieve.
+- **Mapa público de locaciones bloqueables** que cuestan Influencia; el
+  recinto propio en la base es gratis. *Motivo:* interacción entre jugadores
+  y sentido a construir.
+- **Equipo por tiers;** el mejor solo se consigue en partidas o dungeons.
+  *Motivo:* freno a la bola de nieve y arco narrativo.
+- **Cualquier número de jugadores;** slots dobles = jugadores − locaciones.
+  *Motivo:* escalar la Fase de Encargos.
+- **Sin máster:** los jugadores fiscalizan; los eventos están fijados en la
+  línea de tiempo. *Motivo:* nadie decide arbitrariamente.
+- **Duraciones de 4, 8 y 12 sesiones;** diseño sobre 8. *Motivo:* más fácil
+  escalar desde el medio.
+- **3 tiers para todo:** tier 2 en la sesión 3 y tier 3 en la sesión 6
+  (formato de 8). *Motivo:* el mismo número en todos los sistemas.
+- **Banda inicial de 5 personajes desde datacards**, algo de Influencia y
+  una base. *Motivo:* más rápido y menos optimizable que por puntos.
+- **La Amenaza se diseña al final.** *Motivo:* necesita el juego completo.
