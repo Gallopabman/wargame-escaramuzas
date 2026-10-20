@@ -237,3 +237,12 @@ Formato: fecha · decisión · motivo.
 - **Banda inicial de 5 personajes desde datacards**, algo de Influencia y
   una base. *Motivo:* más rápido y menos optimizable que por puntos.
 - **La Amenaza se diseña al final.** *Motivo:* necesita el juego completo.
+
+## 2026-10-20
+
+- **Al activar una miniatura hay que gastar al menos 1 punto de acción**; el
+  resto se puede guardar para reaccionar. (Resuelve el conflicto con la
+  sesión del 2026-10-19, que decía gastar todos.)
+- **Banda inicial desde datacards** (con equipo incluido) y **equipo nuevo
+  comprado con Influencia**; cada objeto tiene un coste. Se abandona el
+  constructor por puntos.

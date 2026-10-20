@@ -83,10 +83,11 @@ Límites para que todo el contenido del juego sea coherente.
 
 ## Habilidades
 
-## Sistema de puntos
-Necesario para el constructor de bandas (4–8 miniaturas).
+## Costes en Influencia
 
-- **Cada arma y armadura tiene un coste** en monedas, que equilibra el equipo:
-  un arma muy buena es cara y una floja, barata (p. ej. hacha grande ~70,
-  daga ~5).
-- [PENDIENTE: costes de perfiles, equipo y habilidades]
+- La banda **no se arma por puntos**: empieza con 5 personajes desde
+  **datacards**, que ya incluyen su equipo inicial (ver `05_campana.md`).
+- El equipo nuevo (armas, armaduras, pociones, etc.) se **compra con
+  Influencia**. Cada objeto tiene un coste que lo equilibra: uno muy bueno es
+  caro y uno flojo, barato (p. ej. hacha grande ~70, daga ~5).
+- [PENDIENTE: costes de equipo, reclutas, contratados y órdenes]

@@ -52,7 +52,7 @@ dado, **azar controlado** y donde el **equipo elegido sea determinante**.
   iniciativa empieza siempre) → Mantenimiento
   (veneno, efectos de control…).
 - **Puntos de acción y reacciones** (sección 4, en revisión): al activar una
-  miniatura gastas de 0 a todos sus puntos; los guardados sirven para
+  miniatura gastas de 1 a todos sus puntos; los guardados sirven para
   reaccionar. Si ya activaste todas tus miniaturas y el rival no, puedes
   reaccionar con una tras cada activación suya.
 - **Disparo:** 3D6 + Atributo + Precisión. Sin penalización por distancia; se
@@ -119,15 +119,11 @@ Ver `05_campana.md` (sesión del 2026-10-19).
 
 ## Próximos pasos
 
-1. **Resolver los conflictos** entre la sesión de la app (2026-10-19) y el
-   repositorio (primer apartado de `pendientes.md`): si la miniatura gasta
-   todos sus puntos al activarse, y si se abandona el constructor por
-   puntos.
-2. **Mecánica de reacciones:** cerrar las preguntas de la sección 4 de
+1. **Mecánica de reacciones:** cerrar las preguntas de la sección 4 de
    `01_reglas_basicas.md`.
-3. Magia (ligada a hechizos), fase de órdenes y fase de mantenimiento.
-4. Desarrollar la campaña (muchos [PENDIENTE] en `05_campana.md`).
-5. Los **Críticos** no son parte del núcleo: más adelante. La **Amenaza**,
+2. Magia (ligada a hechizos), fase de órdenes y fase de mantenimiento.
+3. Desarrollar la campaña (muchos [PENDIENTE] en `05_campana.md`).
+4. Los **Críticos** no son parte del núcleo: más adelante. La **Amenaza**,
    al final.
 
 ## Cómo trabajamos

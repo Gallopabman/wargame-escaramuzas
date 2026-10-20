@@ -1,16 +1,5 @@
 # Pendientes y preguntas abiertas
 
-## Conflictos entre la sesión de la app (2026-10-19) y el repositorio
-- [ ] **Activación:** la sesión de la app dice que al terminar de activarse
-      una miniatura gasta **todos** sus puntos de acción, los use o no
-      ("castiga activar y quedarse quieto"). En el repositorio (2026-10-17)
-      se pueden **guardar** puntos para reaccionar (sección 4 de
-      `01_reglas_basicas.md`). ¿Cuál vale?
-- [ ] **Constructor por puntos:** la sesión de la app dice que la banda no se
-      arma por puntos, sino desde datacards, y que el equipo se compra con
-      Influencia. ¿Se abandona el sistema de puntos (bandas de 4–8 con coste
-      por arma) o sirve para partidas sueltas fuera de campaña?
-
 ## Concepto
 - [ ] Título del juego.
 - [ ] Batallas: ¿siempre 1 contra 1, o también 3–4 jugadores en la misma
@@ -30,7 +19,8 @@
       reaccionar? ¿Qué otras acciones permiten reaccionar? ¿Los puntos no
       gastados se pierden al acabar la ronda? ¿Cómo evitar que se active con
       0 puntos solo para quedarse sin miniaturas y reaccionar después de
-      cada activación rival?
+      cada activación rival? (Mitigado: ahora hay que gastar al menos 1
+      punto al activarse.)
 - [ ] Fase de órdenes: desarrollarla (quién empieza, cuántas, de dónde
       salen). Las órdenes se compran con Influencia en la campaña.
 - [ ] Fase de mantenimiento: lista de efectos (veneno, control…) y cuándo

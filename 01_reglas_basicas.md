@@ -70,8 +70,8 @@ Cada ronda tiene cuatro fases, en este orden:
 - El jugador con la iniciativa elige una de sus miniaturas y la **activa**.
   Cuando termina, el otro jugador activa una de las suyas, y así
   sucesivamente hasta que **todas las miniaturas se hayan activado**.
-- Al activar una miniatura puedes gastar **cualquier número de sus puntos de
-  acción: desde 0 hasta todos**. Los que no gastes quedan disponibles para
+- Al activar una miniatura tienes que gastar **al menos 1 punto de acción**,
+  y puedes gastar **hasta todos**. Los que no gastes quedan disponibles para
   **reaccionar** (sección 4).
 - [PENDIENTE: ¿los puntos de acción no gastados se pierden al acabar la
   ronda?]

@@ -133,7 +133,8 @@ de datacards.
 
 - **5 personajes**, cada uno desde una datacard con sus atributos,
   habilidades y equipo inicial. El reglamento da pautas para elegirlos.
-- **Algo de Influencia inicial**, para comprar un extra o guardarla.
+- **Algo de Influencia inicial**, para comprar un extra o guardarla. Las
+  datacards traen equipo; el equipo nuevo se compra con Influencia.
 - **Una base** y posiblemente **una construcción** inicial para ella.
 
 [PENDIENTE]
