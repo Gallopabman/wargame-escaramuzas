@@ -38,6 +38,7 @@ dado, **azar controlado** y donde el **equipo elegido sea determinante**.
 | `pendientes.md` | Preguntas abiertas y huecos. **Empieza por aquí.** |
 | `simulaciones/` | Simulador de combate y resultados. |
 | `sesiones/` | Resúmenes de sesiones hechas fuera de VS Code (PDF). |
+| `juego_campana/` | **Gremios de la Niebla**: juego web de gestión de campaña (un jugador contra 3 IA, batallas simuladas). Abrir `index.html`. Ver su README. |
 
 ## Núcleo de reglas en una pantalla
 
@@ -123,7 +124,10 @@ Ver `05_campana.md` (sesión del 2026-10-19).
    `01_reglas_basicas.md`.
 2. Magia (ligada a hechizos), fase de órdenes y fase de mantenimiento.
 3. Desarrollar la campaña (muchos [PENDIENTE] en `05_campana.md`).
-4. Los **Críticos** no son parte del núcleo: más adelante. La **Amenaza**,
+4. **Juego web** (`juego_campana/`): sirve para probar la campaña. Si cambian las
+   reglas, actualizar `js/datos.js`, `js/combate.js` o `js/campana.js` y pasar
+   las pruebas de `tests/` (necesitan Node.js).
+5. Los **Críticos** no son parte del núcleo: más adelante. La **Amenaza**,
    al final.
 
 ## Cómo trabajamos

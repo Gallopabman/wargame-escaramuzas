@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vista previa</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+  <div id="app"></div><div id="avisos"></div>
+  <script>
+    // Vista previa para capturas: ?fase=encargos|batalla|resolucion|preparacion&tab=...&sesion=N
+    window.__vistaPrevia = true;
+  </script>
+  <script src="../js/iconos.js"></script>
+  <script src="../js/util.js"></script>
+  <script src="../js/datos.js"></script>
+  <script src="../js/combate.js"></script>
+  <script src="../js/campana.js"></script>
+  <script src="../js/ia.js"></script>
+  <script src="../js/ui.js"></script>
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search), C = JG.campana, U = JG.ui;
+      var fase = q.get("fase"), tab = q.get("tab") || "fase", ses = Number(q.get("sesion") || 1);
+      if (!fase) return;
+      var e = C.nueva({ gremio: q.get("gremio") || "asesinos", sesiones: 8, semilla: 777, nombre: "La Hermandad del Velo" });
+      var j = C.jugador(e);
+      function paso() {
+        if (e.fase === "encargos") { while (C.turnoEncargos(e)) JG.ia.turnoEncargos(e, C.banda(e, C.turnoEncargos(e))); C.terminarEncargos(e); }
+        else if (e.fase === "batalla") C.jugarBatallas(e);
+        else if (e.fase === "resolucion") C.aPreparacion(e);
+        else if (e.fase === "preparacion") { JG.ia.preparar(e, j); C.terminarSesion(e); }
+      }
+      var g = 0;
+      while ((e.sesion < ses || e.fase !== fase) && !e.finalizada && g++ < 200) {
+        if (e.sesion === ses && e.fase === "encargos" && fase === "encargos") break;
+        paso();
+      }
+      if (fase === "encargos") C.avanzarIAEncargos(e);
+      if (fase === "fin") while (!e.finalizada && g++ < 400) paso();
+      U.e = e; U.tab = tab; U.render();
+    })();
+  </script>
+</body>
+</html>
